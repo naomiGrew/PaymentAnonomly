@@ -9,6 +9,9 @@ from urllib import error, request
 from app.models import AnalyzeTransactionRequest
 from app.settings import LlmSettings
 
+MAX_EXPLANATION_WORDS = 35
+MAX_EXPLANATION_CHARS = 180
+
 
 class LlmExplanationError(RuntimeError):
     pass
@@ -53,7 +56,7 @@ class LlmExplainer:
             "You are a payment fraud analyst assistant. Explain anomaly alerts in plain English for a fraud analyst. "
             "Only describe facts supported by the supplied transaction metadata and the model reasons. "
             "Do not make up customer identities, merchant details, or legal conclusions. "
-            "Keep the answer to 2 sentences maximum. "
+            "Write exactly 2 sentences, with no more than 35 words total. "
             "Use cautious, professional language. Treat the result as analysis assistance, not an accusation."
         )
 
@@ -79,7 +82,7 @@ class LlmExplainer:
         return {
             "model": self.settings.model,
             "temperature": 0.1,
-            "max_tokens": 180,
+            "max_tokens": 80,
             "messages": [
                 {
                     "role": "system",
@@ -119,9 +122,10 @@ class LlmExplainer:
             f"- anomaly score: {anomaly_score:.4f}\n"
             f"- status: {risk_label}\n"
             f"- reasons: {reason_text}\n"
-            "Review this transaction and explain the alert using only the supplied facts.\n"
+            "Write exactly 2 sentences and no more than 35 words total.\n"
+            "Use only the supplied facts and model reasons.\n"
             "If the transaction is normal, say it looks consistent with the baseline.\n"
-            "If it is flagged, identify the main drivers using the provided reasons."
+            "If it is flagged, identify the main drivers and keep it concise."
         )
 
     def _call_model(self, payload: dict[str, Any]) -> dict[str, Any]:
@@ -176,9 +180,9 @@ class LlmExplainer:
         normalized = " ".join(content.split())
         issues: list[str] = []
 
-        if len(normalized) > 280:
+        if len(normalized) > MAX_EXPLANATION_CHARS:
             issues.append("explanation is too long")
-        if len(normalized.split()) > 50:
+        if len(normalized.split()) > MAX_EXPLANATION_WORDS:
             issues.append("explanation is too verbose")
         if not re.search(r"(?i)\b(merchant|amount|risk|flag|normal|review|cross-border|unusual|payment|transaction)\b", normalized):
             issues.append("explanation is too generic or missing evidence")
