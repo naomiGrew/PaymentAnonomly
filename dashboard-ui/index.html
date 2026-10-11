@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Anomaly Command Center</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+<div class="shell">
+    <header class="hero card">
+        <div class="hero-copy">
+            <span class="eyebrow">AI-Powered Payment Monitoring</span>
+            <h1>Payment Anomaly Command Center</h1>
+            <p>
+                Submit payment events, inspect anomaly scores, and review plain-English alert explanations
+                from the detection pipeline in one place.
+            </p>
+            <div class="hero-actions">
+                <button id="safePresetButton" class="ghost-button" type="button">Load low-risk example</button>
+                <button id="riskyPresetButton" class="primary-button" type="button">Load risky example</button>
+            </div>
+        </div>
+        <div class="hero-panel">
+            <div class="hero-stat">
+                <span class="hero-stat-label">System status</span>
+                <strong id="systemStatus">Checking...</strong>
+            </div>
+            <div class="hero-stat">
+                <span class="hero-stat-label">Detection engine</span>
+                <strong>IsolationForest + explanation layer</strong>
+            </div>
+            <div class="hero-stat">
+                <span class="hero-stat-label">Analyst workflow</span>
+                <strong>Submit, score, review</strong>
+            </div>
+        </div>
+    </header>
+
+    <section class="metrics-grid">
+        <article class="metric card">
+            <span class="metric-label">Transactions tracked</span>
+            <strong id="totalTransactions">0</strong>
+            <p>All persisted transactions in the current environment.</p>
+        </article>
+        <article class="metric card">
+            <span class="metric-label">Flagged alerts</span>
+            <strong id="flaggedTransactions">0</strong>
+            <p>Payments marked anomalous by the scoring pipeline.</p>
+        </article>
+        <article class="metric card">
+            <span class="metric-label">Average risk</span>
+            <strong id="averageScore">0.00</strong>
+            <p>Mean anomaly score across the visible transaction set.</p>
+        </article>
+        <article class="metric card">
+            <span class="metric-label">Cross-border activity</span>
+            <strong id="crossBorderTransactions">0</strong>
+            <p>Transactions where payment country differs from home country.</p>
+        </article>
+    </section>
+
+    <main class="main-grid">
+        <section class="card form-card">
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow">New transaction</span>
+                    <h2>Run anomaly analysis</h2>
+                </div>
+                <span id="submitStatus" class="status-pill neutral">Ready</span>
+            </div>
+
+            <form id="transactionForm" class="transaction-form">
+                <div class="form-grid">
+                    <label>
+                        <span>Account ID</span>
+                        <input name="accountId" required placeholder="acct-2048">
+                    </label>
+                    <label>
+                        <span>Merchant</span>
+                        <input name="merchant" required placeholder="Everyday Market">
+                    </label>
+                    <label>
+                        <span>Amount</span>
+                        <input name="amount" type="number" min="0.01" step="0.01" required placeholder="125.50">
+                    </label>
+                    <label>
+                        <span>Currency</span>
+                        <input name="currency" required maxlength="3" placeholder="USD">
+                    </label>
+                    <label>
+                        <span>Payment country</span>
+                        <input name="country" required placeholder="US">
+                    </label>
+                    <label>
+                        <span>Home country</span>
+                        <input name="homeCountry" required placeholder="US">
+                    </label>
+                    <label>
+                        <span>Payment method</span>
+                        <select name="paymentMethod" required>
+                            <option value="card">Card</option>
+                            <option value="bank_transfer">Bank transfer</option>
+                            <option value="wire">Wire</option>
+                            <option value="crypto">Crypto</option>
+                        </select>
+                    </label>
+                    <label>
+                        <span>Transaction type</span>
+                        <select name="transactionType" required>
+                            <option value="purchase">Purchase</option>
+                            <option value="refund">Refund</option>
+                            <option value="cash_advance">Cash advance</option>
+                            <option value="subscription">Subscription</option>
+                        </select>
+                    </label>
+                    <label class="full-width">
+                        <span>Transaction timestamp</span>
+                        <input name="transactionTimestamp" type="datetime-local" required>
+                    </label>
+                </div>
+
+                <div class="form-actions">
+                    <button class="primary-button" type="submit">Analyze transaction</button>
+                    <button id="resetButton" class="ghost-button" type="button">Reset</button>
+                </div>
+            </form>
+        </section>
+
+        <aside class="card insights-card">
+            <div class="section-heading">
+                <div>
+                    <span class="eyebrow">Selected alert</span>
+                    <h2>Investigation summary</h2>
+                </div>
+                <span id="selectedFlag" class="status-pill neutral">No selection</span>
+            </div>
+            <div id="emptyState" class="empty-state">
+                Select a transaction to inspect the anomaly explanation and supporting signals.
+            </div>
+            <div id="detailPanel" class="detail-panel hidden">
+                <div class="detail-topline">
+                    <div>
+                        <h3 id="detailMerchant">-</h3>
+                        <p id="detailMeta">-</p>
+                    </div>
+                    <div class="score-ring">
+                        <span>Risk</span>
+                        <strong id="detailScore">0.00</strong>
+                    </div>
+                </div>
+
+                <div class="detail-block">
+                    <span class="detail-label">Explanation</span>
+                    <div class="detail-inline-meta">
+                        <span class="mini-label">Source</span>
+                        <span id="detailSource" class="mini-pill">Template</span>
+                    </div>
+                    <p id="detailExplanation"></p>
+                </div>
+
+                <div class="detail-block">
+                    <span class="detail-label">Reasons</span>
+                    <ul id="detailReasons" class="reasons-list"></ul>
+                </div>
+
+                <div class="detail-block">
+                    <span class="detail-label">Attributes</span>
+                    <dl class="detail-grid">
+                        <div>
+                            <dt>Account</dt>
+                            <dd id="detailAccount"></dd>
+                        </div>
+                        <div>
+                            <dt>Method</dt>
+                            <dd id="detailMethod"></dd>
+                        </div>
+                        <div>
+                            <dt>Type</dt>
+                            <dd id="detailType"></dd>
+                        </div>
+                        <div>
+                            <dt>Location</dt>
+                            <dd id="detailLocation"></dd>
+                        </div>
+                    </dl>
+                </div>
+            </div>
+        </aside>
+    </main>
+
+    <section class="card table-card">
+        <div class="section-heading table-heading">
+            <div>
+                <span class="eyebrow">Recent activity</span>
+                <h2>Transactions</h2>
+            </div>
+            <div class="table-controls">
+                <button class="filter-button active" data-filter="all" type="button">All</button>
+                <button class="filter-button" data-filter="flagged" type="button">Flagged</button>
+                <button class="ghost-button" id="refreshButton" type="button">Refresh</button>
+            </div>
+        </div>
+
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                <tr>
+                    <th>Merchant</th>
+                    <th>Amount</th>
+                    <th>Country</th>
+                    <th>Score</th>
+                    <th>Status</th>
+                    <th>Timestamp</th>
+                </tr>
+                </thead>
+                <tbody id="transactionsTableBody">
+                <tr>
+                    <td colspan="6" class="loading-row">Loading transactions...</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+</div>
+
+<script src="./app.js"></script>
+</body>
+</html>

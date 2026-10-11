@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: transaction-orchestrator
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/payment_anomaly}
+    username: ${SPRING_DATASOURCE_USERNAME:payment_user}
+    password: ${SPRING_DATASOURCE_PASSWORD:CHANGE_ME}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+    open-in-view: false
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+
+anomaly:
+  service:
+    base-url: ${ANOMALY_SERVICE_BASE_URL:http://localhost:8000}

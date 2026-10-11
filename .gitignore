@@ -1,0 +1,7 @@
+.idea/
+*.iml
+.env
+**/.venv/
+**/__pycache__/
+**/*.pyc
+**/target/

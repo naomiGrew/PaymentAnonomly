@@ -1,0 +1,55 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: payment_anomaly
+      POSTGRES_USER: payment_user
+      POSTGRES_PASSWORD: CHANGE_ME
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U payment_user -d payment_anomaly"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  anomaly-detection-service:
+    build:
+      context: ./anomaly-detection-service
+    environment:
+      LLM_API_BASE_URL: ${LLM_API_BASE_URL:-}
+      LLM_API_KEY: ${LLM_API_KEY:-}
+      LLM_MODEL: ${LLM_MODEL:-}
+      LLM_TIMEOUT_SECONDS: ${LLM_TIMEOUT_SECONDS:-15}
+    ports:
+      - "8000:8000"
+
+  transaction-orchestrator:
+    build:
+      context: ./transaction-orchestrator
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/payment_anomaly
+      SPRING_DATASOURCE_USERNAME: payment_user
+      SPRING_DATASOURCE_PASSWORD: CHANGE_ME
+      ANOMALY_SERVICE_BASE_URL: http://anomaly-detection-service:8000
+    depends_on:
+      postgres:
+        condition: service_healthy
+      anomaly-detection-service:
+        condition: service_started
+    ports:
+      - "8081:8080"
+
+  dashboard-ui:
+    build:
+      context: ./dashboard-ui
+    depends_on:
+      transaction-orchestrator:
+        condition: service_started
+    ports:
+      - "3000:80"
+
+volumes:
+  postgres-data:
