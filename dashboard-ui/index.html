@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./styles.css?v=20261011-2">
 </head>
 <body>
 <div class="shell">
@@ -22,16 +22,8 @@
         </div>
         <div class="hero-panel">
             <div class="hero-stat">
-                <span class="hero-stat-label">System status</span>
+                <span class="hero-stat-label">Operational mode</span>
                 <strong id="systemStatus">Checking...</strong>
-            </div>
-            <div class="hero-stat">
-                <span class="hero-stat-label">Detection engine</span>
-                <strong>IsolationForest + explanation layer</strong>
-            </div>
-            <div class="hero-stat">
-                <span class="hero-stat-label">Analyst workflow</span>
-                <strong>Submit, score, review</strong>
             </div>
         </div>
     </header>
@@ -178,6 +170,32 @@
                     </div>
                 </div>
 
+                <div class="transaction-controls">
+                    <div class="transaction-search-wrap">
+                        <input id="transactionSearch" type="search" placeholder="Search merchant, account or country" aria-label="Search transactions">
+                    </div>
+                    <label class="country-filter-wrap" for="countryFilter">
+                        <span>Country</span>
+                        <select id="countryFilter">
+                            <option value="all">All countries</option>
+                        </select>
+                    </label>
+                    <label class="country-filter-wrap" for="currencyFilter">
+                        <span>Currency</span>
+                        <select id="currencyFilter">
+                            <option value="all">All currencies</option>
+                        </select>
+                    </label>
+                    <label class="country-filter-wrap" for="statusFilter">
+                        <span>Status</span>
+                        <select id="statusFilter">
+                            <option value="all">All status</option>
+                            <option value="flagged">Flagged</option>
+                            <option value="normal">Normal</option>
+                        </select>
+                    </label>
+                </div>
+
                 <div class="table-wrapper">
                     <table>
                         <thead>
@@ -185,6 +203,7 @@
                             <th style="width: 52px;">Select</th>
                             <th>Merchant</th>
                             <th>Amount</th>
+                            <th>Currency</th>
                             <th>Country</th>
                             <th>Score</th>
                             <th>Status</th>
@@ -233,6 +252,6 @@
 
 </div>
 
-<script src="./app.js"></script>
+<script src="./app.js?v=20261011-2"></script>
 </body>
 </html>

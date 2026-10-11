@@ -5,6 +5,10 @@ const state = {
     selectedId: null,
     activeTab: "add",
     selectedIds: new Set(),
+    searchTerm: "",
+    countryFilter: "all",
+    currencyFilter: "all",
+    statusFilter: "all",
 };
 
 const DEFAULT_TRANSACTION = {
@@ -160,6 +164,8 @@ async function loadTransactions() {
     try {
         const allTransactions = await fetchJson("/api/v1/transactions");
         state.allTransactions = allTransactions;
+        populateCountryFilter();
+        populateCurrencyFilter();
 
         const filteredTransactions = state.filter === "flagged"
             ? allTransactions.filter((transaction) => transaction.flagged)
@@ -427,13 +433,98 @@ function renderTopFlaggedCategories() {
         .join("");
 }
 
-function renderTable() {
-    if (state.transactions.length === 0) {
-        tableBody.innerHTML = `<tr><td colspan="6" class="loading-row">No transactions yet.</td></tr>`;
+function getVisibleTransactions() {
+    const search = state.searchTerm.trim().toLowerCase();
+    const baseTransactions = state.filter === "flagged"
+        ? state.allTransactions.filter((transaction) => transaction.flagged)
+        : state.allTransactions;
+
+    const filteredByCountry = state.countryFilter === "all"
+        ? baseTransactions
+        : baseTransactions.filter((transaction) => String(transaction.country ?? "").toUpperCase() === state.countryFilter.toUpperCase());
+
+    const filteredByCurrency = state.currencyFilter === "all"
+        ? filteredByCountry
+        : filteredByCountry.filter((transaction) => String(transaction.currency ?? "").toUpperCase() === state.currencyFilter.toUpperCase());
+
+    const filteredByStatus = state.statusFilter === "all"
+        ? filteredByCurrency
+        : filteredByCurrency.filter((transaction) => (transaction.flagged ? "flagged" : "normal") === state.statusFilter);
+
+    if (!search) {
+        return filteredByStatus;
+    }
+
+    const matchesSearch = (value) => String(value ?? "").toLowerCase().includes(search);
+
+    return filteredByStatus.filter((transaction) => {
+        const countryCodeMatch = transaction.country && transaction.country.toLowerCase() === search;
+        const homeCountryMatch = transaction.homeCountry && transaction.homeCountry.toLowerCase() === search;
+        const currencyCodeMatch = transaction.currency && transaction.currency.toLowerCase() === search;
+
+        return countryCodeMatch
+            || homeCountryMatch
+            || currencyCodeMatch
+            || matchesSearch(transaction.merchant)
+            || matchesSearch(transaction.accountId)
+            || matchesSearch(transaction.paymentMethod)
+            || matchesSearch(transaction.transactionType)
+            || matchesSearch(transaction.amount)
+            || matchesSearch(transaction.anomalyScore)
+            || matchesSearch(transaction.flagged ? "flagged" : "normal")
+            || matchesSearch(formatDate(transaction.transactionTimestamp));
+    });
+}
+
+function populateCountryFilter() {
+    const countryFilter = document.getElementById("countryFilter");
+    if (!countryFilter) {
         return;
     }
 
-    tableBody.innerHTML = state.transactions
+    const countries = [...new Set(state.allTransactions
+        .map((transaction) => String(transaction.country ?? "").trim())
+        .filter(Boolean))].sort();
+
+    const selectedValue = state.countryFilter;
+    const current = countries.includes(selectedValue) ? selectedValue : "all";
+    state.countryFilter = current;
+
+    countryFilter.innerHTML = [
+        '<option value="all">All countries</option>',
+        ...countries.map((country) => `<option value="${escapeHtml(country)}" ${country === current ? "selected" : ""}>${escapeHtml(country)}</option>`),
+    ].join("");
+}
+
+function populateCurrencyFilter() {
+    const currencyFilter = document.getElementById("currencyFilter");
+    if (!currencyFilter) {
+        return;
+    }
+
+    const currencies = [...new Set(state.allTransactions
+        .map((transaction) => String(transaction.currency ?? "").trim())
+        .filter(Boolean))].sort();
+
+    const selectedValue = state.currencyFilter;
+    const current = currencies.includes(selectedValue) ? selectedValue : "all";
+    state.currencyFilter = current;
+
+    currencyFilter.innerHTML = [
+        '<option value="all">All currencies</option>',
+        ...currencies.map((currency) => `<option value="${escapeHtml(currency)}" ${currency === current ? "selected" : ""}>${escapeHtml(currency)}</option>`),
+    ].join("");
+}
+
+function renderTable() {
+    const visibleTransactions = getVisibleTransactions();
+
+    if (visibleTransactions.length === 0) {
+        tableBody.innerHTML = `<tr><td colspan="8" class="loading-row">No matching transactions.</td></tr>`;
+        return;
+    }
+
+    tableBody.innerHTML = visibleTransactions
         .map((transaction) => {
             const selectedClass = transaction.id === state.selectedId ? " style=\"background: rgba(124, 58, 237, 0.12);\"" : "";
             const statusClass = transaction.flagged ? "flagged" : "normal";
@@ -442,7 +533,7 @@ function renderTable() {
             const isChecked = state.selectedIds.has(transaction.id);
             const detailHtml = isSelected ? `
                 <tr class="transaction-detail-row">
-                    <td colspan="7">
+                    <td colspan="8">
                         <div class="transaction-detail-accordion">
                             <div class="detail-topline">
                                 <div>
@@ -507,7 +598,8 @@ function renderTable() {
                             <span class="row-subtitle">${escapeHtml(transaction.accountId)}</span>
                         </div>
                     </td>
-                    <td>${formatCurrency(transaction.amount, transaction.currency)}</td>
+                    <td>${Number(transaction.amount).toFixed(2)}</td>
+                    <td>${escapeHtml(transaction.currency)}</td>
                     <td>${escapeHtml(transaction.country)}</td>
                     <td>${Number(transaction.anomalyScore).toFixed(2)}</td>
                     <td><span class="table-badge ${statusClass}">${statusLabel}</span></td>
@@ -933,7 +1025,7 @@ function buildPrintableReport() {
 }
 
 document.getElementById("printSelectedButton").addEventListener("click", () => {
-    const selected = state.transactions.filter((transaction) => state.selectedIds.has(transaction.id));
+    const selected = getVisibleTransactions().filter((transaction) => state.selectedIds.has(transaction.id));
     if (selected.length === 0) {
         alert("Select at least one transaction before generating a PDF.");
         return;
@@ -945,10 +1037,31 @@ document.getElementById("printSelectedButton").addEventListener("click", () => {
         return;
     }
 
-    printWindow.document.write(buildPrintableReport());
+    const reportHtml = buildPrintableReport();
+    printWindow.document.write(reportHtml);
     printWindow.document.close();
     printWindow.focus();
     printWindow.print();
+});
+
+document.getElementById("transactionSearch").addEventListener("input", (event) => {
+    state.searchTerm = event.target.value;
+    renderTable();
+});
+
+document.getElementById("countryFilter").addEventListener("change", (event) => {
+    state.countryFilter = event.target.value;
+    renderTable();
+});
+
+document.getElementById("currencyFilter").addEventListener("change", (event) => {
+    state.currencyFilter = event.target.value;
+    renderTable();
+});
+
+document.getElementById("statusFilter").addEventListener("change", (event) => {
+    state.statusFilter = event.target.value;
+    renderTable();
 });
 
 setFormValues(normalPreset);
