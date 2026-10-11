@@ -14,15 +14,11 @@
     <header class="hero card">
         <div class="hero-copy">
             <span class="eyebrow">AI-Powered Payment Monitoring</span>
-            <h1>Payment Anomaly Command Center</h1>
+            <h1>Payment Risk Command Center</h1>
             <p>
-                Submit payment events, inspect anomaly scores, and review plain-English alert explanations
-                from the detection pipeline in one place.
+                Submit payment events, inspect risk scores, and review alert explanations from the detection
+                pipeline in one place.
             </p>
-            <div class="hero-actions">
-                <button id="safePresetButton" class="ghost-button" type="button">Load low-risk example</button>
-                <button id="riskyPresetButton" class="primary-button" type="button">Load risky example</button>
-            </div>
         </div>
         <div class="hero-panel">
             <div class="hero-stat">
@@ -127,6 +123,7 @@
                     <button class="primary-button" type="submit">Analyze transaction</button>
                     <button id="resetButton" class="ghost-button" type="button">Reset</button>
                 </div>
+                <div id="formAlert" class="alert-banner" role="alert" aria-live="polite"></div>
             </form>
         </section>
 
@@ -139,7 +136,7 @@
                 <span id="selectedFlag" class="status-pill neutral">No selection</span>
             </div>
             <div id="emptyState" class="empty-state">
-                Select a transaction to inspect the anomaly explanation and supporting signals.
+                Select a transaction to inspect the risk explanation and supporting signals.
             </div>
             <div id="detailPanel" class="detail-panel hidden">
                 <div class="detail-topline">
@@ -191,6 +188,33 @@
             </div>
         </aside>
     </main>
+
+    <section class="card chart-card" aria-labelledby="chartTitle">
+        <div class="section-heading table-heading">
+            <div>
+                <span class="eyebrow">Risk trends</span>
+                <h2 id="chartTitle">Risk activity timeline</h2>
+            </div>
+        </div>
+        <div class="chart-legend" aria-label="Chart legend">
+            <span><i class="legend-swatch flagged"></i>Flagged activity</span>
+            <span><i class="legend-swatch normal"></i>Normal activity</span>
+        </div>
+        <div class="chart-wrapper">
+            <canvas id="transactionChart" aria-label="Risk activity timeline chart"></canvas>
+            <div id="chartTooltip" class="chart-tooltip" role="tooltip" aria-hidden="true"></div>
+        </div>
+    </section>
+
+    <section class="card insights-card top-categories-card">
+        <div class="section-heading table-heading">
+            <div>
+                <span class="eyebrow">Operational view</span>
+                <h2>Top flagged categories</h2>
+            </div>
+        </div>
+        <div id="topCategories" class="top-categories-list"></div>
+    </section>
 
     <section class="card table-card">
         <div class="section-heading table-heading">

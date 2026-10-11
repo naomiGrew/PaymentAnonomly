@@ -8,7 +8,7 @@ from app.settings import LlmSettings
 app = FastAPI(
     title="Payment Anomaly Detection Service",
     version="0.1.0",
-    description="Scores transactions for anomalous behavior and explains the decision in plain English.",
+    description="Scores transactions for anomalous behavior and explains the decision in a concise risk summary.",
 )
 
 detector = PaymentAnomalyDetector(

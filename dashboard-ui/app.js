@@ -4,10 +4,27 @@ const state = {
     selectedId: null,
 };
 
+const DEFAULT_TRANSACTION = {
+    accountId: "",
+    merchant: "",
+    amount: "",
+    currency: "USD",
+    country: "",
+    homeCountry: "",
+    paymentMethod: "card",
+    transactionType: "purchase",
+    transactionTimestamp: toLocalDateTime(new Date()),
+};
+
+const chartPalette = ["#7c3aed", "#38bdf8", "#34d399", "#fbbf24", "#fb7185", "#a78bfa"];
 const form = document.getElementById("transactionForm");
 const tableBody = document.getElementById("transactionsTableBody");
 const detailPanel = document.getElementById("detailPanel");
 const emptyState = document.getElementById("emptyState");
+const chartCanvas = document.getElementById("transactionChart");
+const chartTooltip = document.getElementById("chartTooltip");
+const topCategories = document.getElementById("topCategories");
+const formAlert = document.getElementById("formAlert");
 
 const elements = {
     totalTransactions: document.getElementById("totalTransactions"),
@@ -29,29 +46,7 @@ const elements = {
     detailLocation: document.getElementById("detailLocation"),
 };
 
-const normalPreset = {
-    accountId: "acct-2048",
-    merchant: "Everyday Market",
-    amount: "84.65",
-    currency: "USD",
-    country: "US",
-    homeCountry: "US",
-    paymentMethod: "card",
-    transactionType: "purchase",
-    transactionTimestamp: toLocalDateTime(new Date()),
-};
-
-const riskyPreset = {
-    accountId: "acct-1024",
-    merchant: "Luxury Electronics",
-    amount: "6200.00",
-    currency: "USD",
-    country: "NG",
-    homeCountry: "US",
-    paymentMethod: "wire",
-    transactionType: "purchase",
-    transactionTimestamp: "2026-10-09T01:24",
-};
+const normalPreset = { ...DEFAULT_TRANSACTION };
 
 function toLocalDateTime(date) {
     const offset = date.getTimezoneOffset();
@@ -68,8 +63,34 @@ function setFormValues(values) {
 }
 
 function updateSubmitStatus(label, tone) {
+    if (!elements.submitStatus) {
+        return;
+    }
+
     elements.submitStatus.textContent = label;
     elements.submitStatus.className = `status-pill ${tone}`;
+}
+
+function showFormAlert(message, tone) {
+    if (!formAlert) {
+        return;
+    }
+
+    formAlert.textContent = message;
+    formAlert.className = `alert-banner visible ${tone}`;
+}
+
+function clearFormAlert() {
+    if (!formAlert) {
+        return;
+    }
+
+    formAlert.textContent = "";
+    formAlert.className = "alert-banner";
+}
+
+function isObject(value) {
+    return value !== null && typeof value === "object" && !Array.isArray(value);
 }
 
 async function fetchJson(url, options) {
@@ -140,6 +161,212 @@ function renderMetrics() {
     elements.flaggedTransactions.textContent = String(flagged);
     elements.averageScore.textContent = average.toFixed(2);
     elements.crossBorderTransactions.textContent = String(crossBorder);
+    renderTransactionChart();
+    renderTopFlaggedCategories();
+}
+
+function renderTransactionChart() {
+    if (!chartCanvas) {
+        return;
+    }
+
+    const ctx = chartCanvas.getContext("2d");
+    if (!ctx) {
+        return;
+    }
+
+    const timeline = {};
+    state.transactions.forEach((transaction) => {
+        const date = new Date(transaction.transactionTimestamp);
+        const key = date.toISOString().slice(0, 10);
+        if (!timeline[key]) {
+            timeline[key] = { total: 0, flagged: 0 };
+        }
+        timeline[key].total += 1;
+        timeline[key].flagged += transaction.flagged ? 1 : 0;
+    });
+
+    const labels = Object.keys(timeline).sort();
+    const totals = labels.map((label) => timeline[label].total);
+    const flaggedValues = labels.map((label) => timeline[label].flagged);
+
+    const width = chartCanvas.clientWidth || 620;
+    const height = chartCanvas.clientHeight || 280;
+    const ratio = window.devicePixelRatio || 1;
+
+    chartCanvas.width = Math.max(1, width * ratio);
+    chartCanvas.height = Math.max(1, height * ratio);
+    ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
+    ctx.clearRect(0, 0, width, height);
+
+    if (labels.length === 0) {
+        ctx.fillStyle = "#94a3b8";
+        ctx.font = "14px Inter, sans-serif";
+        ctx.textAlign = "center";
+        ctx.fillText("No transaction data yet", width / 2, height / 2);
+        return;
+    }
+
+    const padding = { top: 18, right: 18, bottom: 42, left: 42 };
+    const chartWidth = width - padding.left - padding.right;
+    const chartHeight = height - padding.top - padding.bottom;
+    const maxValue = Math.max(1, ...totals, ...flaggedValues);
+
+    ctx.strokeStyle = "rgba(148, 163, 184, 0.18)";
+    ctx.lineWidth = 1;
+    for (let i = 0; i <= 4; i += 1) {
+        const y = padding.top + (chartHeight / 4) * i;
+        ctx.beginPath();
+        ctx.moveTo(padding.left, y);
+        ctx.lineTo(width - padding.right, y);
+        ctx.stroke();
+    }
+
+    const stepX = labels.length > 1 ? chartWidth / (labels.length - 1) : chartWidth;
+    const lineColor = "#34d399";
+    const flaggedColor = "#fb7185";
+
+    ctx.beginPath();
+    ctx.strokeStyle = lineColor;
+    ctx.lineWidth = 2.5;
+    totals.forEach((value, index) => {
+        const x = padding.left + stepX * index;
+        const y = padding.top + chartHeight - (value / maxValue) * chartHeight;
+        if (index === 0) {
+            ctx.moveTo(x, y);
+        } else {
+            ctx.lineTo(x, y);
+        }
+    });
+    ctx.stroke();
+
+    ctx.beginPath();
+    ctx.strokeStyle = flaggedColor;
+    ctx.lineWidth = 2.5;
+    flaggedValues.forEach((value, index) => {
+        const x = padding.left + stepX * index;
+        const y = padding.top + chartHeight - (value / maxValue) * chartHeight;
+        if (index === 0) {
+            ctx.moveTo(x, y);
+        } else {
+            ctx.lineTo(x, y);
+        }
+    });
+    ctx.stroke();
+
+    chartCanvas.__hoverTargets = [];
+    labels.forEach((label, index) => {
+        const x = padding.left + stepX * index;
+        const y = height - 18;
+        ctx.fillStyle = "#cbd5e1";
+        ctx.font = "12px Inter, sans-serif";
+        ctx.textAlign = "center";
+
+        const text = new Date(label).toLocaleDateString("en-US", { month: "short", day: "numeric" });
+        ctx.fillText(text, x, y);
+
+        const totalValue = totals[index];
+        const flaggedValue = flaggedValues[index];
+        const totalY = padding.top + chartHeight - (totalValue / maxValue) * chartHeight;
+        const flaggedY = padding.top + chartHeight - (flaggedValue / maxValue) * chartHeight;
+        chartCanvas.__hoverTargets.push({
+            x,
+            y: Math.min(totalY, flaggedY),
+            label: text,
+            total: totalValue,
+            flagged: flaggedValue,
+        });
+    });
+
+    if (chartTooltip) {
+        chartTooltip.classList.remove("visible");
+        chartTooltip.setAttribute("aria-hidden", "true");
+    }
+
+    chartCanvas.onmousemove = (event) => {
+        if (!chartCanvas.__hoverTargets || !chartTooltip) {
+            return;
+        }
+
+        const rect = chartCanvas.getBoundingClientRect();
+        const x = event.clientX - rect.left;
+        const y = event.clientY - rect.top;
+        const nearest = chartCanvas.__hoverTargets.reduce((best, point) => {
+            if (!best) {
+                return point;
+            }
+            const bestDistance = Math.abs(best.x - x);
+            const pointDistance = Math.abs(point.x - x);
+            return pointDistance < bestDistance ? point : best;
+        }, null);
+
+        if (!nearest || Math.abs(nearest.x - x) > 56) {
+            chartTooltip.classList.remove("visible");
+            chartTooltip.setAttribute("aria-hidden", "true");
+            return;
+        }
+
+        chartTooltip.innerHTML = `
+            <strong>${nearest.label}</strong><br>
+            Total: ${nearest.total}<br>
+            Flagged: ${nearest.flagged}
+        `;
+        chartTooltip.style.left = `${nearest.x}px`;
+        chartTooltip.style.top = `${Math.max(18, nearest.y - 12)}px`;
+        chartTooltip.classList.add("visible");
+        chartTooltip.setAttribute("aria-hidden", "false");
+    };
+
+    chartCanvas.onmouseleave = () => {
+        if (chartTooltip) {
+            chartTooltip.classList.remove("visible");
+            chartTooltip.setAttribute("aria-hidden", "true");
+        }
+    };
+}
+
+function renderTopFlaggedCategories() {
+    if (!topCategories) {
+        return;
+    }
+
+    const buckets = {};
+    state.transactions.forEach((transaction) => {
+        const key = prettifyValue(transaction.transactionType);
+        if (!buckets[key]) {
+            buckets[key] = { name: key, total: 0, flagged: 0 };
+        }
+        buckets[key].total += 1;
+        buckets[key].flagged += transaction.flagged ? 1 : 0;
+    });
+
+    const rows = Object.values(buckets)
+        .sort((left, right) => (right.flagged * 10 + right.total) - (left.flagged * 10 + left.total))
+        .slice(0, 4);
+
+    if (rows.length === 0) {
+        topCategories.innerHTML = '<div class="category-row"><span class="category-name">No activity</span><span class="category-volume">No data</span></div>';
+        return;
+    }
+
+    const maxFlagged = Math.max(1, ...rows.map((row) => row.flagged));
+
+    topCategories.innerHTML = rows
+        .map((row) => {
+            const rate = row.total === 0 ? 0 : ((row.flagged / row.total) * 100).toFixed(0);
+            const width = Math.max(16, (row.flagged / maxFlagged) * 100);
+            return `
+                <div class="category-row">
+                    <span class="category-name">${escapeHtml(row.name)}</span>
+                    <span class="category-volume">${row.flagged}/${row.total} flagged</span>
+                    <span class="category-rate ${row.flagged > 0 ? "flagged" : ""}">${rate}%</span>
+                    <div style="grid-column: 1 / -1; height: 6px; border-radius: 999px; background: rgba(148, 163, 184, 0.12); overflow: hidden;">
+                        <div style="width: ${width}%; height: 100%; border-radius: inherit; background: linear-gradient(90deg, #fb7185 0%, #fbbf24 100%);"></div>
+                    </div>
+                </div>
+            `;
+        })
+        .join("");
 }
 
 function renderTable() {
@@ -238,21 +465,35 @@ function escapeHtml(value) {
 }
 
 function buildPayload(formData) {
+    const amountValue = Number(formData.get("amount"));
+    if (!Number.isFinite(amountValue) || amountValue <= 0) {
+        throw new Error("Amount must be greater than zero.");
+    }
+
+    const country = String(formData.get("country") ?? "").trim().toUpperCase();
+    const homeCountry = String(formData.get("homeCountry") ?? "").trim().toUpperCase();
+    const timestampValue = formData.get("transactionTimestamp");
+    const timestamp = new Date(timestampValue);
+    if (Number.isNaN(timestamp.getTime())) {
+        throw new Error("Transaction timestamp is invalid.");
+    }
+
     return {
-        accountId: formData.get("accountId"),
-        merchant: formData.get("merchant"),
-        amount: Number(formData.get("amount")),
-        currency: String(formData.get("currency")).toUpperCase(),
-        country: String(formData.get("country")).toUpperCase(),
-        homeCountry: String(formData.get("homeCountry")).toUpperCase(),
-        paymentMethod: formData.get("paymentMethod"),
-        transactionType: formData.get("transactionType"),
-        transactionTimestamp: new Date(formData.get("transactionTimestamp")).toISOString(),
+        accountId: String(formData.get("accountId") ?? "").trim(),
+        merchant: String(formData.get("merchant") ?? "").trim(),
+        amount: amountValue,
+        currency: String(formData.get("currency") ?? "USD").trim().toUpperCase(),
+        country,
+        homeCountry,
+        paymentMethod: String(formData.get("paymentMethod") ?? "card").trim(),
+        transactionType: String(formData.get("transactionType") ?? "purchase").trim(),
+        transactionTimestamp: timestamp.toISOString(),
     };
 }
 
 form.addEventListener("submit", async (event) => {
     event.preventDefault();
+    clearFormAlert();
     updateSubmitStatus("Analyzing...", "neutral");
 
     try {
@@ -262,19 +503,30 @@ form.addEventListener("submit", async (event) => {
             body: JSON.stringify(payload),
         });
 
+        if (!isObject(transaction) || typeof transaction.id !== "string") {
+            throw new Error("Invalid response from analysis service.");
+        }
+
         state.selectedId = transaction.id;
         updateSubmitStatus(transaction.flagged ? "Flagged anomaly" : "Analysis complete", transaction.flagged ? "danger" : "success");
+        showFormAlert(transaction.flagged ? "Transaction flagged for review." : "Transaction analyzed successfully.", transaction.flagged ? "error" : "success");
         await loadTransactions();
     } catch (error) {
+        const message = error instanceof Error ? error.message : "Submission failed";
         updateSubmitStatus("Submission failed", "danger");
+        showFormAlert(message, "error");
         console.error(error);
     }
 });
 
-document.getElementById("refreshButton").addEventListener("click", loadTransactions);
-document.getElementById("resetButton").addEventListener("click", () => setFormValues(normalPreset));
-document.getElementById("safePresetButton").addEventListener("click", () => setFormValues(normalPreset));
-document.getElementById("riskyPresetButton").addEventListener("click", () => setFormValues(riskyPreset));
+document.getElementById("refreshButton").addEventListener("click", () => {
+    clearFormAlert();
+    return loadTransactions();
+});
+document.getElementById("resetButton").addEventListener("click", () => {
+    clearFormAlert();
+    setFormValues(normalPreset);
+});
 
 document.querySelectorAll(".filter-button").forEach((button) => {
     button.addEventListener("click", async () => {

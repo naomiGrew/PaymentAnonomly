@@ -53,7 +53,7 @@ class LlmExplainer:
     @staticmethod
     def _build_system_prompt() -> str:
         return (
-            "You are a payment fraud analyst assistant. Explain anomaly alerts in plain English for a fraud analyst. "
+            "You are a payment fraud analyst assistant. Explain anomaly alerts for a fraud analyst in concise risk language. "
             "Only describe facts supported by the supplied transaction metadata and the model reasons. "
             "Do not make up customer identities, merchant details, or legal conclusions. "
             "Write exactly 2 sentences, with no more than 35 words total. "
