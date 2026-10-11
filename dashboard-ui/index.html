@@ -63,8 +63,34 @@
         <section class="card form-card">
             <div class="section-heading">
                 <div>
+                    <span class="eyebrow">Bulk intake</span>
+                    <h2>Import transactions</h2>
+                </div>
+                <span id="importStatus" class="status-pill neutral">Ready</span>
+            </div>
+
+            <div class="import-panel">
+                <label class="file-picker">
+                    <span>Upload CSV or JSON</span>
+                    <input id="transactionFileInput" type="file" accept=".csv,.json,.txt" />
+                </label>
+                <div class="form-actions compact-actions">
+                    <button id="importButton" class="primary-button" type="button">Import document</button>
+                    <button id="clearImportButton" class="ghost-button" type="button">Clear</button>
+                </div>
+                <p class="upload-help">
+                    CSV columns: accountId, merchant, amount, currency, country, homeCountry, paymentMethod,
+                    transactionType, transactionTimestamp
+                </p>
+                <div id="importAlert" class="alert-banner" role="alert" aria-live="polite"></div>
+            </div>
+        </section>
+
+        <section class="card form-card">
+            <div class="section-heading">
+                <div>
                     <span class="eyebrow">New transaction</span>
-                    <h2>Run anomaly analysis</h2>
+                    <h2>Manually input transaction</h2>
                 </div>
                 <span id="submitStatus" class="status-pill neutral">Ready</span>
             </div>
@@ -120,74 +146,12 @@
                 </div>
 
                 <div class="form-actions">
-                    <button class="primary-button" type="submit">Analyze transaction</button>
+                    <button class="primary-button" type="submit">Submit transaction</button>
                     <button id="resetButton" class="ghost-button" type="button">Reset</button>
                 </div>
                 <div id="formAlert" class="alert-banner" role="alert" aria-live="polite"></div>
             </form>
         </section>
-
-        <aside class="card insights-card">
-            <div class="section-heading">
-                <div>
-                    <span class="eyebrow">Selected alert</span>
-                    <h2>Investigation summary</h2>
-                </div>
-                <span id="selectedFlag" class="status-pill neutral">No selection</span>
-            </div>
-            <div id="emptyState" class="empty-state">
-                Select a transaction to inspect the risk explanation and supporting signals.
-            </div>
-            <div id="detailPanel" class="detail-panel hidden">
-                <div class="detail-topline">
-                    <div>
-                        <h3 id="detailMerchant">-</h3>
-                        <p id="detailMeta">-</p>
-                    </div>
-                    <div class="score-ring">
-                        <span>Risk</span>
-                        <strong id="detailScore">0.00</strong>
-                    </div>
-                </div>
-
-                <div class="detail-block">
-                    <span class="detail-label">Explanation</span>
-                    <div class="detail-inline-meta">
-                        <span class="mini-label">Source</span>
-                        <span id="detailSource" class="mini-pill">Template</span>
-                        <span class="mini-pill ai-badge">AI generated</span>
-                    </div>
-                    <p id="detailExplanation"></p>
-                </div>
-
-                <div class="detail-block">
-                    <span class="detail-label">Reasons</span>
-                    <ul id="detailReasons" class="reasons-list"></ul>
-                </div>
-
-                <div class="detail-block">
-                    <span class="detail-label">Attributes</span>
-                    <dl class="detail-grid">
-                        <div>
-                            <dt>Account</dt>
-                            <dd id="detailAccount"></dd>
-                        </div>
-                        <div>
-                            <dt>Method</dt>
-                            <dd id="detailMethod"></dd>
-                        </div>
-                        <div>
-                            <dt>Type</dt>
-                            <dd id="detailType"></dd>
-                        </div>
-                        <div>
-                            <dt>Location</dt>
-                            <dd id="detailLocation"></dd>
-                        </div>
-                    </dl>
-                </div>
-            </div>
-        </aside>
     </main>
 
     <section class="card chart-card" aria-labelledby="chartTitle">
@@ -250,6 +214,7 @@
             </table>
         </div>
     </section>
+
 </div>
 
 <script src="./app.js"></script>

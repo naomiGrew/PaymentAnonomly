@@ -26,6 +26,8 @@ const chartCanvas = document.getElementById("transactionChart");
 const chartTooltip = document.getElementById("chartTooltip");
 const topCategories = document.getElementById("topCategories");
 const formAlert = document.getElementById("formAlert");
+const importAlert = document.getElementById("importAlert");
+const importFileInput = document.getElementById("transactionFileInput");
 
 const elements = {
     totalTransactions: document.getElementById("totalTransactions"),
@@ -33,6 +35,7 @@ const elements = {
     averageScore: document.getElementById("averageScore"),
     crossBorderTransactions: document.getElementById("crossBorderTransactions"),
     submitStatus: document.getElementById("submitStatus"),
+    importStatus: document.getElementById("importStatus"),
     systemStatus: document.getElementById("systemStatus"),
     selectedFlag: document.getElementById("selectedFlag"),
     detailMerchant: document.getElementById("detailMerchant"),
@@ -72,6 +75,15 @@ function updateSubmitStatus(label, tone) {
     elements.submitStatus.className = `status-pill ${tone}`;
 }
 
+function updateImportStatus(label, tone) {
+    if (!elements.importStatus) {
+        return;
+    }
+
+    elements.importStatus.textContent = label;
+    elements.importStatus.className = `status-pill ${tone}`;
+}
+
 function showFormAlert(message, tone) {
     if (!formAlert) {
         return;
@@ -81,6 +93,15 @@ function showFormAlert(message, tone) {
     formAlert.className = `alert-banner visible ${tone}`;
 }
 
+function showImportAlert(message, tone) {
+    if (!importAlert) {
+        return;
+    }
+
+    importAlert.textContent = message;
+    importAlert.className = `alert-banner visible ${tone}`;
+}
+
 function clearFormAlert() {
     if (!formAlert) {
         return;
@@ -88,6 +109,15 @@ function clearFormAlert() {
 
     formAlert.textContent = "";
     formAlert.className = "alert-banner";
+}
+
+function clearImportAlert() {
+    if (!importAlert) {
+        return;
+    }
+
+    importAlert.textContent = "";
+    importAlert.className = "alert-banner";
 }
 
 function isObject(value) {
@@ -364,10 +394,10 @@ function renderTopFlaggedCategories() {
         }))
         .filter((row) => row.total > 0)
         .sort((left, right) => {
-            if (right.flagged !== left.flagged) {
-                return right.flagged - left.flagged;
+            if (right.rate !== left.rate) {
+                return right.rate - left.rate;
             }
-            return right.rate - left.rate;
+            return right.flagged - left.flagged;
         })
         .slice(0, 4);
 
@@ -376,12 +406,12 @@ function renderTopFlaggedCategories() {
         return;
     }
 
-    const maxFlagged = Math.max(1, ...rows.map((row) => row.flagged));
+    const maxRate = Math.max(100, ...rows.map((row) => row.rate));
 
     topCategories.innerHTML = rows
         .map((row) => {
-            const width = row.flagged === 0 ? 0 : Math.max(16, (row.flagged / maxFlagged) * 100);
             const rate = `${Math.round(row.rate)}%`;
+            const width = Math.max(12, (row.rate / maxRate) * 100);
             const label = `${row.flagged} flagged / ${row.total} total`;
             return `
                 <div class="category-row">
@@ -408,6 +438,66 @@ function renderTable() {
             const selectedClass = transaction.id === state.selectedId ? " style=\"background: rgba(124, 58, 237, 0.12);\"" : "";
             const statusClass = transaction.flagged ? "flagged" : "normal";
             const statusLabel = transaction.flagged ? "Flagged" : "Normal";
+            const isSelected = transaction.id === state.selectedId;
+            const detailHtml = isSelected ? `
+                <tr class="transaction-detail-row">
+                    <td colspan="6">
+                        <div class="transaction-detail-accordion">
+                            <div class="detail-topline">
+                                <div>
+                                    <h3>${escapeHtml(transaction.merchant)}</h3>
+                                    <p>${formatCurrency(transaction.amount, transaction.currency)} • ${formatDate(transaction.transactionTimestamp)}</p>
+                                </div>
+                                <div class="score-ring">
+                                    <span>Risk</span>
+                                    <strong>${Number(transaction.anomalyScore).toFixed(2)}</strong>
+                                </div>
+                            </div>
+
+                            <div class="detail-block">
+                                <span class="detail-label">Explanation</span>
+                                <div class="detail-inline-meta">
+                                    <span class="mini-label">Source</span>
+                                    <span class="mini-pill">${escapeHtml(prettifyValue(transaction.explanationSource ?? "template"))}</span>
+                                    <span class="mini-pill ai-badge">AI generated</span>
+                                </div>
+                                <p>${escapeHtml(transaction.explanation || "No explanation available.")}</p>
+                            </div>
+
+                            <div class="detail-block">
+                                <span class="detail-label">Reasons</span>
+                                <ul class="reasons-list">
+                                    ${(transaction.reasons && transaction.reasons.length > 0 ? transaction.reasons : ["No explicit reason was attached to this record."])
+                                        .map((reason) => `<li>${escapeHtml(reason)}</li>`)
+                                        .join("")}
+                                </ul>
+                            </div>
+
+                            <div class="detail-block">
+                                <span class="detail-label">Attributes</span>
+                                <dl class="detail-grid">
+                                    <div>
+                                        <dt>Account</dt>
+                                        <dd>${escapeHtml(transaction.accountId)}</dd>
+                                    </div>
+                                    <div>
+                                        <dt>Method</dt>
+                                        <dd>${escapeHtml(prettifyValue(transaction.paymentMethod))}</dd>
+                                    </div>
+                                    <div>
+                                        <dt>Type</dt>
+                                        <dd>${escapeHtml(prettifyValue(transaction.transactionType))}</dd>
+                                    </div>
+                                    <div>
+                                        <dt>Location</dt>
+                                        <dd>${escapeHtml(`${transaction.country} vs ${transaction.homeCountry}`)}</dd>
+                                    </div>
+                                </dl>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            ` : "";
             return `
                 <tr data-id="${transaction.id}"${selectedClass}>
                     <td>
@@ -422,45 +512,75 @@ function renderTable() {
                     <td><span class="table-badge ${statusClass}">${statusLabel}</span></td>
                     <td>${formatDate(transaction.transactionTimestamp)}</td>
                 </tr>
+                ${detailHtml}
             `;
         })
         .join("");
 }
 
 function renderDetail() {
-    const transaction = state.transactions.find((item) => item.id === state.selectedId);
+    if (!detailPanel || !emptyState) {
+        return;
+    }
+
+    const transaction = state.transactions.find((item) => item.id === state.selectedId)
+        ?? state.allTransactions.find((item) => item.id === state.selectedId);
 
     if (!transaction) {
         emptyState.classList.remove("hidden");
         detailPanel.classList.add("hidden");
-        elements.selectedFlag.textContent = "No selection";
-        elements.selectedFlag.className = "status-pill neutral";
+        if (elements.selectedFlag) {
+            elements.selectedFlag.textContent = "No selection";
+            elements.selectedFlag.className = "status-pill neutral";
+        }
         return;
     }
 
     emptyState.classList.add("hidden");
     detailPanel.classList.remove("hidden");
 
-    elements.selectedFlag.textContent = transaction.flagged ? "Flagged anomaly" : "Normal activity";
-    elements.selectedFlag.className = `status-pill ${transaction.flagged ? "danger" : "success"}`;
-    elements.detailMerchant.textContent = transaction.merchant;
-    elements.detailMeta.textContent =
-        `${formatCurrency(transaction.amount, transaction.currency)} • ${formatDate(transaction.transactionTimestamp)}`;
-    elements.detailScore.textContent = Number(transaction.anomalyScore).toFixed(2);
-    elements.detailExplanation.textContent = transaction.explanation;
-    elements.detailSource.textContent = prettifyValue(transaction.explanationSource ?? "template");
-    elements.detailAccount.textContent = transaction.accountId;
-    elements.detailMethod.textContent = prettifyValue(transaction.paymentMethod);
-    elements.detailType.textContent = prettifyValue(transaction.transactionType);
-    elements.detailLocation.textContent = `${transaction.country} vs ${transaction.homeCountry}`;
+    if (elements.selectedFlag) {
+        elements.selectedFlag.textContent = transaction.flagged ? "Flagged anomaly" : "Normal activity";
+        elements.selectedFlag.className = `status-pill ${transaction.flagged ? "danger" : "success"}`;
+    }
+
+    if (elements.detailMerchant) {
+        elements.detailMerchant.textContent = transaction.merchant;
+    }
+    if (elements.detailMeta) {
+        elements.detailMeta.textContent = `${formatCurrency(transaction.amount, transaction.currency)} • ${formatDate(transaction.transactionTimestamp)}`;
+    }
+    if (elements.detailScore) {
+        elements.detailScore.textContent = Number(transaction.anomalyScore).toFixed(2);
+    }
+    if (elements.detailExplanation) {
+        elements.detailExplanation.textContent = transaction.explanation || "No narrative explanation was generated for this transaction.";
+    }
+    if (elements.detailSource) {
+        elements.detailSource.textContent = prettifyValue(transaction.explanationSource ?? "template");
+    }
+    if (elements.detailAccount) {
+        elements.detailAccount.textContent = transaction.accountId;
+    }
+    if (elements.detailMethod) {
+        elements.detailMethod.textContent = prettifyValue(transaction.paymentMethod);
+    }
+    if (elements.detailType) {
+        elements.detailType.textContent = prettifyValue(transaction.transactionType);
+    }
+    if (elements.detailLocation) {
+        elements.detailLocation.textContent = `${transaction.country} vs ${transaction.homeCountry}`;
+    }
 
     const reasons = transaction.reasons && transaction.reasons.length > 0
         ? transaction.reasons
         : ["No explicit reason was attached to this record."];
 
-    elements.detailReasons.innerHTML = reasons
-        .map((reason) => `<li>${escapeHtml(reason)}</li>`)
-        .join("");
+    if (elements.detailReasons) {
+        elements.detailReasons.innerHTML = reasons
+            .map((reason) => `<li>${escapeHtml(reason)}</li>`)
+            .join("");
+    }
 }
 
 function formatCurrency(amount, currency) {
@@ -470,6 +590,13 @@ function formatCurrency(amount, currency) {
         style: "currency",
         currency: safeCurrency,
     }).format(amount);
+}
+
+function formatRiskLabel(flagged, score) {
+    if (flagged) {
+        return `Flagged · ${Number(score ?? 0).toFixed(2)}`;
+    }
+    return `Normal · ${Number(score ?? 0).toFixed(2)}`;
 }
 
 function formatDate(value) {
@@ -521,6 +648,80 @@ function buildPayload(formData) {
     };
 }
 
+async function importTransactionsFromFile(file) {
+    if (!file) {
+        throw new Error("No file selected.");
+    }
+
+    const text = await file.text();
+    let records;
+    const extension = file.name.split(".").pop()?.toLowerCase();
+
+    if (extension === "json") {
+        const parsed = JSON.parse(text);
+        records = Array.isArray(parsed) ? parsed : [parsed];
+    } else {
+        const lines = text
+            .split(/\r?\n/)
+            .map((line) => line.trim())
+            .filter(Boolean);
+        if (lines.length < 2) {
+            throw new Error("CSV is empty or missing a header row.");
+        }
+
+        const headers = lines[0].split(",").map((header) => header.trim());
+        records = lines.slice(1).map((line) => {
+            const values = line.split(",").map((value) => value.trim());
+            const entry = {};
+            headers.forEach((header, index) => {
+                entry[header] = values[index] ?? "";
+            });
+            return entry;
+        });
+    }
+
+    if (records.length === 0) {
+        throw new Error("No transaction rows were found in the uploaded document.");
+    }
+
+    const normalized = records.map((record, index) => {
+        const raw = {
+            accountId: String(record.accountId ?? record.account_id ?? "").trim(),
+            merchant: String(record.merchant ?? "").trim(),
+            amount: Number(record.amount ?? 0),
+            currency: String(record.currency ?? "USD").trim().toUpperCase(),
+            country: String(record.country ?? "").trim().toUpperCase(),
+            homeCountry: String(record.homeCountry ?? record.home_country ?? "US").trim().toUpperCase(),
+            paymentMethod: String(record.paymentMethod ?? record.payment_method ?? "card").trim(),
+            transactionType: String(record.transactionType ?? record.transaction_type ?? "purchase").trim(),
+            transactionTimestamp: String(record.transactionTimestamp ?? record.transaction_timestamp ?? "").trim(),
+        };
+
+        if (!raw.accountId || !raw.merchant || !Number.isFinite(raw.amount) || raw.amount <= 0) {
+            throw new Error(`Row ${index + 2} is missing required transaction data.`);
+        }
+
+        if (!raw.transactionTimestamp) {
+            throw new Error(`Row ${index + 2} is missing a valid transaction timestamp.`);
+        }
+
+        return {
+            ...raw,
+            amount: raw.amount,
+            transactionTimestamp: new Date(raw.transactionTimestamp).toISOString(),
+        };
+    });
+
+    const submissions = await Promise.all(
+        normalized.map(async (record) => fetchJson("/api/v1/transactions", {
+            method: "POST",
+            body: JSON.stringify(record),
+        }))
+    );
+
+    return submissions;
+}
+
 form.addEventListener("submit", async (event) => {
     event.preventDefault();
     clearFormAlert();
@@ -549,8 +750,45 @@ form.addEventListener("submit", async (event) => {
     }
 });
 
+document.getElementById("importButton").addEventListener("click", async () => {
+    clearImportAlert();
+    const file = importFileInput?.files?.[0];
+    if (!file) {
+        showImportAlert("Select a CSV or JSON file first.", "error");
+        return;
+    }
+
+    updateImportStatus("Importing...", "neutral");
+
+    try {
+        const imported = await importTransactionsFromFile(file);
+        const count = imported.length;
+        state.selectedId = imported[0]?.id ?? state.selectedId;
+        updateImportStatus(`${count} transactions imported`, "success");
+        showImportAlert(`${count} transactions were imported into Recent activity.`, "success");
+        await loadTransactions();
+        if (importFileInput) {
+            importFileInput.value = "";
+        }
+    } catch (error) {
+        const message = error instanceof Error ? error.message : "Import failed";
+        updateImportStatus("Import failed", "danger");
+        showImportAlert(message, "error");
+        console.error(error);
+    }
+});
+
+document.getElementById("clearImportButton").addEventListener("click", () => {
+    if (importFileInput) {
+        importFileInput.value = "";
+    }
+    clearImportAlert();
+    updateImportStatus("Ready", "neutral");
+});
+
 document.getElementById("refreshButton").addEventListener("click", () => {
     clearFormAlert();
+    clearImportAlert();
     return loadTransactions();
 });
 document.getElementById("resetButton").addEventListener("click", () => {
@@ -576,9 +814,21 @@ tableBody.addEventListener("click", (event) => {
     if (!row) {
         return;
     }
-    state.selectedId = row.dataset.id;
+
+    const nextSelectedId = row.dataset.id;
+    state.selectedId = state.selectedId === nextSelectedId ? null : nextSelectedId;
     renderTable();
     renderDetail();
+
+    if (state.selectedId) {
+        const selectedDetailRow = document.querySelector(".transaction-detail-row");
+        if (selectedDetailRow) {
+            selectedDetailRow.scrollIntoView({
+                behavior: "smooth",
+                block: "nearest",
+            });
+        }
+    }
 });
 
 setFormValues(normalPreset);

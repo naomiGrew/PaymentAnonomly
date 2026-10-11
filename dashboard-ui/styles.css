@@ -168,7 +168,7 @@ select {
 
 .main-grid {
     display: grid;
-    grid-template-columns: 1.25fr 0.95fr;
+    grid-template-columns: 1fr 1fr;
     gap: 20px;
     margin-bottom: 22px;
 }
@@ -256,6 +256,37 @@ select:focus {
     margin-top: 22px;
 }
 
+.compact-actions {
+    margin-top: 14px;
+}
+
+.import-panel {
+    display: grid;
+    gap: 16px;
+}
+
+.file-picker {
+    display: block;
+    padding: 14px 15px;
+    border-radius: 14px;
+    border: 1px dashed rgba(148, 163, 184, 0.22);
+    background: rgba(15, 23, 42, 0.26);
+}
+
+.file-picker input {
+    margin-top: 10px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+}
+
+.upload-help {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.82rem;
+    line-height: 1.5;
+}
+
 .empty-state {
     min-height: 320px;
     display: grid;
@@ -275,6 +306,21 @@ select:focus {
 .detail-panel {
     display: grid;
     gap: 20px;
+}
+
+#detailPanel {
+    max-height: 1000px;
+    overflow: visible;
+}
+
+.transaction-detail-row {
+    background: rgba(15, 23, 42, 0.24);
+}
+
+.transaction-detail-accordion {
+    display: grid;
+    gap: 18px;
+    padding: 18px 8px 10px;
 }
 
 .detail-topline {
@@ -385,6 +431,10 @@ select:focus {
 
 .table-heading {
     align-items: center;
+}
+
+.report-card {
+    margin-top: 22px;
 }
 
 .table-wrapper {
