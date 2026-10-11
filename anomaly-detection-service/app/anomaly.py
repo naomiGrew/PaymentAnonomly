@@ -42,7 +42,7 @@ class PaymentAnomalyDetector:
             reasons.append("payment method is less common in the training profile")
 
         anomaly_score = float(np.clip(1 / (1 + np.exp(-5 * raw_score)), 0, 1))
-        flagged = model_flagged or len(reasons) >= 2 or request.amount >= 5000
+        flagged = anomaly_score >= 0.70 or model_flagged or len(reasons) >= 2 or request.amount >= 5000
 
         if not reasons and flagged:
             reasons.append("feature combination differs from normal transaction patterns")

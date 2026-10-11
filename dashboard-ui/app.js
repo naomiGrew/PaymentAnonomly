@@ -8,7 +8,6 @@ const state = {
     searchTerm: "",
     countryFilter: "all",
     currencyFilter: "all",
-    statusFilter: "all",
 };
 
 const DEFAULT_TRANSACTION = {
@@ -307,6 +306,8 @@ function renderTransactionChart() {
     ctx.stroke();
 
     chartCanvas.__hoverTargets = [];
+    const labelSpacing = labels.length <= 7 ? 1 : Math.ceil(labels.length / 7);
+
     labels.forEach((label, index) => {
         const x = padding.left + stepX * index;
         const y = height - 18;
@@ -315,7 +316,11 @@ function renderTransactionChart() {
         ctx.textAlign = "center";
 
         const text = new Date(label).toLocaleDateString("en-US", { month: "short", day: "numeric" });
-        ctx.fillText(text, x, y);
+        const shouldDrawLabel = labels.length <= 7 || index === labels.length - 1 || index % labelSpacing === 0;
+
+        if (shouldDrawLabel) {
+            ctx.fillText(text, x, y);
+        }
 
         const totalValue = totals[index];
         const flaggedValue = flaggedValues[index];
@@ -447,17 +452,13 @@ function getVisibleTransactions() {
         ? filteredByCountry
         : filteredByCountry.filter((transaction) => String(transaction.currency ?? "").toUpperCase() === state.currencyFilter.toUpperCase());
 
-    const filteredByStatus = state.statusFilter === "all"
-        ? filteredByCurrency
-        : filteredByCurrency.filter((transaction) => (transaction.flagged ? "flagged" : "normal") === state.statusFilter);
-
     if (!search) {
-        return filteredByStatus;
+        return filteredByCurrency;
     }
 
     const matchesSearch = (value) => String(value ?? "").toLowerCase().includes(search);
 
-    return filteredByStatus.filter((transaction) => {
+    return filteredByCurrency.filter((transaction) => {
         const countryCodeMatch = transaction.country && transaction.country.toLowerCase() === search;
         const homeCountryMatch = transaction.homeCountry && transaction.homeCountry.toLowerCase() === search;
         const currencyCodeMatch = transaction.currency && transaction.currency.toLowerCase() === search;
@@ -650,7 +651,7 @@ function renderDetail() {
         elements.detailExplanation.textContent = transaction.explanation || "No narrative explanation was generated for this transaction.";
     }
     if (elements.detailSource) {
-        elements.detailSource.textContent = prettifyValue(transaction.explanationSource ?? "template");
+        elements.detailSource.textContent = "Narrative risk report";
     }
     if (elements.detailAccount) {
         elements.detailAccount.textContent = transaction.accountId;
@@ -1056,11 +1057,6 @@ document.getElementById("countryFilter").addEventListener("change", (event) => {
 
 document.getElementById("currencyFilter").addEventListener("change", (event) => {
     state.currencyFilter = event.target.value;
-    renderTable();
-});
-
-document.getElementById("statusFilter").addEventListener("change", (event) => {
-    state.statusFilter = event.target.value;
     renderTable();
 });
 

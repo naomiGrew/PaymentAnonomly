@@ -1,0 +1,81 @@
+accountId,merchant,amount,currency,country,homeCountry,paymentMethod,transactionType,transactionTimestamp
+acct-1000,Apex Currency Exchange,6500.00,USD,NG,US,wire,cash_advance,2026-09-01T02:00:00Z
+acct-1180,Northwind Supply,585.24,GBP,US,US,card,purchase,2026-09-02T16:27:00Z
+acct-1056,Bridgeport Labs,1829.58,GBP,GB,GB,bank_transfer,purchase,2026-09-03T14:26:00Z
+acct-1001,Nova Wire Partners,7800.00,GBP,AE,GB,crypto,purchase,2026-09-04T03:00:00Z
+acct-1021,Evergreen Logistics,489.76,USD,AU,AU,bank_transfer,refund,2026-09-05T18:05:00Z
+acct-1069,Fjord Consulting,1538.39,GBP,US,US,bank_transfer,subscription,2026-09-06T13:55:00Z
+acct-1002,Helios Crypto Desk,9100.00,AED,IN,US,bank_transfer,refund,2026-09-07T04:00:00Z
+acct-1055,Crestline Foods,1978.56,SGD,SG,SG,card,purchase,2026-09-08T17:14:00Z
+acct-1191,Crestline Foods,805.44,SGD,SG,SG,card,refund,2026-09-09T10:56:00Z
+acct-1003,Redwood Treasury,10400.00,NGN,SG,GB,wire,cash_advance,2026-09-10T05:00:00Z
+acct-1003,Bluebird Hotel,132.09,GBP,US,US,card,refund,2026-09-11T15:55:00Z
+acct-1185,Bayview Motors,839.51,GBP,US,US,bank_transfer,refund,2026-09-12T10:46:00Z
+acct-1004,Vertex Capital Ops,11700.00,SGD,BR,US,crypto,purchase,2026-09-13T06:00:00Z
+acct-1062,Atlas Hotel Group,81.06,CAD,US,US,bank_transfer,subscription,2026-09-14T16:58:00Z
+acct-1169,Harbor Point,136.75,AUD,AU,AU,card,refund,2026-09-15T01:15:00Z
+acct-1005,Blue Harbor FX,13000.00,USD,NG,GB,bank_transfer,refund,2026-09-16T07:00:00Z
+acct-1142,Oakleaf Consulting,1102.76,AUD,SG,SG,bank_transfer,refund,2026-09-17T09:42:00Z
+acct-1132,Northwind Supply,267.73,GBP,GB,GB,card,refund,2026-09-18T07:37:00Z
+acct-1006,Silverline Trading,14300.00,GBP,AE,US,wire,cash_advance,2026-09-19T08:00:00Z
+acct-1026,Bayview Motors,1036.76,GBP,US,US,bank_transfer,subscription,2026-09-20T08:06:00Z
+acct-1119,Crestline Foods,488.11,USD,SG,SG,card,purchase,2026-09-21T10:25:00Z
+acct-1007,Summit Escrow,15600.00,AED,IN,GB,crypto,purchase,2026-09-22T09:00:00Z
+acct-1074,Riverview Travel,424.37,USD,FR,FR,bank_transfer,purchase,2026-09-23T14:31:00Z
+acct-1016,Western Telecom,484.11,AUD,SG,SG,bank_transfer,purchase,2026-09-24T08:44:00Z
+acct-1008,Harbor Vault,16900.00,NGN,SG,US,bank_transfer,refund,2026-09-25T10:00:00Z
+acct-1011,Bayview Motors,318.53,GBP,US,US,card,subscription,2026-09-26T02:38:00Z
+acct-1034,Bayview Motors,518.07,USD,FR,FR,bank_transfer,subscription,2026-09-27T19:05:00Z
+acct-1009,Atlantic Settlement,18200.00,SGD,BR,GB,wire,cash_advance,2026-09-28T11:00:00Z
+acct-1181,Bluebird Hotel,2114.47,GBP,DE,DE,bank_transfer,purchase,2026-09-29T10:32:00Z
+acct-1191,Brightline Logistics,325.49,JPY,JP,JP,card,refund,2026-09-30T10:39:00Z
+acct-1014,Evergreen Logistics,643.75,USD,DE,DE,card,refund,2026-09-01T17:09:00Z
+acct-1142,Pine & Co,823.86,USD,FR,FR,card,purchase,2026-09-02T12:40:00Z
+acct-1150,Northwind Supply,2270.05,USD,AU,AU,card,purchase,2026-09-03T10:27:00Z
+acct-1092,Bluebird Hotel,897.40,EUR,FR,FR,card,subscription,2026-09-04T17:09:00Z
+acct-1192,Bayview Motors,1879.97,EUR,GB,GB,card,subscription,2026-09-05T06:43:00Z
+acct-1172,Lumen Publishing,93.62,USD,GB,GB,card,subscription,2026-09-06T04:59:00Z
+acct-1090,Pine & Co,795.18,USD,GB,GB,card,refund,2026-09-07T23:51:00Z
+acct-1090,Stone Market,1595.98,USD,JP,JP,card,purchase,2026-09-08T12:52:00Z
+acct-1010,Bayview Motors,307.78,USD,FR,FR,bank_transfer,purchase,2026-09-09T20:32:00Z
+acct-1066,Oakleaf Consulting,1468.68,EUR,FR,FR,bank_transfer,subscription,2026-09-10T14:38:00Z
+acct-1170,Northwind Supply,1055.02,USD,FR,FR,card,subscription,2026-09-11T01:45:00Z
+acct-1108,Beacon Medical,1000.85,EUR,DE,DE,bank_transfer,refund,2026-09-12T12:46:00Z
+acct-1168,Cinderline Ventures,5925.97,AED,IN,US,wire,cash_advance,2026-09-13T04:24:00Z
+acct-1132,Prime Finance,7597.40,USD,AE,GB,card,cash_advance,2026-09-14T10:29:00Z
+acct-1157,Lumen Publishing,4310.85,USD,SG,GB,bank_transfer,subscription,2026-09-15T01:40:00Z
+acct-1109,Copper & Co,3859.09,AED,AE,US,wire,cash_advance,2026-09-16T22:29:00Z
+acct-1153,Summit Medical,8438.80,AED,IN,GB,wire,purchase,2026-09-17T04:11:00Z
+acct-1197,Northstar Health Group,7256.86,USD,AE,GB,wire,purchase,2026-09-18T02:48:00Z
+acct-1099,Western Telecom,7052.11,USD,US,US,wire,purchase,2026-09-19T20:31:00Z
+acct-1179,Bluebird Hotel,4449.99,AED,IN,US,wire,cash_advance,2026-09-20T22:09:00Z
+acct-1192,Blue Harbor FX,4230.57,AUD,SG,GB,wire,cash_advance,2026-09-21T00:54:00Z
+acct-1043,Silverline Trading,5163.68,AUD,SG,US,wire,cash_advance,2026-09-22T21:34:00Z
+acct-1067,Apex Currency Exchange,6708.40,GBP,GB,US,wire,subscription,2026-09-23T22:58:00Z
+acct-1139,Brightline Logistics,4092.14,GBP,US,US,wire,cash_advance,2026-09-24T22:20:00Z
+acct-1145,Harbor Point,3555.65,GBP,GB,US,wire,purchase,2026-09-25T02:22:00Z
+acct-1028,Northline Market,6329.28,USD,IN,GB,bank_transfer,subscription,2026-09-26T22:29:00Z
+acct-1154,Apex Currency Exchange,2716.78,EUR,GB,GB,card,purchase,2026-09-27T18:01:00Z
+acct-1028,Echo Publishing,6698.35,USD,GB,GB,wire,cash_advance,2026-09-28T03:50:00Z
+acct-1199,Cinderline Ventures,11681.84,AUD,SG,GB,wire,purchase,2026-09-29T23:23:00Z
+acct-1087,Blue Harbor FX,15464.56,USD,BR,GB,wire,cash_advance,2026-09-30T03:29:00Z
+acct-1071,Helios Crypto Desk,18257.56,GBP,US,GB,crypto,cash_advance,2026-09-01T02:31:00Z
+acct-1115,Nova Wire Partners,20156.55,USD,ID,US,wire,refund,2026-09-02T01:00:00Z
+acct-1109,Silverline Trading,16468.38,USD,IN,US,bank_transfer,cash_advance,2026-09-03T03:05:00Z
+acct-1191,Cinderline Ventures,16483.73,INR,IN,GB,crypto,purchase,2026-09-04T23:35:00Z
+acct-1153,Redwood Treasury,23018.51,AUD,SG,US,wire,refund,2026-09-05T17:48:00Z
+acct-1142,Vertex Capital Ops,11803.45,USD,US,US,wire,purchase,2026-09-06T04:06:00Z
+acct-1065,Nova Wire Partners,15663.69,AED,AE,GB,wire,refund,2026-09-07T02:44:00Z
+acct-1064,Silverline Trading,26434.38,GBP,GB,GB,crypto,cash_advance,2026-09-08T01:07:00Z
+acct-1151,Atlantic Settlement,13505.29,CAD,US,GB,bank_transfer,refund,2026-09-09T03:35:00Z
+acct-1041,Atlantic Settlement,40071.32,IDR,ID,US,bank_transfer,cash_advance,2026-09-10T01:19:00Z
+acct-1073,Helios Crypto Desk,21778.54,EUR,GB,GB,wire,purchase,2026-09-11T02:11:00Z
+acct-1109,Northstar Health Group,34192.07,BRL,BR,US,wire,purchase,2026-09-12T23:55:00Z
+acct-1074,Vertex Capital Ops,7394.68,GBP,AE,US,wire,cash_advance,2026-09-13T03:34:00Z
+acct-1189,Cinderline Ventures,23617.38,USD,BR,GB,crypto,purchase,2026-09-14T00:07:00Z
+acct-1069,Nova Wire Partners,35963.28,AED,IN,US,wire,refund,2026-09-15T00:38:00Z
+acct-1024,Summit Escrow,21474.04,CAD,US,US,bank_transfer,refund,2026-09-16T04:02:00Z
+acct-1195,Blue Harbor FX,36764.58,USD,BR,GB,bank_transfer,cash_advance,2026-09-17T23:22:00Z
+acct-1169,Blue Harbor FX,9465.91,BRL,BR,US,crypto,purchase,2026-09-18T17:02:00Z
+acct-1069,Redwood Treasury,28112.93,BRL,BR,US,bank_transfer,purchase,2026-09-19T03:29:00Z
+acct-1142,Cinderline Ventures,6262.40,USD,IN,GB,crypto,cash_advance,2026-09-20T01:08:00Z
