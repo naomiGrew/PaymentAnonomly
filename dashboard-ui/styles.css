@@ -349,6 +349,12 @@ select:focus {
     font-weight: 700;
 }
 
+.ai-badge {
+    background: rgba(124, 58, 237, 0.18);
+    color: #ddd6fe;
+    border: 1px solid rgba(196, 181, 253, 0.25);
+}
+
 .reasons-list {
     margin: 10px 0 0;
     padding-left: 18px;

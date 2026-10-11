@@ -1,5 +1,6 @@
 const state = {
     transactions: [],
+    allTransactions: [],
     filter: "all",
     selectedId: null,
 };
@@ -125,14 +126,19 @@ async function loadTransactions() {
     tableBody.innerHTML = `<tr><td colspan="6" class="loading-row">Loading transactions...</td></tr>`;
 
     try {
-        const query = state.filter === "flagged" ? "?flagged=true" : "";
-        const transactions = await fetchJson(`/api/v1/transactions${query}`);
-        state.transactions = transactions;
+        const allTransactions = await fetchJson("/api/v1/transactions");
+        state.allTransactions = allTransactions;
 
-        if (!state.selectedId && transactions.length > 0) {
-            state.selectedId = transactions[0].id;
-        } else if (!transactions.some((transaction) => transaction.id === state.selectedId)) {
-            state.selectedId = transactions[0]?.id ?? null;
+        const filteredTransactions = state.filter === "flagged"
+            ? allTransactions.filter((transaction) => transaction.flagged)
+            : allTransactions;
+
+        state.transactions = filteredTransactions;
+
+        if (!state.selectedId && filteredTransactions.length > 0) {
+            state.selectedId = filteredTransactions[0].id;
+        } else if (!filteredTransactions.some((transaction) => transaction.id === state.selectedId)) {
+            state.selectedId = filteredTransactions[0]?.id ?? null;
         }
 
         renderMetrics();
@@ -140,21 +146,27 @@ async function loadTransactions() {
         renderDetail();
     } catch (error) {
         tableBody.innerHTML = `<tr><td colspan="6" class="loading-row">Unable to load transactions.</td></tr>`;
-        renderMetrics([]);
+        state.allTransactions = [];
+        state.transactions = [];
+        renderMetrics();
         elements.systemStatus.textContent = "Backend unavailable";
         console.error(error);
     }
 }
 
+function getChartTransactions() {
+    return state.allTransactions.length > 0 ? state.allTransactions : state.transactions;
+}
+
 function renderMetrics() {
-    const transactions = state.transactions;
+    const transactions = getChartTransactions();
     const total = transactions.length;
     const flagged = transactions.filter((transaction) => transaction.flagged).length;
     const average = total === 0
         ? 0
         : transactions.reduce((sum, transaction) => sum + transaction.anomalyScore, 0) / total;
     const crossBorder = transactions.filter(
-        (transaction) => transaction.country.toUpperCase() !== transaction.homeCountry.toUpperCase()
+        (transaction) => String(transaction.country || "").toUpperCase() !== String(transaction.homeCountry || "").toUpperCase()
     ).length;
 
     elements.totalTransactions.textContent = String(total);
@@ -175,9 +187,13 @@ function renderTransactionChart() {
         return;
     }
 
+    const transactions = getChartTransactions();
     const timeline = {};
-    state.transactions.forEach((transaction) => {
+    transactions.forEach((transaction) => {
         const date = new Date(transaction.transactionTimestamp);
+        if (Number.isNaN(date.getTime())) {
+            return;
+        }
         const key = date.toISOString().slice(0, 10);
         if (!timeline[key]) {
             timeline[key] = { total: 0, flagged: 0 };
@@ -330,18 +346,29 @@ function renderTopFlaggedCategories() {
         return;
     }
 
+    const transactions = getChartTransactions();
     const buckets = {};
-    state.transactions.forEach((transaction) => {
-        const key = prettifyValue(transaction.transactionType);
-        if (!buckets[key]) {
-            buckets[key] = { name: key, total: 0, flagged: 0 };
+    transactions.forEach((transaction) => {
+        const name = prettifyValue(transaction.transactionType || "unknown");
+        if (!buckets[name]) {
+            buckets[name] = { name, total: 0, flagged: 0 };
         }
-        buckets[key].total += 1;
-        buckets[key].flagged += transaction.flagged ? 1 : 0;
+        buckets[name].total += 1;
+        buckets[name].flagged += transaction.flagged ? 1 : 0;
     });
 
     const rows = Object.values(buckets)
-        .sort((left, right) => (right.flagged * 10 + right.total) - (left.flagged * 10 + left.total))
+        .map((row) => ({
+            ...row,
+            rate: row.total === 0 ? 0 : (row.flagged / row.total) * 100,
+        }))
+        .filter((row) => row.total > 0)
+        .sort((left, right) => {
+            if (right.flagged !== left.flagged) {
+                return right.flagged - left.flagged;
+            }
+            return right.rate - left.rate;
+        })
         .slice(0, 4);
 
     if (rows.length === 0) {
@@ -353,15 +380,16 @@ function renderTopFlaggedCategories() {
 
     topCategories.innerHTML = rows
         .map((row) => {
-            const rate = row.total === 0 ? 0 : ((row.flagged / row.total) * 100).toFixed(0);
-            const width = Math.max(16, (row.flagged / maxFlagged) * 100);
+            const width = row.flagged === 0 ? 0 : Math.max(16, (row.flagged / maxFlagged) * 100);
+            const rate = `${Math.round(row.rate)}%`;
+            const label = `${row.flagged} flagged / ${row.total} total`;
             return `
                 <div class="category-row">
                     <span class="category-name">${escapeHtml(row.name)}</span>
-                    <span class="category-volume">${row.flagged}/${row.total} flagged</span>
-                    <span class="category-rate ${row.flagged > 0 ? "flagged" : ""}">${rate}%</span>
-                    <div style="grid-column: 1 / -1; height: 6px; border-radius: 999px; background: rgba(148, 163, 184, 0.12); overflow: hidden;">
-                        <div style="width: ${width}%; height: 100%; border-radius: inherit; background: linear-gradient(90deg, #fb7185 0%, #fbbf24 100%);"></div>
+                    <span class="category-volume">${label}</span>
+                    <span class="category-rate ${row.flagged > 0 ? "flagged" : ""}">${rate}</span>
+                    <div style="grid-column: 1 / -1; height: 8px; border-radius: 999px; background: rgba(148, 163, 184, 0.12); overflow: hidden;">
+                        <div style="width: ${width}%; height: 100%; border-radius: inherit; background: linear-gradient(90deg, #f59e0b 0%, #fb7185 100%);"></div>
                     </div>
                 </div>
             `;
@@ -436,9 +464,11 @@ function renderDetail() {
 }
 
 function formatCurrency(amount, currency) {
+    const normalized = String(currency ?? "USD").trim().toUpperCase();
+    const safeCurrency = /^[A-Z]{3}$/.test(normalized) ? normalized : "USD";
     return new Intl.NumberFormat("en-US", {
         style: "currency",
-        currency,
+        currency: safeCurrency,
     }).format(amount);
 }
 
@@ -525,7 +555,11 @@ document.getElementById("refreshButton").addEventListener("click", () => {
 });
 document.getElementById("resetButton").addEventListener("click", () => {
     clearFormAlert();
+    updateSubmitStatus("Ready", "neutral");
+    state.selectedId = null;
     setFormValues(normalPreset);
+    renderTable();
+    renderDetail();
 });
 
 document.querySelectorAll(".filter-button").forEach((button) => {

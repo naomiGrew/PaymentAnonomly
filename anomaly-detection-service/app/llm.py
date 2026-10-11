@@ -9,7 +9,8 @@ from urllib import error, request
 from app.models import AnalyzeTransactionRequest
 from app.settings import LlmSettings
 
-MAX_EXPLANATION_WORDS = 35
+MIN_EXPLANATION_WORDS = 12
+MAX_EXPLANATION_WORDS = 32
 MAX_EXPLANATION_CHARS = 180
 
 
@@ -42,6 +43,7 @@ class LlmExplainer:
         if not content:
             raise LlmExplanationError("LLM explanation response did not include message content")
 
+        content = self._constrain_explanation(content)
         safety = self._evaluate_output(content, sanitized_request, reasons)
         if not safety.allowed:
             raise LlmExplanationError(
@@ -51,13 +53,25 @@ class LlmExplainer:
         return content
 
     @staticmethod
+    def _constrain_explanation(content: str) -> str:
+        words = content.split()
+        if len(words) <= MAX_EXPLANATION_WORDS and len(" ".join(words)) <= MAX_EXPLANATION_CHARS:
+            return " ".join(words)
+
+        compact_words = words[:MAX_EXPLANATION_WORDS]
+        compact = " ".join(compact_words)
+        if len(compact) > MAX_EXPLANATION_CHARS:
+            return compact[:MAX_EXPLANATION_CHARS].rsplit(" ", 1)[0].strip() or compact[:MAX_EXPLANATION_CHARS].strip()
+        return compact
+
+    @staticmethod
     def _build_system_prompt() -> str:
         return (
-            "You are a payment fraud analyst assistant. Explain anomaly alerts for a fraud analyst in concise risk language. "
-            "Only describe facts supported by the supplied transaction metadata and the model reasons. "
-            "Do not make up customer identities, merchant details, or legal conclusions. "
-            "Write exactly 2 sentences, with no more than 35 words total. "
-            "Use cautious, professional language. Treat the result as analysis assistance, not an accusation."
+            "You are a payment fraud analyst assistant. Produce a short risk explanation for a fraud analyst. "
+            "Use only the supplied transaction details and model reasons. "
+            "Do not invent customer identities, merchant details, or legal conclusions. "
+            "Write exactly 2 sentences, 18 to 32 words total, and be clear and direct. "
+            "Keep the tone professional, cautious, and operational."
         )
 
     @staticmethod
@@ -179,20 +193,19 @@ class LlmExplainer:
     ) -> SafetyCheck:
         normalized = " ".join(content.split())
         issues: list[str] = []
+        word_count = len(normalized.split())
 
+        if word_count < MIN_EXPLANATION_WORDS:
+            issues.append("explanation is too short")
         if len(normalized) > MAX_EXPLANATION_CHARS:
             issues.append("explanation is too long")
-        if len(normalized.split()) > MAX_EXPLANATION_WORDS:
+        if word_count > MAX_EXPLANATION_WORDS:
             issues.append("explanation is too verbose")
-        if not re.search(r"(?i)\b(merchant|amount|risk|flag|normal|review|cross-border|unusual|payment|transaction)\b", normalized):
+        if not re.search(r"(?i)\b(merchant|amount|risk|flag|normal|review|cross-border|unusual|payment|transaction|country|method)\b", normalized):
             issues.append("explanation is too generic or missing evidence")
         if any(term in normalized.lower() for term in ["guarantee", "definitely fraud", "illegal", "criminal"]):
             issues.append("explanation makes unsupported legal or certainty claims")
         if not reasons and "normal" not in normalized.lower() and "review" not in normalized.lower():
             issues.append("explanation does not reflect the factual risk signal")
-
-        if request_model.accountId and len(request_model.accountId) > 12:
-            if request_model.accountId.lower() not in normalized.lower():
-                pass
 
         return SafetyCheck(allowed=not issues, reasons=issues)

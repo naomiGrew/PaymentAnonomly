@@ -17,8 +17,8 @@ class LlmSettings:
 
     @classmethod
     def from_env(cls) -> "LlmSettings | None":
-        api_key = os.getenv("LLM_API_KEY")
-        model = os.getenv("LLM_MODEL")
+        api_key = (os.getenv("LLM_API_KEY") or "").strip()
+        model = (os.getenv("LLM_MODEL") or "").strip()
 
         if not api_key and not model:
             return None
@@ -26,8 +26,8 @@ class LlmSettings:
         if not api_key or not model:
             raise ValueError("LLM_API_KEY and LLM_MODEL must both be set to enable LLM explanations")
 
-        base_url = os.getenv("LLM_API_BASE_URL", "https://api.openai.com/v1")
-        timeout_seconds = float(os.getenv("LLM_TIMEOUT_SECONDS", "15"))
+        base_url = (os.getenv("LLM_API_BASE_URL") or "https://api.openai.com/v1").strip()
+        timeout_seconds = float((os.getenv("LLM_TIMEOUT_SECONDS") or "15").strip())
         return cls(
             base_url=base_url,
             api_key=api_key,
