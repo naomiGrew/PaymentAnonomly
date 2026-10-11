@@ -92,6 +92,20 @@ select {
     flex-wrap: wrap;
 }
 
+.selection-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-right: 8px;
+}
+
+.selection-checkbox {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--accent);
+    cursor: pointer;
+}
+
 .primary-button,
 .ghost-button,
 .filter-button {

@@ -4,6 +4,7 @@ const state = {
     filter: "all",
     selectedId: null,
     activeTab: "add",
+    selectedIds: new Set(),
 };
 
 const DEFAULT_TRANSACTION = {
@@ -166,10 +167,8 @@ async function loadTransactions() {
 
         state.transactions = filteredTransactions;
 
-        if (!state.selectedId && filteredTransactions.length > 0) {
-            state.selectedId = filteredTransactions[0].id;
-        } else if (!filteredTransactions.some((transaction) => transaction.id === state.selectedId)) {
-            state.selectedId = filteredTransactions[0]?.id ?? null;
+        if (!filteredTransactions.some((transaction) => transaction.id === state.selectedId)) {
+            state.selectedId = null;
         }
 
         renderMetrics();
@@ -440,9 +439,10 @@ function renderTable() {
             const statusClass = transaction.flagged ? "flagged" : "normal";
             const statusLabel = transaction.flagged ? "Flagged" : "Normal";
             const isSelected = transaction.id === state.selectedId;
+            const isChecked = state.selectedIds.has(transaction.id);
             const detailHtml = isSelected ? `
                 <tr class="transaction-detail-row">
-                    <td colspan="6">
+                    <td colspan="7">
                         <div class="transaction-detail-accordion">
                             <div class="detail-topline">
                                 <div>
@@ -457,11 +457,6 @@ function renderTable() {
 
                             <div class="detail-block">
                                 <span class="detail-label">Explanation</span>
-                                <div class="detail-inline-meta">
-                                    <span class="mini-label">Source</span>
-                                    <span class="mini-pill">${escapeHtml(prettifyValue(transaction.explanationSource ?? "template"))}</span>
-                                    <span class="mini-pill ai-badge">AI generated</span>
-                                </div>
                                 <p>${escapeHtml(transaction.explanation || "No explanation available.")}</p>
                             </div>
 
@@ -501,6 +496,11 @@ function renderTable() {
             ` : "";
             return `
                 <tr data-id="${transaction.id}"${selectedClass}>
+                    <td class="select-cell">
+                        <label class="selection-actions">
+                            <input class="selection-checkbox" type="checkbox" data-select-id="${transaction.id}" ${isChecked ? "checked" : ""} aria-label="Select transaction ${escapeHtml(transaction.merchant)}">
+                        </label>
+                    </td>
                     <td>
                         <div class="row-title">
                             <strong>${escapeHtml(transaction.merchant)}</strong>
@@ -829,6 +829,21 @@ document.querySelectorAll(".tab-button").forEach((button) => {
 });
 
 tableBody.addEventListener("click", (event) => {
+    const checkbox = event.target.closest(".selection-checkbox");
+    if (checkbox) {
+        const transactionId = checkbox.dataset.selectId;
+        if (!transactionId) {
+            return;
+        }
+
+        if (checkbox.checked) {
+            state.selectedIds.add(transactionId);
+        } else {
+            state.selectedIds.delete(transactionId);
+        }
+        return;
+    }
+
     const row = event.target.closest("tr[data-id]");
     if (!row) {
         return;
@@ -848,6 +863,92 @@ tableBody.addEventListener("click", (event) => {
             });
         }
     }
+});
+
+function buildPrintableReport() {
+    const selected = state.transactions.filter((transaction) => state.selectedIds.has(transaction.id));
+    if (selected.length === 0) {
+        return "<p>No transactions selected.</p>";
+    }
+
+    const summaryRows = selected.map((transaction) => `
+        <tr>
+            <td>${escapeHtml(transaction.merchant)}</td>
+            <td>${escapeHtml(transaction.accountId)}</td>
+            <td>${formatCurrency(transaction.amount, transaction.currency)}</td>
+            <td>${escapeHtml(transaction.country)}</td>
+            <td>${Number(transaction.anomalyScore).toFixed(2)}</td>
+            <td>${transaction.flagged ? "Flagged" : "Normal"}</td>
+        </tr>
+    `).join("");
+
+    const details = selected.map((transaction) => `
+        <section style="margin-top: 24px; page-break-inside: avoid;">
+            <h2 style="margin-bottom: 8px; font-size: 20px;">${escapeHtml(transaction.merchant)}</h2>
+            <p style="margin: 4px 0; color: #374151;">${formatCurrency(transaction.amount, transaction.currency)} • ${escapeHtml(transaction.accountId)} • ${escapeHtml(transaction.country)}</p>
+            <p style="margin: 4px 0;"><strong>Risk score:</strong> ${Number(transaction.anomalyScore).toFixed(2)} • <strong>Status:</strong> ${transaction.flagged ? "Flagged" : "Normal"}</p>
+            <p style="margin: 10px 0 0; white-space: pre-wrap; line-height: 1.6;">${escapeHtml(transaction.explanation || "No explanation available.")}</p>
+            <ul style="margin: 10px 0 0 20px; line-height: 1.6;">
+                ${(transaction.reasons && transaction.reasons.length > 0 ? transaction.reasons : ["No explicit reason was attached."])
+                    .map((reason) => `<li>${escapeHtml(reason)}</li>`)
+                    .join("")}
+            </ul>
+        </section>
+    `).join("");
+
+    return `
+        <html>
+            <head>
+                <title>Selected transaction report</title>
+                <style>
+                    body { font-family: Arial, sans-serif; color: #111827; margin: 24px; }
+                    h1 { font-size: 24px; margin-bottom: 12px; }
+                    h2 { font-size: 20px; margin: 0; }
+                    table { width: 100%; border-collapse: collapse; margin-top: 18px; }
+                    th, td { border: 1px solid #d1d5db; padding: 8px 10px; text-align: left; }
+                    th { background: #f3f4f6; }
+                    p, li { color: #374151; }
+                </style>
+            </head>
+            <body>
+                <h1>Selected payment transactions</h1>
+                <p>${selected.length} transactions selected</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Merchant</th>
+                            <th>Account</th>
+                            <th>Amount</th>
+                            <th>Country</th>
+                            <th>Score</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>${summaryRows}</tbody>
+                </table>
+                ${details}
+            </body>
+        </html>
+    `;
+}
+
+document.getElementById("printSelectedButton").addEventListener("click", () => {
+    const selected = state.transactions.filter((transaction) => state.selectedIds.has(transaction.id));
+    if (selected.length === 0) {
+        alert("Select at least one transaction before generating a PDF.");
+        return;
+    }
+
+    const printWindow = window.open("", "_blank", "width=1000,height=900");
+    if (!printWindow) {
+        alert("Your browser blocked the pop-up window. Please allow pop-ups and try again.");
+        return;
+    }
+
+    printWindow.document.write(buildPrintableReport());
+    printWindow.document.close();
+    printWindow.focus();
+    printWindow.print();
 });
 
 setFormValues(normalPreset);
