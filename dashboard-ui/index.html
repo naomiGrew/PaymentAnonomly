@@ -59,161 +59,175 @@
         </article>
     </section>
 
-    <main class="main-grid">
-        <section class="card form-card">
-            <div class="section-heading">
-                <div>
-                    <span class="eyebrow">Bulk intake</span>
-                    <h2>Import transactions</h2>
-                </div>
-                <span id="importStatus" class="status-pill neutral">Ready</span>
-            </div>
+    <div class="tab-bar card" role="tablist" aria-label="Payment monitoring tabs">
+        <button class="tab-button active" type="button" data-tab="add" role="tab" aria-selected="true">Add transactions</button>
+        <button class="tab-button" type="button" data-tab="analyse" role="tab" aria-selected="false">Analyse transactions</button>
+        <button class="tab-button" type="button" data-tab="stats" role="tab" aria-selected="false">Stats</button>
+    </div>
 
-            <div class="import-panel">
-                <label class="file-picker">
-                    <span>Upload CSV or JSON</span>
-                    <input id="transactionFileInput" type="file" accept=".csv,.json,.txt" />
-                </label>
-                <div class="form-actions compact-actions">
-                    <button id="importButton" class="primary-button" type="button">Import document</button>
-                    <button id="clearImportButton" class="ghost-button" type="button">Clear</button>
-                </div>
-                <p class="upload-help">
-                    CSV columns: accountId, merchant, amount, currency, country, homeCountry, paymentMethod,
-                    transactionType, transactionTimestamp
-                </p>
-                <div id="importAlert" class="alert-banner" role="alert" aria-live="polite"></div>
+    <main class="tab-panels">
+        <section class="tab-panel active" data-panel="add">
+            <div class="main-grid">
+                <section class="card form-card">
+                    <div class="section-heading">
+                        <div>
+                            <span class="eyebrow">Bulk intake</span>
+                            <h2>Import transactions</h2>
+                        </div>
+                        <span id="importStatus" class="status-pill neutral">Ready</span>
+                    </div>
+
+                    <div class="import-panel">
+                        <label class="file-picker">
+                            <span>Upload CSV or JSON</span>
+                            <input id="transactionFileInput" type="file" accept=".csv,.json,.txt" />
+                        </label>
+                        <div class="form-actions compact-actions">
+                            <button id="importButton" class="primary-button" type="button">Import document</button>
+                            <button id="clearImportButton" class="ghost-button" type="button">Clear</button>
+                        </div>
+                        <p class="upload-help">
+                            CSV columns: accountId, merchant, amount, currency, country, homeCountry, paymentMethod,
+                            transactionType, transactionTimestamp
+                        </p>
+                        <div id="importAlert" class="alert-banner" role="alert" aria-live="polite"></div>
+                    </div>
+                </section>
+
+                <section class="card form-card">
+                    <div class="section-heading">
+                        <div>
+                            <span class="eyebrow">New transaction</span>
+                            <h2>Manually input transaction</h2>
+                        </div>
+                        <span id="submitStatus" class="status-pill neutral">Ready</span>
+                    </div>
+
+                    <form id="transactionForm" class="transaction-form">
+                        <div class="form-grid">
+                            <label>
+                                <span>Account ID</span>
+                                <input name="accountId" required placeholder="acct-2048">
+                            </label>
+                            <label>
+                                <span>Merchant</span>
+                                <input name="merchant" required placeholder="Everyday Market">
+                            </label>
+                            <label>
+                                <span>Amount</span>
+                                <input name="amount" type="number" min="0.01" step="0.01" required placeholder="125.50">
+                            </label>
+                            <label>
+                                <span>Currency</span>
+                                <input name="currency" required maxlength="3" placeholder="USD">
+                            </label>
+                            <label>
+                                <span>Payment country</span>
+                                <input name="country" required placeholder="US">
+                            </label>
+                            <label>
+                                <span>Home country</span>
+                                <input name="homeCountry" required placeholder="US">
+                            </label>
+                            <label>
+                                <span>Payment method</span>
+                                <select name="paymentMethod" required>
+                                    <option value="card">Card</option>
+                                    <option value="bank_transfer">Bank transfer</option>
+                                    <option value="wire">Wire</option>
+                                    <option value="crypto">Crypto</option>
+                                </select>
+                            </label>
+                            <label>
+                                <span>Transaction type</span>
+                                <select name="transactionType" required>
+                                    <option value="purchase">Purchase</option>
+                                    <option value="refund">Refund</option>
+                                    <option value="cash_advance">Cash advance</option>
+                                    <option value="subscription">Subscription</option>
+                                </select>
+                            </label>
+                            <label class="full-width">
+                                <span>Transaction timestamp</span>
+                                <input name="transactionTimestamp" type="datetime-local" required>
+                            </label>
+                        </div>
+
+                        <div class="form-actions">
+                            <button class="primary-button" type="submit">Submit transaction</button>
+                            <button id="resetButton" class="ghost-button" type="button">Reset</button>
+                        </div>
+                        <div id="formAlert" class="alert-banner" role="alert" aria-live="polite"></div>
+                    </form>
+                </section>
             </div>
         </section>
 
-        <section class="card form-card">
-            <div class="section-heading">
-                <div>
-                    <span class="eyebrow">New transaction</span>
-                    <h2>Manually input transaction</h2>
-                </div>
-                <span id="submitStatus" class="status-pill neutral">Ready</span>
-            </div>
-
-            <form id="transactionForm" class="transaction-form">
-                <div class="form-grid">
-                    <label>
-                        <span>Account ID</span>
-                        <input name="accountId" required placeholder="acct-2048">
-                    </label>
-                    <label>
-                        <span>Merchant</span>
-                        <input name="merchant" required placeholder="Everyday Market">
-                    </label>
-                    <label>
-                        <span>Amount</span>
-                        <input name="amount" type="number" min="0.01" step="0.01" required placeholder="125.50">
-                    </label>
-                    <label>
-                        <span>Currency</span>
-                        <input name="currency" required maxlength="3" placeholder="USD">
-                    </label>
-                    <label>
-                        <span>Payment country</span>
-                        <input name="country" required placeholder="US">
-                    </label>
-                    <label>
-                        <span>Home country</span>
-                        <input name="homeCountry" required placeholder="US">
-                    </label>
-                    <label>
-                        <span>Payment method</span>
-                        <select name="paymentMethod" required>
-                            <option value="card">Card</option>
-                            <option value="bank_transfer">Bank transfer</option>
-                            <option value="wire">Wire</option>
-                            <option value="crypto">Crypto</option>
-                        </select>
-                    </label>
-                    <label>
-                        <span>Transaction type</span>
-                        <select name="transactionType" required>
-                            <option value="purchase">Purchase</option>
-                            <option value="refund">Refund</option>
-                            <option value="cash_advance">Cash advance</option>
-                            <option value="subscription">Subscription</option>
-                        </select>
-                    </label>
-                    <label class="full-width">
-                        <span>Transaction timestamp</span>
-                        <input name="transactionTimestamp" type="datetime-local" required>
-                    </label>
+        <section class="tab-panel" data-panel="analyse">
+            <section class="card table-card">
+                <div class="section-heading table-heading">
+                    <div>
+                        <span class="eyebrow">Recent activity</span>
+                        <h2>Transactions</h2>
+                    </div>
+                    <div class="table-controls">
+                        <button class="filter-button active" data-filter="all" type="button">All</button>
+                        <button class="filter-button" data-filter="flagged" type="button">Flagged</button>
+                        <button class="ghost-button" id="refreshButton" type="button">Refresh</button>
+                    </div>
                 </div>
 
-                <div class="form-actions">
-                    <button class="primary-button" type="submit">Submit transaction</button>
-                    <button id="resetButton" class="ghost-button" type="button">Reset</button>
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>Merchant</th>
+                            <th>Amount</th>
+                            <th>Country</th>
+                            <th>Score</th>
+                            <th>Status</th>
+                            <th>Timestamp</th>
+                        </tr>
+                        </thead>
+                        <tbody id="transactionsTableBody">
+                        <tr>
+                            <td colspan="6" class="loading-row">Loading transactions...</td>
+                        </tr>
+                        </tbody>
+                    </table>
                 </div>
-                <div id="formAlert" class="alert-banner" role="alert" aria-live="polite"></div>
-            </form>
+            </section>
+        </section>
+
+        <section class="tab-panel" data-panel="stats">
+            <section class="card chart-card" aria-labelledby="chartTitle">
+                <div class="section-heading table-heading">
+                    <div>
+                        <span class="eyebrow">Risk trends</span>
+                        <h2 id="chartTitle">Risk activity timeline</h2>
+                    </div>
+                </div>
+                <div class="chart-legend" aria-label="Chart legend">
+                    <span><i class="legend-swatch flagged"></i>Flagged activity</span>
+                    <span><i class="legend-swatch normal"></i>Normal activity</span>
+                </div>
+                <div class="chart-wrapper">
+                    <canvas id="transactionChart" aria-label="Risk activity timeline chart"></canvas>
+                    <div id="chartTooltip" class="chart-tooltip" role="tooltip" aria-hidden="true"></div>
+                </div>
+            </section>
+
+            <section class="card insights-card top-categories-card">
+                <div class="section-heading table-heading">
+                    <div>
+                        <span class="eyebrow">Operational view</span>
+                        <h2>Top flagged categories</h2>
+                    </div>
+                </div>
+                <div id="topCategories" class="top-categories-list"></div>
+            </section>
         </section>
     </main>
-
-    <section class="card chart-card" aria-labelledby="chartTitle">
-        <div class="section-heading table-heading">
-            <div>
-                <span class="eyebrow">Risk trends</span>
-                <h2 id="chartTitle">Risk activity timeline</h2>
-            </div>
-        </div>
-        <div class="chart-legend" aria-label="Chart legend">
-            <span><i class="legend-swatch flagged"></i>Flagged activity</span>
-            <span><i class="legend-swatch normal"></i>Normal activity</span>
-        </div>
-        <div class="chart-wrapper">
-            <canvas id="transactionChart" aria-label="Risk activity timeline chart"></canvas>
-            <div id="chartTooltip" class="chart-tooltip" role="tooltip" aria-hidden="true"></div>
-        </div>
-    </section>
-
-    <section class="card insights-card top-categories-card">
-        <div class="section-heading table-heading">
-            <div>
-                <span class="eyebrow">Operational view</span>
-                <h2>Top flagged categories</h2>
-            </div>
-        </div>
-        <div id="topCategories" class="top-categories-list"></div>
-    </section>
-
-    <section class="card table-card">
-        <div class="section-heading table-heading">
-            <div>
-                <span class="eyebrow">Recent activity</span>
-                <h2>Transactions</h2>
-            </div>
-            <div class="table-controls">
-                <button class="filter-button active" data-filter="all" type="button">All</button>
-                <button class="filter-button" data-filter="flagged" type="button">Flagged</button>
-                <button class="ghost-button" id="refreshButton" type="button">Refresh</button>
-            </div>
-        </div>
-
-        <div class="table-wrapper">
-            <table>
-                <thead>
-                <tr>
-                    <th>Merchant</th>
-                    <th>Amount</th>
-                    <th>Country</th>
-                    <th>Score</th>
-                    <th>Status</th>
-                    <th>Timestamp</th>
-                </tr>
-                </thead>
-                <tbody id="transactionsTableBody">
-                <tr>
-                    <td colspan="6" class="loading-row">Loading transactions...</td>
-                </tr>
-                </tbody>
-            </table>
-        </div>
-    </section>
 
 </div>
 

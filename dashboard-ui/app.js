@@ -3,6 +3,7 @@ const state = {
     allTransactions: [],
     filter: "all",
     selectedId: null,
+    activeTab: "add",
 };
 
 const DEFAULT_TRANSACTION = {
@@ -519,12 +520,12 @@ function renderTable() {
 }
 
 function renderDetail() {
+    const transaction = state.transactions.find((item) => item.id === state.selectedId)
+        ?? state.allTransactions.find((item) => item.id === state.selectedId);
+
     if (!detailPanel || !emptyState) {
         return;
     }
-
-    const transaction = state.transactions.find((item) => item.id === state.selectedId)
-        ?? state.allTransactions.find((item) => item.id === state.selectedId);
 
     if (!transaction) {
         emptyState.classList.remove("hidden");
@@ -806,6 +807,24 @@ document.querySelectorAll(".filter-button").forEach((button) => {
         button.classList.add("active");
         state.filter = button.dataset.filter;
         await loadTransactions();
+    });
+});
+
+document.querySelectorAll(".tab-button").forEach((button) => {
+    button.addEventListener("click", () => {
+        const nextTab = button.dataset.tab;
+        state.activeTab = nextTab;
+
+        document.querySelectorAll(".tab-button").forEach((tabButton) => {
+            const isActive = tabButton === button;
+            tabButton.classList.toggle("active", isActive);
+            tabButton.setAttribute("aria-selected", String(isActive));
+        });
+
+        document.querySelectorAll(".tab-panel").forEach((panel) => {
+            const isActive = panel.dataset.panel === nextTab;
+            panel.classList.toggle("active", isActive);
+        });
     });
 });
 

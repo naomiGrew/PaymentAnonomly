@@ -173,6 +173,43 @@ select {
     margin-bottom: 22px;
 }
 
+.tab-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 10px;
+    margin-bottom: 22px;
+}
+
+.tab-button {
+    border: 1px solid rgba(148, 163, 184, 0.12);
+    background: rgba(15, 23, 42, 0.56);
+    color: var(--muted);
+    border-radius: 999px;
+    padding: 11px 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.18s ease;
+}
+
+.tab-button.active {
+    background: rgba(124, 58, 237, 0.2);
+    border-color: rgba(196, 181, 253, 0.2);
+    color: #ddd6fe;
+}
+
+.tab-panels {
+    display: block;
+}
+
+.tab-panel {
+    display: none;
+}
+
+.tab-panel.active {
+    display: block;
+}
+
 .form-card,
 .insights-card,
 .table-card,
@@ -317,10 +354,15 @@ select:focus {
     background: rgba(15, 23, 42, 0.24);
 }
 
+.transaction-detail-row td {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
 .transaction-detail-accordion {
     display: grid;
     gap: 18px;
-    padding: 18px 8px 10px;
+    padding: 18px 8px 18px;
 }
 
 .detail-topline {
