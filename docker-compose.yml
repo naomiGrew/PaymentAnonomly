@@ -2,9 +2,9 @@ services:
   postgres:
     image: postgres:16-alpine
     environment:
-      POSTGRES_DB: payment_anomaly
-      POSTGRES_USER: payment_user
-      POSTGRES_PASSWORD: CHANGE_ME
+      POSTGRES_DB: ${POSTGRES_DB:-payment_anomaly}
+      POSTGRES_USER: ${POSTGRES_USER:-payment_user}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-CHANGE_ME}
     ports:
       - "5432:5432"
     volumes:
@@ -30,9 +30,9 @@ services:
     build:
       context: ./transaction-orchestrator
     environment:
-      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/payment_anomaly
-      SPRING_DATASOURCE_USERNAME: payment_user
-      SPRING_DATASOURCE_PASSWORD: CHANGE_ME
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/${POSTGRES_DB:-payment_anomaly}
+      SPRING_DATASOURCE_USERNAME: ${POSTGRES_USER:-payment_user}
+      SPRING_DATASOURCE_PASSWORD: ${POSTGRES_PASSWORD:-CHANGE_ME}
       ANOMALY_SERVICE_BASE_URL: http://anomaly-detection-service:8000
     depends_on:
       postgres:

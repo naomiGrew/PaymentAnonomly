@@ -12,6 +12,8 @@ Starter monorepo for an anomaly-detection platform that scores payment transacti
 ## Quick start
 
 ```bash
+cp .env.example .env
+# update CHANGE_ME values in .env
 docker compose up --build
 ```
 
@@ -105,6 +107,15 @@ export LLM_API_KEY=your_api_key
 export LLM_MODEL=gpt-4o-mini
 export LLM_API_BASE_URL=https://api.openai.com/v1
 ```
+
+## Public repository safety checklist
+
+Before publishing this repo, make sure to:
+
+1. Keep `.env` out of version control and only commit `.env.example`.
+2. Use non-default credentials (`CHANGE_ME` placeholders are intentional).
+3. Rotate any real API keys that were used during development.
+4. Run secret scanning on the repo history (example: `gitleaks detect`).
 
 ## Next build targets
 
