@@ -8,6 +8,9 @@ const state = {
     searchTerm: "",
     countryFilter: "all",
     currencyFilter: "all",
+    statsCountryFilter: "all",
+    statsCurrencyFilter: "all",
+    statsMerchantFilter: "all",
 };
 
 const DEFAULT_TRANSACTION = {
@@ -148,10 +151,7 @@ async function fetchJson(url, options) {
 async function loadHealth() {
     try {
         const health = await fetchJson("/api/health");
-        const explanationMode = health.explanationMode
-            ? `${prettifyValue(health.explanationMode)} explanations`
-            : "stack online";
-        elements.systemStatus.textContent = `All systems operational • ${explanationMode}`;
+        elements.systemStatus.textContent = "All systems operational";
     } catch {
         elements.systemStatus.textContent = "Backend unavailable";
     }
@@ -165,6 +165,9 @@ async function loadTransactions() {
         state.allTransactions = allTransactions;
         populateCountryFilter();
         populateCurrencyFilter();
+        populateStatsCountryFilter();
+        populateStatsCurrencyFilter();
+        populateStatsMerchantFilter();
 
         const filteredTransactions = state.filter === "flagged"
             ? allTransactions.filter((transaction) => transaction.flagged)
@@ -193,20 +196,36 @@ function getChartTransactions() {
     return state.allTransactions.length > 0 ? state.allTransactions : state.transactions;
 }
 
+function getStatsFilteredTransactions() {
+    let transactions = getChartTransactions();
+    
+    const filteredByMerchant = state.statsMerchantFilter === "all"
+        ? transactions
+        : transactions.filter((transaction) => String(transaction.merchant ?? "") === state.statsMerchantFilter);
+    
+    const filteredByCountry = state.statsCountryFilter === "all"
+        ? filteredByMerchant
+        : filteredByMerchant.filter((transaction) => String(transaction.country ?? "").toUpperCase() === state.statsCountryFilter.toUpperCase());
+    
+    const filteredByCurrency = state.statsCurrencyFilter === "all"
+        ? filteredByCountry
+        : filteredByCountry.filter((transaction) => String(transaction.currency ?? "").toUpperCase() === state.statsCurrencyFilter.toUpperCase());
+    
+    return filteredByCurrency;
+}
+
 function renderMetrics() {
     const transactions = getChartTransactions();
     const total = transactions.length;
     const flagged = transactions.filter((transaction) => transaction.flagged).length;
-    const average = total === 0
-        ? 0
-        : transactions.reduce((sum, transaction) => sum + transaction.anomalyScore, 0) / total;
+    const highRisk = transactions.filter((transaction) => transaction.riskLevel === "HIGH").length;
     const crossBorder = transactions.filter(
         (transaction) => String(transaction.country || "").toUpperCase() !== String(transaction.homeCountry || "").toUpperCase()
     ).length;
 
     elements.totalTransactions.textContent = String(total);
     elements.flaggedTransactions.textContent = String(flagged);
-    elements.averageScore.textContent = average.toFixed(2);
+    elements.averageScore.textContent = ((highRisk / (total || 1)) * 100).toFixed(1) + "% High Risk";
     elements.crossBorderTransactions.textContent = String(crossBorder);
     renderTransactionChart();
     renderTopFlaggedCategories();
@@ -222,7 +241,7 @@ function renderTransactionChart() {
         return;
     }
 
-    const transactions = getChartTransactions();
+    const transactions = getStatsFilteredTransactions();
     const timeline = {};
     transactions.forEach((transaction) => {
         const date = new Date(transaction.transactionTimestamp);
@@ -387,7 +406,7 @@ function renderTopFlaggedCategories() {
         return;
     }
 
-    const transactions = getChartTransactions();
+    const transactions = getStatsFilteredTransactions();
     const buckets = {};
     transactions.forEach((transaction) => {
         const name = prettifyValue(transaction.transactionType || "unknown");
@@ -471,7 +490,7 @@ function getVisibleTransactions() {
             || matchesSearch(transaction.paymentMethod)
             || matchesSearch(transaction.transactionType)
             || matchesSearch(transaction.amount)
-            || matchesSearch(transaction.anomalyScore)
+            || matchesSearch(transaction.riskLevel)
             || matchesSearch(transaction.flagged ? "flagged" : "normal")
             || matchesSearch(formatDate(transaction.transactionTimestamp));
     });
@@ -517,6 +536,66 @@ function populateCurrencyFilter() {
     ].join("");
 }
 
+function populateStatsCountryFilter() {
+    const countryFilter = document.getElementById("statsCountryFilter");
+    if (!countryFilter) {
+        return;
+    }
+
+    const countries = [...new Set(state.allTransactions
+        .map((transaction) => String(transaction.country ?? "").trim())
+        .filter(Boolean))].sort();
+
+    const selectedValue = state.statsCountryFilter;
+    const current = countries.includes(selectedValue) ? selectedValue : "all";
+    state.statsCountryFilter = current;
+
+    countryFilter.innerHTML = [
+        '<option value="all">All countries</option>',
+        ...countries.map((country) => `<option value="${escapeHtml(country)}" ${country === current ? "selected" : ""}>${escapeHtml(country)}</option>`),
+    ].join("");
+}
+
+function populateStatsCurrencyFilter() {
+    const currencyFilter = document.getElementById("statsCurrencyFilter");
+    if (!currencyFilter) {
+        return;
+    }
+
+    const currencies = [...new Set(state.allTransactions
+        .map((transaction) => String(transaction.currency ?? "").trim())
+        .filter(Boolean))].sort();
+
+    const selectedValue = state.statsCurrencyFilter;
+    const current = currencies.includes(selectedValue) ? selectedValue : "all";
+    state.statsCurrencyFilter = current;
+
+    currencyFilter.innerHTML = [
+        '<option value="all">All currencies</option>',
+        ...currencies.map((currency) => `<option value="${escapeHtml(currency)}" ${currency === current ? "selected" : ""}>${escapeHtml(currency)}</option>`),
+    ].join("");
+}
+
+function populateStatsMerchantFilter() {
+    const merchantFilter = document.getElementById("statsMerchantFilter");
+    if (!merchantFilter) {
+        return;
+    }
+
+    const merchants = [...new Set(state.allTransactions
+        .map((transaction) => String(transaction.merchant ?? "").trim())
+        .filter(Boolean))].sort();
+
+    const selectedValue = state.statsMerchantFilter;
+    const current = merchants.includes(selectedValue) ? selectedValue : "all";
+    state.statsMerchantFilter = current;
+
+    merchantFilter.innerHTML = [
+        '<option value="all">All merchants</option>',
+        ...merchants.map((merchant) => `<option value="${escapeHtml(merchant)}" ${merchant === current ? "selected" : ""}>${escapeHtml(merchant)}</option>`),
+    ].join("");
+}
+
 function renderTable() {
     const visibleTransactions = getVisibleTransactions();
 
@@ -543,7 +622,7 @@ function renderTable() {
                                 </div>
                                 <div class="score-ring">
                                     <span>Risk</span>
-                                    <strong>${Number(transaction.anomalyScore).toFixed(2)}</strong>
+                                    <strong>${transaction.riskLevel}</strong>
                                 </div>
                             </div>
 
@@ -602,7 +681,7 @@ function renderTable() {
                     <td>${Number(transaction.amount).toFixed(2)}</td>
                     <td>${escapeHtml(transaction.currency)}</td>
                     <td>${escapeHtml(transaction.country)}</td>
-                    <td>${Number(transaction.anomalyScore).toFixed(2)}</td>
+                    <td>${transaction.riskLevel}</td>
                     <td><span class="table-badge ${statusClass}">${statusLabel}</span></td>
                     <td>${formatDate(transaction.transactionTimestamp)}</td>
                 </tr>
@@ -645,7 +724,7 @@ function renderDetail() {
         elements.detailMeta.textContent = `${formatCurrency(transaction.amount, transaction.currency)} • ${formatDate(transaction.transactionTimestamp)}`;
     }
     if (elements.detailScore) {
-        elements.detailScore.textContent = Number(transaction.anomalyScore).toFixed(2);
+        elements.detailScore.textContent = transaction.riskLevel;
     }
     if (elements.detailExplanation) {
         elements.detailExplanation.textContent = transaction.explanation || "No narrative explanation was generated for this transaction.";
@@ -970,7 +1049,7 @@ function buildPrintableReport() {
             <td>${escapeHtml(transaction.accountId)}</td>
             <td>${formatCurrency(transaction.amount, transaction.currency)}</td>
             <td>${escapeHtml(transaction.country)}</td>
-            <td>${Number(transaction.anomalyScore).toFixed(2)}</td>
+            <td>${transaction.riskLevel}</td>
             <td>${transaction.flagged ? "Flagged" : "Normal"}</td>
         </tr>
     `).join("");
@@ -979,7 +1058,7 @@ function buildPrintableReport() {
         <section style="margin-top: 24px; page-break-inside: avoid;">
             <h2 style="margin-bottom: 8px; font-size: 20px;">${escapeHtml(transaction.merchant)}</h2>
             <p style="margin: 4px 0; color: #374151;">${formatCurrency(transaction.amount, transaction.currency)} • ${escapeHtml(transaction.accountId)} • ${escapeHtml(transaction.country)}</p>
-            <p style="margin: 4px 0;"><strong>Risk score:</strong> ${Number(transaction.anomalyScore).toFixed(2)} • <strong>Status:</strong> ${transaction.flagged ? "Flagged" : "Normal"}</p>
+            <p style="margin: 4px 0;"><strong>Risk Level:</strong> ${transaction.riskLevel} • <strong>Status:</strong> ${transaction.flagged ? "Flagged" : "Normal"}</p>
             <p style="margin: 10px 0 0; white-space: pre-wrap; line-height: 1.6;">${escapeHtml(transaction.explanation || "No explanation available.")}</p>
             <ul style="margin: 10px 0 0 20px; line-height: 1.6;">
                 ${(transaction.reasons && transaction.reasons.length > 0 ? transaction.reasons : ["No explicit reason was attached."])
@@ -1058,6 +1137,31 @@ document.getElementById("countryFilter").addEventListener("change", (event) => {
 document.getElementById("currencyFilter").addEventListener("change", (event) => {
     state.currencyFilter = event.target.value;
     renderTable();
+});
+
+document.getElementById("statsCountryFilter").addEventListener("change", (event) => {
+    state.statsCountryFilter = event.target.value;
+    renderMetrics();
+});
+
+document.getElementById("statsCurrencyFilter").addEventListener("change", (event) => {
+    state.statsCurrencyFilter = event.target.value;
+    renderMetrics();
+});
+
+document.getElementById("statsMerchantFilter").addEventListener("change", (event) => {
+    state.statsMerchantFilter = event.target.value;
+    renderMetrics();
+});
+
+document.getElementById("resetStatsFilters").addEventListener("click", () => {
+    state.statsCountryFilter = "all";
+    state.statsCurrencyFilter = "all";
+    state.statsMerchantFilter = "all";
+    populateStatsCountryFilter();
+    populateStatsCurrencyFilter();
+    populateStatsMerchantFilter();
+    renderMetrics();
 });
 
 setFormValues(normalPreset);

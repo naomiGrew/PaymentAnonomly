@@ -1,0 +1,1251 @@
+accountId,merchant,amount,currency,country,homeCountry,paymentMethod,transactionType,transactionTimestamp
+acct-1387,Vertex Capital Ops,67.51,GBP,AU,AU,bank_transfer,purchase,2026-09-12T19:10:00Z
+acct-1303,Echo Finance,279.33,CAD,FR,FR,card,purchase,2026-09-12T22:46:00Z
+acct-1416,Redwood Treasury,347.29,EUR,US,US,card,subscription,2026-09-12T11:34:00Z
+acct-1130,Oakleaf Consulting,293.94,GBP,FR,FR,bank_transfer,purchase,2026-09-18T11:40:00Z
+acct-1342,Bluebird Hotel,233.91,EUR,CA,CA,bank_transfer,purchase,2026-10-19T11:02:00Z
+acct-1267,Helios Crypto Desk,498.51,AUD,US,US,card,purchase,2026-10-19T14:01:00Z
+acct-1333,Apex Currency Exchange,289.56,GBP,US,US,card,purchase,2026-10-17T09:16:00Z
+acct-1190,Cascadia Commerce,150.48,AUD,AU,AU,card,subscription,2026-09-12T18:27:00Z
+acct-1325,Cascadia Commerce,465.34,GBP,US,US,card,purchase,2026-10-06T20:16:00Z
+acct-1250,Harbor Point,452.45,GBP,US,US,bank_transfer,purchase,2026-09-14T19:26:00Z
+acct-1173,Prism Consulting,55.72,USD,US,US,card,purchase,2026-09-19T06:21:00Z
+acct-1038,Velocity Partners,94.29,EUR,GB,GB,bank_transfer,purchase,2026-09-14T11:50:00Z
+acct-1454,Nova Wire Partners,102.19,CAD,CA,CA,bank_transfer,purchase,2026-09-04T10:08:00Z
+acct-1470,Crestline Foods,56.04,GBP,CA,CA,bank_transfer,subscription,2026-09-24T20:56:00Z
+acct-1384,Bayview Motors,236.34,CAD,US,US,bank_transfer,subscription,2026-10-04T22:58:00Z
+acct-1392,Phoenix Financial,483.38,CAD,AU,AU,bank_transfer,subscription,2026-10-13T13:55:00Z
+acct-1418,Nova Wire Partners,482.97,EUR,CA,CA,card,subscription,2026-09-04T15:46:00Z
+acct-1150,Redwood Treasury,160.94,AUD,GB,GB,bank_transfer,subscription,2026-09-27T19:42:00Z
+acct-1403,Echo Finance,352.25,USD,FR,FR,card,subscription,2026-09-11T08:26:00Z
+acct-1350,Evergreen Logistics,115.71,GBP,GB,GB,card,subscription,2026-09-09T18:26:00Z
+acct-1168,Horizon Ventures,435.54,USD,CA,CA,bank_transfer,subscription,2026-09-01T21:48:00Z
+acct-1109,Zenith Industries,148.76,USD,FR,FR,card,purchase,2026-09-02T08:49:00Z
+acct-1405,Bridgeport Labs,193.94,EUR,US,US,bank_transfer,subscription,2026-09-16T16:36:00Z
+acct-1103,Aurora Tech,87.46,CAD,CA,CA,card,purchase,2026-10-13T12:49:00Z
+acct-1258,Horizon Ventures,317.89,EUR,FR,FR,card,purchase,2026-09-04T22:21:00Z
+acct-1061,Prism Consulting,157.14,AUD,US,US,card,subscription,2026-09-16T22:35:00Z
+acct-1472,Nova Wire Partners,433.72,EUR,US,US,bank_transfer,subscription,2026-10-19T06:33:00Z
+acct-1414,Velocity Partners,327.95,CAD,GB,GB,bank_transfer,subscription,2026-09-21T15:40:00Z
+acct-1431,Quantum Retail,342.04,GBP,GB,GB,card,subscription,2026-09-27T17:02:00Z
+acct-1171,Echo Finance,374.07,AUD,FR,FR,card,purchase,2026-09-23T12:27:00Z
+acct-1107,Blue Harbor FX,347.77,EUR,FR,FR,bank_transfer,purchase,2026-10-08T06:07:00Z
+acct-1215,Cascadia Commerce,423.83,CAD,AU,AU,bank_transfer,subscription,2026-09-10T17:55:00Z
+acct-1484,Vertex Capital Ops,278.56,EUR,CA,CA,card,purchase,2026-09-20T18:04:00Z
+acct-1392,Evergreen Logistics,147.65,AUD,GB,GB,bank_transfer,subscription,2026-09-29T07:30:00Z
+acct-1225,Northwind Supply,329.94,AUD,AU,AU,bank_transfer,subscription,2026-09-21T18:25:00Z
+acct-1377,Cascadia Commerce,239.24,USD,CA,CA,bank_transfer,purchase,2026-09-28T17:12:00Z
+acct-1095,Blue Harbor FX,429.52,AUD,FR,FR,bank_transfer,subscription,2026-09-21T21:48:00Z
+acct-1241,Redwood Treasury,231.69,EUR,GB,GB,bank_transfer,subscription,2026-10-09T22:41:00Z
+acct-1170,Apex Currency Exchange,50.91,GBP,GB,GB,card,purchase,2026-09-03T22:50:00Z
+acct-1372,Phoenix Financial,300.88,CAD,GB,GB,card,subscription,2026-10-12T12:48:00Z
+acct-1029,Atlas Hotel Group,439.80,GBP,AU,AU,bank_transfer,purchase,2026-10-01T20:03:00Z
+acct-1199,Bridgeport Labs,209.38,AUD,US,US,card,subscription,2026-09-30T13:23:00Z
+acct-1309,Fjord Consulting,273.72,EUR,FR,FR,card,purchase,2026-09-03T07:57:00Z
+acct-1162,Atlas Hotel Group,69.00,EUR,FR,FR,bank_transfer,purchase,2026-09-20T10:47:00Z
+acct-1154,Compass Airlines,106.80,AUD,GB,GB,card,subscription,2026-09-12T16:37:00Z
+acct-1004,Northwind Supply,94.96,GBP,CA,CA,card,purchase,2026-10-02T15:00:00Z
+acct-1294,Bluebird Hotel,427.92,USD,AU,AU,card,purchase,2026-10-07T07:33:00Z
+acct-1290,Redwood Treasury,153.92,EUR,CA,CA,bank_transfer,subscription,2026-10-20T06:44:00Z
+acct-1453,Nova Wire Partners,182.63,USD,FR,FR,card,purchase,2026-09-04T12:29:00Z
+acct-1248,Cascadia Commerce,381.29,GBP,US,US,card,subscription,2026-09-10T12:12:00Z
+acct-1350,Evergreen Logistics,246.80,CAD,GB,GB,bank_transfer,subscription,2026-09-30T20:49:00Z
+acct-1159,Crestline Foods,377.64,CAD,FR,FR,bank_transfer,subscription,2026-10-18T16:01:00Z
+acct-1253,Helios Crypto Desk,102.72,EUR,AU,AU,card,purchase,2026-09-25T14:18:00Z
+acct-1009,Prism Consulting,452.42,CAD,CA,CA,bank_transfer,purchase,2026-09-11T13:31:00Z
+acct-1269,Prism Consulting,100.87,AUD,CA,CA,card,subscription,2026-09-26T13:30:00Z
+acct-1385,Fjord Consulting,362.40,EUR,AU,AU,card,subscription,2026-09-16T08:07:00Z
+acct-1456,Evergreen Logistics,95.22,EUR,GB,GB,bank_transfer,subscription,2026-09-23T11:58:00Z
+acct-1460,Helios Crypto Desk,267.08,AUD,GB,GB,bank_transfer,purchase,2026-09-29T13:48:00Z
+acct-1170,Crestline Foods,351.31,CAD,GB,GB,bank_transfer,purchase,2026-10-18T22:01:00Z
+acct-1122,Nexus Trading,237.60,CAD,US,US,card,subscription,2026-10-02T09:48:00Z
+acct-1485,Fjord Consulting,271.25,EUR,US,US,card,subscription,2026-10-08T14:38:00Z
+acct-1254,Velocity Partners,495.66,GBP,CA,CA,bank_transfer,subscription,2026-10-13T21:59:00Z
+acct-1009,Quantum Retail,291.62,EUR,AU,AU,bank_transfer,subscription,2026-09-18T14:13:00Z
+acct-1432,Prism Consulting,165.81,EUR,AU,AU,card,purchase,2026-09-15T19:20:00Z
+acct-1141,Zenith Industries,187.75,CAD,CA,CA,card,purchase,2026-09-02T20:35:00Z
+acct-1292,Stellar Motors,494.54,AUD,AU,AU,bank_transfer,purchase,2026-09-27T21:06:00Z
+acct-1340,Bluebird Hotel,291.27,AUD,US,US,bank_transfer,subscription,2026-10-13T10:38:00Z
+acct-1213,Compass Airlines,136.19,CAD,US,US,bank_transfer,purchase,2026-09-22T18:28:00Z
+acct-1446,Helios Crypto Desk,63.34,CAD,US,US,bank_transfer,subscription,2026-09-23T15:29:00Z
+acct-1289,Cascadia Commerce,342.40,EUR,CA,CA,bank_transfer,subscription,2026-10-11T21:51:00Z
+acct-1234,Zenith Industries,57.02,CAD,FR,FR,bank_transfer,purchase,2026-09-22T08:20:00Z
+acct-1212,Evergreen Logistics,295.78,AUD,AU,AU,card,purchase,2026-09-25T12:28:00Z
+acct-1305,Northwind Supply,268.79,CAD,GB,GB,card,purchase,2026-09-06T21:31:00Z
+acct-1172,Atlas Hotel Group,426.13,AUD,US,US,card,subscription,2026-10-19T21:03:00Z
+acct-1158,Bluebird Hotel,328.03,CAD,AU,AU,bank_transfer,purchase,2026-09-13T06:50:00Z
+acct-1488,Quantum Retail,308.81,GBP,FR,FR,bank_transfer,purchase,2026-09-25T07:07:00Z
+acct-1132,Apex Currency Exchange,388.66,USD,US,US,card,subscription,2026-10-15T22:15:00Z
+acct-1474,Titan Logistics,229.78,GBP,GB,GB,card,purchase,2026-10-13T13:30:00Z
+acct-1408,Evergreen Logistics,178.40,USD,FR,FR,card,purchase,2026-09-18T07:59:00Z
+acct-1386,Atlas Hotel Group,266.04,CAD,AU,AU,bank_transfer,purchase,2026-10-11T09:14:00Z
+acct-1318,Redwood Treasury,271.14,CAD,GB,GB,bank_transfer,purchase,2026-10-03T07:08:00Z
+acct-1044,Crestline Foods,372.74,GBP,CA,CA,bank_transfer,purchase,2026-09-29T06:23:00Z
+acct-1307,Evergreen Logistics,167.45,AUD,AU,AU,card,subscription,2026-10-14T13:32:00Z
+acct-1158,Stellar Motors,164.89,AUD,US,US,bank_transfer,subscription,2026-09-01T09:12:00Z
+acct-1351,Helios Crypto Desk,214.77,AUD,CA,CA,bank_transfer,subscription,2026-09-09T22:12:00Z
+acct-1452,Vertex Capital Ops,170.48,USD,CA,CA,bank_transfer,purchase,2026-10-14T20:42:00Z
+acct-1056,Phoenix Financial,304.39,GBP,GB,GB,card,subscription,2026-09-22T09:00:00Z
+acct-1278,Nova Wire Partners,287.06,USD,US,US,bank_transfer,purchase,2026-09-20T09:36:00Z
+acct-1328,Horizon Ventures,81.52,USD,FR,FR,card,purchase,2026-09-24T06:57:00Z
+acct-1030,Compass Airlines,108.01,CAD,GB,GB,bank_transfer,purchase,2026-10-19T12:55:00Z
+acct-1368,Redwood Treasury,447.16,CAD,FR,FR,bank_transfer,subscription,2026-10-15T15:31:00Z
+acct-1445,Stellar Motors,90.92,CAD,FR,FR,card,subscription,2026-09-08T20:04:00Z
+acct-1168,Horizon Ventures,336.28,EUR,GB,GB,card,purchase,2026-10-12T14:51:00Z
+acct-1262,Northwind Supply,150.72,CAD,FR,FR,bank_transfer,subscription,2026-09-23T13:29:00Z
+acct-1057,Zenith Industries,470.45,CAD,FR,FR,card,subscription,2026-09-17T15:19:00Z
+acct-1416,Phoenix Financial,113.10,USD,AU,AU,bank_transfer,subscription,2026-09-12T11:06:00Z
+acct-1342,Oakleaf Consulting,391.49,GBP,GB,GB,card,subscription,2026-09-16T22:54:00Z
+acct-1412,Echo Finance,134.09,EUR,GB,GB,card,subscription,2026-10-14T18:25:00Z
+acct-1475,Fjord Consulting,220.74,EUR,CA,CA,bank_transfer,purchase,2026-09-24T18:29:00Z
+acct-1305,Velocity Partners,89.87,USD,CA,CA,bank_transfer,subscription,2026-09-04T17:04:00Z
+acct-1332,Oakleaf Consulting,473.29,AUD,AU,AU,bank_transfer,subscription,2026-10-14T07:23:00Z
+acct-1433,Silverline Trading,229.97,EUR,US,US,bank_transfer,purchase,2026-10-16T16:25:00Z
+acct-1408,Redwood Treasury,144.54,USD,GB,GB,bank_transfer,purchase,2026-10-14T07:15:00Z
+acct-1026,Velocity Partners,82.56,CAD,AU,AU,bank_transfer,subscription,2026-09-04T18:08:00Z
+acct-1341,Fjord Consulting,251.08,USD,FR,FR,bank_transfer,subscription,2026-10-14T18:10:00Z
+acct-1488,Northwind Supply,366.43,USD,FR,FR,card,subscription,2026-10-16T10:31:00Z
+acct-1382,Northwind Supply,182.29,AUD,CA,CA,card,subscription,2026-09-17T08:35:00Z
+acct-1079,Velocity Partners,203.39,USD,FR,FR,bank_transfer,subscription,2026-09-25T08:26:00Z
+acct-1439,Bluebird Hotel,335.20,AUD,GB,GB,card,subscription,2026-10-05T09:44:00Z
+acct-1324,Titan Logistics,202.21,GBP,US,US,card,subscription,2026-09-01T10:37:00Z
+acct-1472,Zenith Industries,428.38,USD,CA,CA,bank_transfer,purchase,2026-09-05T19:02:00Z
+acct-1138,Crestline Foods,396.22,USD,CA,CA,card,purchase,2026-09-12T08:53:00Z
+acct-1466,Nexus Trading,403.97,AUD,US,US,bank_transfer,subscription,2026-09-21T15:56:00Z
+acct-1074,Velocity Partners,398.37,AUD,AU,AU,bank_transfer,purchase,2026-10-13T06:09:00Z
+acct-1039,Blue Harbor FX,298.94,GBP,AU,AU,bank_transfer,purchase,2026-09-04T15:45:00Z
+acct-1271,Titan Logistics,340.61,EUR,GB,GB,card,purchase,2026-09-24T21:08:00Z
+acct-1012,Prism Consulting,223.14,GBP,AU,AU,card,purchase,2026-09-14T13:09:00Z
+acct-1474,Redwood Treasury,65.47,EUR,US,US,card,purchase,2026-10-09T15:22:00Z
+acct-1124,Prism Consulting,192.17,CAD,US,US,card,subscription,2026-09-22T22:40:00Z
+acct-1086,Redwood Treasury,219.66,EUR,CA,CA,card,purchase,2026-09-08T09:16:00Z
+acct-1285,Cascadia Commerce,51.08,GBP,FR,FR,bank_transfer,purchase,2026-10-02T09:34:00Z
+acct-1471,Cascadia Commerce,255.33,USD,FR,FR,bank_transfer,subscription,2026-09-29T12:28:00Z
+acct-1365,Velocity Partners,110.15,EUR,AU,AU,bank_transfer,subscription,2026-10-04T10:17:00Z
+acct-1111,Zenith Industries,196.06,AUD,FR,FR,card,purchase,2026-10-16T16:04:00Z
+acct-1130,Echo Finance,185.92,USD,US,US,bank_transfer,subscription,2026-09-01T18:35:00Z
+acct-1211,Zenith Industries,239.94,USD,GB,GB,bank_transfer,subscription,2026-09-08T07:52:00Z
+acct-1234,Prism Consulting,254.59,AUD,CA,CA,card,purchase,2026-10-02T20:48:00Z
+acct-1169,Apex Currency Exchange,75.81,USD,CA,CA,card,purchase,2026-09-26T22:44:00Z
+acct-1440,Phoenix Financial,392.41,EUR,GB,GB,bank_transfer,purchase,2026-09-07T13:37:00Z
+acct-1421,Aurora Tech,226.16,USD,FR,FR,card,subscription,2026-10-11T15:34:00Z
+acct-1196,Bridgeport Labs,354.85,EUR,GB,GB,card,purchase,2026-09-09T12:45:00Z
+acct-1067,Aurora Tech,123.05,AUD,AU,AU,card,subscription,2026-09-05T15:43:00Z
+acct-1106,Bluebird Hotel,460.55,USD,FR,FR,card,subscription,2026-10-01T16:18:00Z
+acct-1082,Bluebird Hotel,496.71,GBP,CA,CA,bank_transfer,subscription,2026-09-21T19:15:00Z
+acct-1406,Horizon Ventures,405.32,GBP,FR,FR,card,subscription,2026-09-30T07:49:00Z
+acct-1279,Bridgeport Labs,210.98,GBP,US,US,card,purchase,2026-10-17T08:01:00Z
+acct-1146,Stellar Motors,163.55,EUR,GB,GB,bank_transfer,purchase,2026-09-20T10:43:00Z
+acct-1177,Cascadia Commerce,493.50,CAD,GB,GB,bank_transfer,subscription,2026-09-10T22:46:00Z
+acct-1285,Horizon Ventures,74.08,EUR,FR,FR,bank_transfer,subscription,2026-09-26T21:42:00Z
+acct-1463,Cascadia Commerce,419.84,CAD,AU,AU,bank_transfer,purchase,2026-09-09T22:37:00Z
+acct-1073,Nexus Trading,493.86,GBP,CA,CA,bank_transfer,purchase,2026-10-15T17:28:00Z
+acct-1054,Harbor Point,57.03,CAD,CA,CA,card,purchase,2026-09-29T17:59:00Z
+acct-1050,Northwind Supply,329.50,USD,FR,FR,card,subscription,2026-10-05T19:01:00Z
+acct-1112,Oakleaf Consulting,191.25,GBP,FR,FR,bank_transfer,subscription,2026-09-14T18:59:00Z
+acct-1466,Fjord Consulting,353.20,CAD,GB,GB,card,subscription,2026-09-12T18:11:00Z
+acct-1438,Quantum Retail,250.00,CAD,FR,FR,card,subscription,2026-09-16T07:08:00Z
+acct-1035,Velocity Partners,221.44,EUR,US,US,card,purchase,2026-09-10T16:38:00Z
+acct-1072,Nova Wire Partners,235.40,AUD,FR,FR,card,subscription,2026-09-16T15:41:00Z
+acct-1035,Helios Crypto Desk,151.95,AUD,AU,AU,bank_transfer,subscription,2026-09-29T10:21:00Z
+acct-1019,Compass Airlines,228.72,AUD,US,US,card,subscription,2026-10-18T19:13:00Z
+acct-1065,Zenith Industries,170.31,EUR,US,US,card,subscription,2026-09-10T13:43:00Z
+acct-1402,Titan Logistics,339.31,USD,FR,FR,bank_transfer,purchase,2026-09-06T08:17:00Z
+acct-1479,Oakleaf Consulting,309.22,AUD,FR,FR,bank_transfer,subscription,2026-09-29T21:58:00Z
+acct-1338,Aurora Tech,474.19,CAD,AU,AU,card,subscription,2026-09-15T21:06:00Z
+acct-1100,Helios Crypto Desk,174.94,GBP,AU,AU,bank_transfer,purchase,2026-09-28T22:54:00Z
+acct-1252,Bayview Motors,489.71,USD,GB,GB,bank_transfer,subscription,2026-10-14T12:22:00Z
+acct-1276,Northwind Supply,316.29,USD,FR,FR,bank_transfer,purchase,2026-09-09T10:19:00Z
+acct-1290,Silverline Trading,120.63,EUR,GB,GB,bank_transfer,purchase,2026-09-25T07:10:00Z
+acct-1431,Bridgeport Labs,346.56,GBP,US,US,bank_transfer,purchase,2026-09-20T12:06:00Z
+acct-1392,Cascadia Commerce,330.67,EUR,GB,GB,card,purchase,2026-10-12T17:03:00Z
+acct-1015,Bluebird Hotel,453.75,GBP,AU,AU,card,subscription,2026-10-11T16:26:00Z
+acct-1346,Phoenix Financial,210.15,EUR,GB,GB,bank_transfer,purchase,2026-09-14T22:49:00Z
+acct-1137,Bayview Motors,208.02,CAD,US,US,bank_transfer,subscription,2026-09-01T09:13:00Z
+acct-1010,Helios Crypto Desk,218.68,EUR,CA,CA,card,purchase,2026-09-15T13:35:00Z
+acct-1231,Northwind Supply,303.24,AUD,FR,FR,card,purchase,2026-09-17T19:50:00Z
+acct-1030,Bridgeport Labs,435.46,EUR,CA,CA,bank_transfer,purchase,2026-09-12T19:58:00Z
+acct-1040,Stellar Motors,432.82,GBP,AU,AU,card,purchase,2026-10-20T21:48:00Z
+acct-1206,Fjord Consulting,104.12,EUR,CA,CA,card,purchase,2026-10-04T11:44:00Z
+acct-1359,Bayview Motors,147.32,GBP,FR,FR,card,subscription,2026-09-15T12:21:00Z
+acct-1134,Crestline Foods,218.34,USD,AU,AU,bank_transfer,purchase,2026-09-10T20:52:00Z
+acct-1073,Atlas Hotel Group,270.95,AUD,AU,AU,bank_transfer,purchase,2026-09-20T11:10:00Z
+acct-1427,Fjord Consulting,262.86,CAD,US,US,bank_transfer,subscription,2026-09-24T06:27:00Z
+acct-1051,Northwind Supply,265.74,AUD,CA,CA,bank_transfer,purchase,2026-10-18T09:51:00Z
+acct-1124,Harbor Point,241.79,EUR,GB,GB,card,subscription,2026-10-19T14:04:00Z
+acct-1204,Harbor Point,171.49,GBP,US,US,bank_transfer,purchase,2026-09-02T19:09:00Z
+acct-1458,Northwind Supply,341.98,GBP,AU,AU,bank_transfer,purchase,2026-09-24T21:31:00Z
+acct-1390,Phoenix Financial,281.77,GBP,FR,FR,bank_transfer,subscription,2026-10-02T19:29:00Z
+acct-1040,Crestline Foods,199.58,AUD,CA,CA,card,purchase,2026-09-15T11:57:00Z
+acct-1017,Bayview Motors,164.52,GBP,US,US,bank_transfer,subscription,2026-09-05T09:50:00Z
+acct-1328,Apex Currency Exchange,231.87,EUR,GB,GB,card,subscription,2026-09-20T17:46:00Z
+acct-1389,Cascadia Commerce,237.23,GBP,AU,AU,card,purchase,2026-09-10T11:26:00Z
+acct-1262,Nexus Trading,479.55,CAD,US,US,card,subscription,2026-09-05T21:41:00Z
+acct-1488,Titan Logistics,222.40,EUR,CA,CA,card,subscription,2026-09-26T17:26:00Z
+acct-1263,Vertex Capital Ops,199.10,EUR,FR,FR,card,subscription,2026-10-04T18:36:00Z
+acct-1037,Echo Finance,200.24,CAD,US,US,bank_transfer,subscription,2026-10-15T09:00:00Z
+acct-1288,Aurora Tech,62.42,AUD,US,US,card,subscription,2026-10-13T06:57:00Z
+acct-1083,Apex Currency Exchange,67.35,GBP,FR,FR,card,subscription,2026-09-13T06:14:00Z
+acct-1107,Silverline Trading,360.55,AUD,FR,FR,card,purchase,2026-10-11T22:05:00Z
+acct-1097,Bayview Motors,93.00,GBP,GB,GB,bank_transfer,subscription,2026-09-15T15:17:00Z
+acct-1012,Apex Currency Exchange,191.62,EUR,US,US,bank_transfer,purchase,2026-09-26T15:15:00Z
+acct-1117,Echo Finance,351.64,EUR,GB,GB,bank_transfer,purchase,2026-09-05T21:08:00Z
+acct-1009,Atlas Hotel Group,238.24,AUD,GB,GB,bank_transfer,subscription,2026-10-10T16:09:00Z
+acct-1443,Aurora Tech,82.63,EUR,AU,AU,bank_transfer,subscription,2026-09-06T07:07:00Z
+acct-1177,Bridgeport Labs,164.56,CAD,FR,FR,bank_transfer,subscription,2026-10-16T19:22:00Z
+acct-1284,Echo Finance,308.62,CAD,FR,FR,bank_transfer,subscription,2026-10-14T10:03:00Z
+acct-1414,Echo Finance,349.52,CAD,GB,GB,card,subscription,2026-09-12T10:17:00Z
+acct-1045,Cascadia Commerce,116.87,CAD,US,US,card,subscription,2026-09-14T11:39:00Z
+acct-1176,Silverline Trading,350.62,EUR,US,US,card,purchase,2026-10-03T20:38:00Z
+acct-1068,Bluebird Hotel,487.16,GBP,CA,CA,bank_transfer,purchase,2026-10-08T08:22:00Z
+acct-1028,Atlas Hotel Group,317.22,EUR,CA,CA,card,purchase,2026-09-08T11:03:00Z
+acct-1125,Zenith Industries,267.72,AUD,FR,FR,bank_transfer,subscription,2026-09-27T07:38:00Z
+acct-1449,Crestline Foods,172.99,EUR,FR,FR,card,subscription,2026-10-08T09:09:00Z
+acct-1098,Redwood Treasury,453.04,EUR,CA,CA,card,subscription,2026-09-01T15:18:00Z
+acct-1093,Apex Currency Exchange,461.43,USD,FR,FR,card,subscription,2026-09-04T19:08:00Z
+acct-1246,Fjord Consulting,169.70,AUD,AU,AU,card,purchase,2026-10-13T07:42:00Z
+acct-1208,Echo Finance,345.80,CAD,FR,FR,card,subscription,2026-09-30T06:52:00Z
+acct-1132,Quantum Retail,194.94,GBP,GB,GB,bank_transfer,subscription,2026-10-14T17:13:00Z
+acct-1414,Harbor Point,271.75,CAD,FR,FR,card,purchase,2026-10-06T08:28:00Z
+acct-1332,Nexus Trading,55.87,AUD,FR,FR,card,subscription,2026-10-15T07:12:00Z
+acct-1267,Atlas Hotel Group,307.39,AUD,US,US,card,subscription,2026-10-12T11:23:00Z
+acct-1322,Bluebird Hotel,167.86,USD,CA,CA,card,purchase,2026-10-11T15:12:00Z
+acct-1283,Atlas Hotel Group,356.98,CAD,GB,GB,bank_transfer,subscription,2026-10-16T09:58:00Z
+acct-1124,Nexus Trading,345.37,GBP,AU,AU,card,subscription,2026-09-11T06:58:00Z
+acct-1455,Compass Airlines,208.97,GBP,US,US,bank_transfer,purchase,2026-09-22T14:33:00Z
+acct-1494,Evergreen Logistics,101.03,GBP,AU,AU,bank_transfer,purchase,2026-09-27T18:12:00Z
+acct-1184,Atlas Hotel Group,484.05,GBP,GB,GB,card,purchase,2026-10-11T13:48:00Z
+acct-1358,Quantum Retail,483.45,EUR,US,US,card,subscription,2026-10-12T07:34:00Z
+acct-1201,Echo Finance,446.48,CAD,US,US,bank_transfer,purchase,2026-09-25T18:45:00Z
+acct-1151,Redwood Treasury,221.93,USD,GB,GB,bank_transfer,purchase,2026-10-10T21:02:00Z
+acct-1492,Aurora Tech,328.91,USD,US,US,card,purchase,2026-09-17T13:08:00Z
+acct-1442,Quantum Retail,386.08,GBP,GB,GB,bank_transfer,subscription,2026-10-18T20:51:00Z
+acct-1334,Quantum Retail,283.20,CAD,GB,GB,bank_transfer,purchase,2026-10-08T08:32:00Z
+acct-1248,Helios Crypto Desk,181.20,USD,FR,FR,card,purchase,2026-10-10T18:48:00Z
+acct-1441,Cascadia Commerce,356.17,GBP,CA,CA,bank_transfer,purchase,2026-09-08T18:30:00Z
+acct-1438,Echo Finance,196.73,CAD,FR,FR,bank_transfer,purchase,2026-09-06T13:12:00Z
+acct-1265,Crestline Foods,159.09,GBP,CA,CA,bank_transfer,purchase,2026-09-24T16:47:00Z
+acct-1315,Stellar Motors,238.09,AUD,FR,FR,bank_transfer,subscription,2026-09-28T11:48:00Z
+acct-1446,Aurora Tech,452.25,AUD,CA,CA,bank_transfer,subscription,2026-09-26T21:28:00Z
+acct-1057,Apex Currency Exchange,392.66,AUD,CA,CA,card,subscription,2026-09-16T11:40:00Z
+acct-1085,Prism Consulting,408.20,USD,US,US,card,subscription,2026-10-07T12:07:00Z
+acct-1195,Zenith Industries,63.81,CAD,CA,CA,bank_transfer,purchase,2026-09-01T19:27:00Z
+acct-1271,Silverline Trading,348.50,GBP,GB,GB,card,subscription,2026-10-04T07:17:00Z
+acct-1267,Compass Airlines,286.30,EUR,FR,FR,bank_transfer,subscription,2026-09-17T12:20:00Z
+acct-1081,Evergreen Logistics,223.76,USD,GB,GB,card,purchase,2026-09-27T19:24:00Z
+acct-1410,Compass Airlines,113.85,USD,AU,AU,bank_transfer,subscription,2026-09-10T06:57:00Z
+acct-1337,Velocity Partners,153.29,CAD,AU,AU,card,purchase,2026-10-07T12:10:00Z
+acct-1386,Nova Wire Partners,469.45,EUR,FR,FR,card,subscription,2026-09-17T19:40:00Z
+acct-1191,Titan Logistics,244.37,AUD,US,US,card,subscription,2026-10-04T14:44:00Z
+acct-1163,Aurora Tech,333.46,AUD,AU,AU,bank_transfer,subscription,2026-09-07T14:50:00Z
+acct-1389,Bayview Motors,440.89,USD,AU,AU,bank_transfer,subscription,2026-09-05T07:55:00Z
+acct-1417,Velocity Partners,163.79,USD,FR,FR,card,purchase,2026-10-19T09:31:00Z
+acct-1096,Oakleaf Consulting,90.77,EUR,AU,AU,card,purchase,2026-09-09T21:02:00Z
+acct-1344,Aurora Tech,468.02,CAD,FR,FR,card,subscription,2026-09-11T21:17:00Z
+acct-1292,Aurora Tech,133.26,USD,GB,GB,card,subscription,2026-10-17T14:51:00Z
+acct-1006,Redwood Treasury,367.40,USD,GB,GB,bank_transfer,purchase,2026-10-13T18:45:00Z
+acct-1311,Helios Crypto Desk,63.19,CAD,GB,GB,bank_transfer,purchase,2026-09-08T10:58:00Z
+acct-1177,Harbor Point,475.05,GBP,CA,CA,bank_transfer,purchase,2026-10-16T06:56:00Z
+acct-1023,Silverline Trading,159.97,EUR,AU,AU,card,subscription,2026-09-13T13:13:00Z
+acct-1215,Harbor Point,294.03,GBP,US,US,card,purchase,2026-09-13T21:26:00Z
+acct-1366,Zenith Industries,316.21,CAD,US,US,card,subscription,2026-10-06T12:53:00Z
+acct-1131,Nexus Trading,195.50,GBP,GB,GB,card,subscription,2026-10-11T18:20:00Z
+acct-1147,Silverline Trading,65.13,EUR,FR,FR,card,subscription,2026-09-29T06:59:00Z
+acct-1101,Northwind Supply,96.05,EUR,AU,AU,card,purchase,2026-09-27T19:26:00Z
+acct-1414,Atlas Hotel Group,471.78,CAD,GB,GB,bank_transfer,subscription,2026-09-21T20:52:00Z
+acct-1455,Prism Consulting,79.95,AUD,FR,FR,card,purchase,2026-10-06T20:55:00Z
+acct-1278,Zenith Industries,177.83,CAD,CA,CA,card,subscription,2026-10-18T17:27:00Z
+acct-1121,Compass Airlines,315.76,USD,FR,FR,bank_transfer,purchase,2026-09-10T17:49:00Z
+acct-1027,Titan Logistics,284.24,CAD,AU,AU,bank_transfer,purchase,2026-10-12T12:35:00Z
+acct-1394,Apex Currency Exchange,351.31,GBP,FR,FR,bank_transfer,subscription,2026-10-13T09:27:00Z
+acct-1189,Phoenix Financial,82.43,EUR,FR,FR,bank_transfer,subscription,2026-09-25T13:48:00Z
+acct-1001,Echo Finance,449.51,USD,CA,CA,bank_transfer,purchase,2026-09-13T14:45:00Z
+acct-1249,Silverline Trading,243.06,GBP,GB,GB,bank_transfer,purchase,2026-09-07T14:16:00Z
+acct-1168,Apex Currency Exchange,451.70,CAD,AU,AU,card,purchase,2026-09-14T14:25:00Z
+acct-1305,Aurora Tech,127.78,CAD,AU,AU,card,subscription,2026-09-21T08:23:00Z
+acct-1297,Echo Finance,279.28,CAD,AU,AU,bank_transfer,purchase,2026-09-08T10:25:00Z
+acct-1406,Evergreen Logistics,393.44,AUD,US,US,bank_transfer,subscription,2026-10-19T14:53:00Z
+acct-1011,Crestline Foods,240.23,AUD,GB,GB,bank_transfer,subscription,2026-10-18T15:36:00Z
+acct-1108,Stellar Motors,417.46,GBP,AU,AU,bank_transfer,purchase,2026-09-10T11:11:00Z
+acct-1170,Phoenix Financial,183.10,AUD,US,US,card,purchase,2026-10-07T08:06:00Z
+acct-1073,Quantum Retail,151.37,CAD,AU,AU,card,purchase,2026-09-17T09:55:00Z
+acct-1106,Bayview Motors,283.25,CAD,CA,CA,bank_transfer,subscription,2026-09-17T06:00:00Z
+acct-1049,Blue Harbor FX,294.38,CAD,US,US,card,purchase,2026-09-12T15:30:00Z
+acct-1478,Silverline Trading,260.70,AUD,CA,CA,card,subscription,2026-10-07T07:33:00Z
+acct-1205,Oakleaf Consulting,257.26,GBP,GB,GB,bank_transfer,subscription,2026-09-02T12:23:00Z
+acct-1303,Prism Consulting,450.71,CAD,US,US,bank_transfer,purchase,2026-09-22T16:49:00Z
+acct-1465,Velocity Partners,77.59,CAD,CA,CA,card,subscription,2026-09-11T12:52:00Z
+acct-1306,Vertex Capital Ops,314.78,CAD,CA,CA,card,subscription,2026-09-06T20:42:00Z
+acct-1232,Nova Wire Partners,279.38,USD,CA,CA,bank_transfer,subscription,2026-09-08T13:29:00Z
+acct-1298,Oakleaf Consulting,330.73,CAD,FR,FR,bank_transfer,purchase,2026-09-23T10:12:00Z
+acct-1222,Nova Wire Partners,255.93,EUR,AU,AU,bank_transfer,subscription,2026-10-11T16:50:00Z
+acct-1292,Stellar Motors,95.39,CAD,US,US,bank_transfer,subscription,2026-10-10T17:11:00Z
+acct-1090,Oakleaf Consulting,196.03,EUR,FR,FR,card,purchase,2026-09-18T15:39:00Z
+acct-1117,Phoenix Financial,223.41,CAD,AU,AU,card,purchase,2026-10-09T08:18:00Z
+acct-1489,Apex Currency Exchange,459.12,USD,CA,CA,card,purchase,2026-10-09T19:31:00Z
+acct-1310,Helios Crypto Desk,281.83,USD,CA,CA,bank_transfer,subscription,2026-10-05T19:00:00Z
+acct-1440,Fjord Consulting,137.65,EUR,CA,CA,card,subscription,2026-10-06T17:22:00Z
+acct-1422,Northwind Supply,258.39,AUD,US,US,bank_transfer,purchase,2026-09-29T08:58:00Z
+acct-1089,Vertex Capital Ops,421.37,CAD,CA,CA,card,subscription,2026-10-16T18:55:00Z
+acct-1379,Nova Wire Partners,431.17,GBP,GB,GB,card,subscription,2026-10-01T15:08:00Z
+acct-1496,Zenith Industries,149.87,CAD,AU,AU,card,subscription,2026-09-02T13:56:00Z
+acct-1356,Titan Logistics,271.17,AUD,CA,CA,card,purchase,2026-09-27T07:04:00Z
+acct-1230,Northwind Supply,408.86,CAD,AU,AU,bank_transfer,purchase,2026-09-14T19:09:00Z
+acct-1392,Silverline Trading,91.41,USD,FR,FR,bank_transfer,purchase,2026-09-08T17:52:00Z
+acct-1313,Compass Airlines,354.86,AUD,AU,AU,card,subscription,2026-09-10T16:21:00Z
+acct-1012,Cascadia Commerce,88.79,USD,AU,AU,bank_transfer,subscription,2026-10-11T11:02:00Z
+acct-1433,Bayview Motors,319.18,GBP,FR,FR,card,purchase,2026-09-17T13:55:00Z
+acct-1377,Horizon Ventures,497.50,AUD,FR,FR,card,subscription,2026-10-15T12:48:00Z
+acct-1463,Helios Crypto Desk,109.36,AUD,AU,AU,bank_transfer,subscription,2026-09-12T21:37:00Z
+acct-1386,Nova Wire Partners,302.96,CAD,US,US,bank_transfer,purchase,2026-10-05T13:53:00Z
+acct-1330,Crestline Foods,445.20,EUR,AU,AU,bank_transfer,subscription,2026-09-02T07:55:00Z
+acct-1193,Stellar Motors,468.31,EUR,GB,GB,card,purchase,2026-09-07T17:53:00Z
+acct-1089,Bluebird Hotel,149.46,GBP,CA,CA,card,subscription,2026-09-04T16:44:00Z
+acct-1219,Blue Harbor FX,97.34,CAD,GB,GB,card,subscription,2026-10-14T20:55:00Z
+acct-1095,Bridgeport Labs,382.10,EUR,FR,FR,card,subscription,2026-09-13T22:09:00Z
+acct-1033,Horizon Ventures,356.47,CAD,FR,FR,bank_transfer,purchase,2026-10-17T19:19:00Z
+acct-1361,Evergreen Logistics,389.40,GBP,AU,AU,bank_transfer,subscription,2026-10-06T22:33:00Z
+acct-1470,Crestline Foods,75.50,USD,FR,FR,bank_transfer,purchase,2026-10-19T17:38:00Z
+acct-1113,Blue Harbor FX,166.76,AUD,US,US,card,purchase,2026-10-14T11:57:00Z
+acct-1337,Echo Finance,105.82,EUR,GB,GB,bank_transfer,subscription,2026-10-07T22:36:00Z
+acct-1030,Bayview Motors,111.70,AUD,CA,CA,card,purchase,2026-09-14T14:23:00Z
+acct-1262,Northwind Supply,475.79,CAD,FR,FR,bank_transfer,subscription,2026-09-29T09:47:00Z
+acct-1344,Atlas Hotel Group,180.41,EUR,US,US,card,purchase,2026-09-23T08:24:00Z
+acct-1491,Velocity Partners,136.11,GBP,CA,CA,card,purchase,2026-09-23T19:13:00Z
+acct-1382,Apex Currency Exchange,466.49,USD,CA,CA,card,purchase,2026-09-06T08:06:00Z
+acct-1396,Fjord Consulting,360.89,CAD,US,US,card,purchase,2026-10-10T18:29:00Z
+acct-1330,Compass Airlines,249.51,GBP,AU,AU,card,purchase,2026-09-19T20:11:00Z
+acct-1472,Evergreen Logistics,208.03,GBP,AU,AU,bank_transfer,subscription,2026-09-12T11:59:00Z
+acct-1072,Atlas Hotel Group,207.75,CAD,FR,FR,card,subscription,2026-09-06T22:37:00Z
+acct-1411,Apex Currency Exchange,323.68,AUD,FR,FR,bank_transfer,subscription,2026-09-23T12:28:00Z
+acct-1422,Quantum Retail,223.94,EUR,CA,CA,bank_transfer,purchase,2026-09-23T09:03:00Z
+acct-1146,Velocity Partners,396.14,CAD,AU,AU,bank_transfer,purchase,2026-09-20T15:40:00Z
+acct-1450,Bayview Motors,307.47,AUD,CA,CA,bank_transfer,purchase,2026-09-13T12:17:00Z
+acct-1342,Fjord Consulting,159.32,EUR,CA,CA,bank_transfer,purchase,2026-09-24T06:18:00Z
+acct-1373,Evergreen Logistics,460.16,AUD,FR,FR,card,purchase,2026-10-11T19:03:00Z
+acct-1071,Oakleaf Consulting,298.25,GBP,GB,GB,bank_transfer,subscription,2026-10-16T17:09:00Z
+acct-1379,Apex Currency Exchange,84.27,AUD,FR,FR,card,subscription,2026-09-13T08:56:00Z
+acct-1258,Cascadia Commerce,405.40,AUD,CA,CA,card,subscription,2026-09-13T20:07:00Z
+acct-1210,Helios Crypto Desk,394.88,AUD,US,US,card,subscription,2026-09-26T18:20:00Z
+acct-1099,Blue Harbor FX,282.79,USD,US,US,bank_transfer,subscription,2026-10-15T21:33:00Z
+acct-1381,Atlas Hotel Group,189.52,GBP,CA,CA,card,subscription,2026-10-04T18:22:00Z
+acct-1328,Velocity Partners,155.62,GBP,US,US,card,subscription,2026-09-28T20:58:00Z
+acct-1259,Cascadia Commerce,352.37,USD,GB,GB,bank_transfer,purchase,2026-10-05T16:11:00Z
+acct-1021,Redwood Treasury,334.71,GBP,CA,CA,card,subscription,2026-09-17T14:12:00Z
+acct-1445,Oakleaf Consulting,340.67,AUD,AU,AU,card,subscription,2026-10-13T14:22:00Z
+acct-1430,Zenith Industries,220.64,CAD,CA,CA,bank_transfer,purchase,2026-10-11T20:40:00Z
+acct-1214,Vertex Capital Ops,78.52,AUD,GB,GB,bank_transfer,purchase,2026-10-15T11:36:00Z
+acct-1238,Nova Wire Partners,491.87,AUD,US,US,bank_transfer,purchase,2026-09-06T14:53:00Z
+acct-1298,Apex Currency Exchange,67.04,EUR,AU,AU,card,purchase,2026-10-07T13:47:00Z
+acct-1202,Atlas Hotel Group,117.71,CAD,FR,FR,bank_transfer,purchase,2026-10-01T13:44:00Z
+acct-1350,Bayview Motors,437.85,USD,FR,FR,bank_transfer,subscription,2026-09-16T08:04:00Z
+acct-1193,Cascadia Commerce,255.93,EUR,FR,FR,card,subscription,2026-10-03T10:28:00Z
+acct-1400,Echo Finance,224.83,GBP,GB,GB,bank_transfer,purchase,2026-10-10T19:14:00Z
+acct-1490,Atlas Hotel Group,126.08,USD,AU,AU,card,subscription,2026-09-17T10:44:00Z
+acct-1045,Aurora Tech,91.55,AUD,FR,FR,bank_transfer,subscription,2026-10-15T09:41:00Z
+acct-1091,Prism Consulting,372.07,EUR,AU,AU,bank_transfer,purchase,2026-09-03T12:15:00Z
+acct-1461,Bridgeport Labs,130.85,CAD,AU,AU,card,subscription,2026-10-01T19:35:00Z
+acct-1429,Harbor Point,333.07,AUD,GB,GB,card,purchase,2026-09-05T22:32:00Z
+acct-1251,Velocity Partners,300.54,AUD,US,US,card,subscription,2026-10-07T12:14:00Z
+acct-1108,Phoenix Financial,77.01,AUD,GB,GB,bank_transfer,purchase,2026-10-12T08:12:00Z
+acct-1302,Redwood Treasury,357.37,AUD,GB,GB,bank_transfer,subscription,2026-10-18T22:58:00Z
+acct-1422,Bayview Motors,447.93,EUR,AU,AU,card,purchase,2026-09-14T21:44:00Z
+acct-1082,Velocity Partners,136.87,AUD,CA,CA,bank_transfer,subscription,2026-09-15T22:12:00Z
+acct-1003,Harbor Point,389.16,EUR,CA,CA,card,purchase,2026-09-08T22:01:00Z
+acct-1090,Phoenix Financial,350.22,EUR,GB,GB,card,subscription,2026-10-19T11:35:00Z
+acct-1031,Compass Airlines,413.24,USD,AU,AU,bank_transfer,subscription,2026-10-03T08:21:00Z
+acct-1299,Atlas Hotel Group,259.78,GBP,FR,FR,bank_transfer,subscription,2026-09-01T20:29:00Z
+acct-1458,Stellar Motors,260.39,GBP,GB,GB,card,purchase,2026-09-01T12:07:00Z
+acct-1386,Horizon Ventures,277.03,USD,AU,AU,bank_transfer,purchase,2026-09-14T12:12:00Z
+acct-1275,Cascadia Commerce,474.94,USD,AU,AU,card,subscription,2026-09-14T19:30:00Z
+acct-1286,Crestline Foods,443.67,EUR,US,US,card,purchase,2026-10-03T10:57:00Z
+acct-1153,Atlas Hotel Group,292.50,USD,US,US,bank_transfer,purchase,2026-09-21T17:18:00Z
+acct-1052,Silverline Trading,180.19,EUR,CA,CA,bank_transfer,purchase,2026-10-13T14:03:00Z
+acct-1365,Apex Currency Exchange,380.75,GBP,FR,FR,bank_transfer,subscription,2026-10-08T18:30:00Z
+acct-1025,Prism Consulting,67.18,EUR,US,US,card,subscription,2026-10-04T20:08:00Z
+acct-1341,Nexus Trading,448.81,CAD,AU,AU,card,subscription,2026-10-09T07:22:00Z
+acct-1416,Echo Finance,191.80,EUR,US,US,bank_transfer,subscription,2026-09-27T17:06:00Z
+acct-1197,Silverline Trading,175.85,AUD,US,US,card,subscription,2026-09-03T10:18:00Z
+acct-1140,Cascadia Commerce,290.19,GBP,FR,FR,bank_transfer,subscription,2026-10-19T15:26:00Z
+acct-1318,Atlas Hotel Group,336.43,USD,FR,FR,card,subscription,2026-09-16T14:59:00Z
+acct-1445,Compass Airlines,255.12,USD,GB,GB,bank_transfer,subscription,2026-09-18T16:14:00Z
+acct-1185,Oakleaf Consulting,330.70,GBP,AU,AU,card,purchase,2026-09-27T18:45:00Z
+acct-1121,Nova Wire Partners,238.52,CAD,FR,FR,card,subscription,2026-09-17T17:13:00Z
+acct-1034,Northwind Supply,349.10,CAD,AU,AU,card,subscription,2026-10-07T18:05:00Z
+acct-1486,Velocity Partners,451.87,USD,GB,GB,card,purchase,2026-09-22T14:26:00Z
+acct-1201,Quantum Retail,483.67,AUD,US,US,card,purchase,2026-09-02T20:50:00Z
+acct-1046,Titan Logistics,54.34,USD,FR,FR,bank_transfer,purchase,2026-09-14T15:19:00Z
+acct-1013,Crestline Foods,280.18,CAD,CA,CA,card,subscription,2026-09-09T18:35:00Z
+acct-1330,Blue Harbor FX,353.30,AUD,US,US,bank_transfer,purchase,2026-09-15T15:00:00Z
+acct-1221,Nova Wire Partners,71.25,USD,AU,AU,bank_transfer,purchase,2026-09-18T16:22:00Z
+acct-1405,Titan Logistics,363.95,CAD,FR,FR,bank_transfer,subscription,2026-09-29T12:02:00Z
+acct-1231,Atlas Hotel Group,180.32,USD,GB,GB,card,subscription,2026-10-09T13:53:00Z
+acct-1085,Northwind Supply,105.42,AUD,FR,FR,card,subscription,2026-10-13T17:55:00Z
+acct-1109,Stellar Motors,377.00,CAD,AU,AU,bank_transfer,purchase,2026-09-26T19:31:00Z
+acct-1353,Apex Currency Exchange,319.57,CAD,AU,AU,bank_transfer,subscription,2026-09-22T11:16:00Z
+acct-1381,Nexus Trading,341.53,GBP,CA,CA,bank_transfer,subscription,2026-09-29T22:04:00Z
+acct-1147,Cascadia Commerce,258.84,EUR,FR,FR,card,purchase,2026-10-03T09:49:00Z
+acct-1397,Zenith Industries,316.34,CAD,GB,GB,bank_transfer,purchase,2026-09-01T21:48:00Z
+acct-1132,Horizon Ventures,394.37,GBP,AU,AU,card,subscription,2026-09-06T18:43:00Z
+acct-1025,Phoenix Financial,297.86,EUR,AU,AU,bank_transfer,purchase,2026-10-10T10:57:00Z
+acct-1289,Echo Finance,273.68,EUR,US,US,card,purchase,2026-09-03T16:37:00Z
+acct-1330,Atlas Hotel Group,442.28,EUR,AU,AU,bank_transfer,subscription,2026-10-04T17:56:00Z
+acct-1341,Silverline Trading,171.92,USD,GB,GB,card,subscription,2026-09-16T17:58:00Z
+acct-1091,Bayview Motors,271.79,EUR,FR,FR,bank_transfer,purchase,2026-10-16T10:52:00Z
+acct-1001,Aurora Tech,493.15,GBP,AU,AU,card,subscription,2026-09-27T16:13:00Z
+acct-1434,Quantum Retail,164.58,CAD,AU,AU,card,subscription,2026-09-05T13:27:00Z
+acct-1329,Blue Harbor FX,68.25,CAD,US,US,card,purchase,2026-10-12T22:13:00Z
+acct-1381,Silverline Trading,472.63,GBP,FR,FR,card,purchase,2026-10-02T10:11:00Z
+acct-1202,Harbor Point,447.35,GBP,AU,AU,bank_transfer,purchase,2026-09-28T10:53:00Z
+acct-1355,Aurora Tech,182.31,GBP,CA,CA,bank_transfer,subscription,2026-10-14T12:10:00Z
+acct-1394,Quantum Retail,221.79,GBP,CA,CA,bank_transfer,subscription,2026-10-20T14:57:00Z
+acct-1273,Bluebird Hotel,442.48,USD,GB,GB,bank_transfer,purchase,2026-09-05T08:07:00Z
+acct-1471,Velocity Partners,482.77,CAD,CA,CA,card,purchase,2026-09-09T15:01:00Z
+acct-1250,Harbor Point,116.36,AUD,CA,CA,bank_transfer,purchase,2026-09-10T20:01:00Z
+acct-1414,Evergreen Logistics,499.13,EUR,FR,FR,card,purchase,2026-09-08T08:37:00Z
+acct-1024,Titan Logistics,361.81,GBP,FR,FR,card,purchase,2026-09-07T14:47:00Z
+acct-1326,Northwind Supply,208.03,USD,GB,GB,bank_transfer,subscription,2026-09-09T12:32:00Z
+acct-1197,Evergreen Logistics,434.13,EUR,FR,FR,card,purchase,2026-10-16T21:11:00Z
+acct-1181,Nexus Trading,382.12,EUR,FR,FR,card,purchase,2026-09-11T21:53:00Z
+acct-1424,Blue Harbor FX,206.06,AUD,US,US,bank_transfer,purchase,2026-09-25T06:12:00Z
+acct-1251,Crestline Foods,243.02,EUR,US,US,card,subscription,2026-10-07T15:35:00Z
+acct-1092,Blue Harbor FX,228.71,GBP,CA,CA,card,subscription,2026-10-18T17:41:00Z
+acct-1425,Phoenix Financial,365.58,EUR,GB,GB,bank_transfer,subscription,2026-10-05T10:48:00Z
+acct-1409,Northwind Supply,184.10,EUR,GB,GB,card,subscription,2026-09-18T12:55:00Z
+acct-1013,Atlas Hotel Group,468.79,CAD,GB,GB,bank_transfer,subscription,2026-09-26T16:25:00Z
+acct-1104,Harbor Point,127.33,EUR,AU,AU,card,purchase,2026-10-13T21:49:00Z
+acct-1002,Zenith Industries,150.10,EUR,FR,FR,bank_transfer,subscription,2026-09-29T06:35:00Z
+acct-1412,Bayview Motors,153.83,USD,CA,CA,card,subscription,2026-10-17T10:33:00Z
+acct-1206,Phoenix Financial,209.77,AUD,US,US,card,purchase,2026-10-11T20:46:00Z
+acct-1282,Velocity Partners,70.23,AUD,FR,FR,bank_transfer,purchase,2026-10-12T13:45:00Z
+acct-1376,Cascadia Commerce,416.70,GBP,CA,CA,bank_transfer,subscription,2026-10-15T18:27:00Z
+acct-1079,Echo Finance,193.59,USD,US,US,card,subscription,2026-09-23T13:48:00Z
+acct-1238,Evergreen Logistics,371.85,AUD,CA,CA,card,subscription,2026-09-14T10:02:00Z
+acct-1392,Bridgeport Labs,209.47,GBP,FR,FR,card,purchase,2026-09-25T08:40:00Z
+acct-1250,Quantum Retail,66.09,CAD,FR,FR,card,purchase,2026-09-08T09:11:00Z
+acct-1492,Vertex Capital Ops,269.75,AUD,US,US,card,purchase,2026-10-16T19:23:00Z
+acct-1081,Zenith Industries,238.16,EUR,AU,AU,card,purchase,2026-09-19T10:52:00Z
+acct-1325,Nexus Trading,248.26,AUD,AU,AU,card,purchase,2026-09-17T15:15:00Z
+acct-1334,Cascadia Commerce,222.85,EUR,GB,GB,card,subscription,2026-10-14T15:13:00Z
+acct-1234,Nova Wire Partners,351.25,USD,US,US,card,purchase,2026-09-05T19:34:00Z
+acct-1429,Evergreen Logistics,71.04,USD,US,US,card,subscription,2026-09-02T10:42:00Z
+acct-1066,Atlas Hotel Group,255.55,GBP,GB,GB,card,subscription,2026-09-20T22:06:00Z
+acct-1331,Bayview Motors,238.89,AUD,CA,CA,bank_transfer,subscription,2026-10-14T07:50:00Z
+acct-1443,Apex Currency Exchange,106.25,CAD,AU,AU,bank_transfer,subscription,2026-10-17T19:47:00Z
+acct-1092,Velocity Partners,159.93,CAD,GB,GB,card,purchase,2026-10-17T18:46:00Z
+acct-1077,Horizon Ventures,183.14,EUR,FR,FR,bank_transfer,subscription,2026-10-07T20:42:00Z
+acct-1252,Cascadia Commerce,338.27,AUD,AU,AU,card,purchase,2026-09-02T11:13:00Z
+acct-1180,Helios Crypto Desk,186.33,GBP,CA,CA,bank_transfer,purchase,2026-09-14T19:07:00Z
+acct-1117,Stellar Motors,246.00,CAD,GB,GB,bank_transfer,purchase,2026-10-07T21:20:00Z
+acct-1316,Aurora Tech,59.64,GBP,GB,GB,card,purchase,2026-10-11T17:13:00Z
+acct-1111,Apex Currency Exchange,438.12,GBP,US,US,card,subscription,2026-09-10T13:00:00Z
+acct-1304,Echo Finance,59.65,USD,AU,AU,bank_transfer,purchase,2026-09-07T15:08:00Z
+acct-1276,Blue Harbor FX,128.77,CAD,GB,GB,card,subscription,2026-10-16T13:50:00Z
+acct-1071,Echo Finance,463.24,CAD,US,US,card,subscription,2026-09-19T20:07:00Z
+acct-1165,Atlas Hotel Group,242.26,AUD,AU,AU,card,purchase,2026-10-05T10:30:00Z
+acct-1210,Echo Finance,465.19,GBP,FR,FR,card,purchase,2026-10-17T14:48:00Z
+acct-1050,Silverline Trading,239.32,USD,CA,CA,card,purchase,2026-09-29T10:19:00Z
+acct-1036,Nova Wire Partners,241.89,GBP,GB,GB,bank_transfer,purchase,2026-09-21T09:11:00Z
+acct-1307,Compass Airlines,276.82,GBP,GB,GB,bank_transfer,subscription,2026-09-11T17:08:00Z
+acct-1080,Silverline Trading,370.66,USD,GB,GB,card,purchase,2026-09-29T21:15:00Z
+acct-1219,Velocity Partners,82.43,AUD,US,US,bank_transfer,purchase,2026-10-20T15:00:00Z
+acct-1232,Blue Harbor FX,317.26,USD,GB,GB,card,subscription,2026-09-27T10:15:00Z
+acct-1445,Echo Finance,169.38,USD,FR,FR,bank_transfer,purchase,2026-10-15T21:29:00Z
+acct-1176,Titan Logistics,376.89,AUD,CA,CA,card,purchase,2026-09-04T16:55:00Z
+acct-1162,Nexus Trading,275.15,EUR,FR,FR,bank_transfer,purchase,2026-09-15T17:04:00Z
+acct-1417,Nexus Trading,261.15,GBP,AU,AU,bank_transfer,subscription,2026-10-10T12:10:00Z
+acct-1496,Prism Consulting,373.66,AUD,GB,GB,card,purchase,2026-09-02T09:01:00Z
+acct-1431,Apex Currency Exchange,205.41,AUD,FR,FR,bank_transfer,subscription,2026-10-17T12:34:00Z
+acct-1185,Horizon Ventures,345.59,EUR,US,US,card,purchase,2026-09-17T21:13:00Z
+acct-1424,Crestline Foods,83.22,EUR,US,US,card,subscription,2026-09-12T21:32:00Z
+acct-1345,Phoenix Financial,283.58,EUR,CA,CA,card,purchase,2026-09-04T06:21:00Z
+acct-1312,Crestline Foods,246.52,GBP,US,US,bank_transfer,subscription,2026-10-01T21:09:00Z
+acct-1490,Nexus Trading,178.20,EUR,GB,GB,bank_transfer,purchase,2026-10-12T08:45:00Z
+acct-1047,Oakleaf Consulting,379.47,AUD,CA,CA,card,purchase,2026-09-13T07:41:00Z
+acct-1241,Harbor Point,227.62,AUD,GB,GB,bank_transfer,purchase,2026-09-11T15:38:00Z
+acct-1483,Bluebird Hotel,273.14,GBP,CA,CA,bank_transfer,purchase,2026-09-09T12:30:00Z
+acct-1168,Fjord Consulting,102.28,USD,US,US,bank_transfer,subscription,2026-10-05T18:21:00Z
+acct-1092,Echo Finance,256.70,USD,FR,FR,bank_transfer,subscription,2026-09-24T22:34:00Z
+acct-1264,Velocity Partners,160.11,USD,GB,GB,card,purchase,2026-09-12T18:40:00Z
+acct-1077,Zenith Industries,376.90,CAD,US,US,card,subscription,2026-09-28T08:22:00Z
+acct-1082,Blue Harbor FX,229.86,CAD,FR,FR,card,subscription,2026-09-06T11:56:00Z
+acct-1005,Crestline Foods,78.47,EUR,CA,CA,card,subscription,2026-10-17T13:51:00Z
+acct-1023,Quantum Retail,82.63,EUR,CA,CA,card,subscription,2026-10-07T16:52:00Z
+acct-1389,Evergreen Logistics,194.36,EUR,US,US,card,subscription,2026-09-07T07:33:00Z
+acct-1084,Prism Consulting,495.98,EUR,FR,FR,bank_transfer,purchase,2026-10-12T09:44:00Z
+acct-1280,Crestline Foods,217.46,CAD,FR,FR,card,subscription,2026-09-26T06:03:00Z
+acct-1432,Nexus Trading,329.64,EUR,US,US,bank_transfer,purchase,2026-09-28T19:30:00Z
+acct-1343,Helios Crypto Desk,214.99,AUD,AU,AU,card,purchase,2026-09-16T14:06:00Z
+acct-1132,Apex Currency Exchange,148.07,USD,GB,GB,card,purchase,2026-09-15T22:06:00Z
+acct-1425,Bluebird Hotel,217.27,AUD,GB,GB,bank_transfer,purchase,2026-09-09T22:27:00Z
+acct-1246,Blue Harbor FX,74.40,AUD,GB,GB,card,purchase,2026-09-07T18:29:00Z
+acct-1044,Blue Harbor FX,244.15,AUD,US,US,bank_transfer,purchase,2026-10-17T19:10:00Z
+acct-1242,Fjord Consulting,292.07,USD,AU,AU,bank_transfer,purchase,2026-09-03T22:55:00Z
+acct-1120,Prism Consulting,455.84,CAD,AU,AU,bank_transfer,purchase,2026-09-16T10:03:00Z
+acct-1259,Nexus Trading,250.29,GBP,AU,AU,bank_transfer,subscription,2026-10-20T12:52:00Z
+acct-1275,Fjord Consulting,371.37,AUD,GB,GB,bank_transfer,subscription,2026-09-28T13:48:00Z
+acct-1387,Helios Crypto Desk,282.16,GBP,US,US,card,purchase,2026-09-08T12:38:00Z
+acct-1266,Vertex Capital Ops,413.94,CAD,FR,FR,card,subscription,2026-10-01T17:40:00Z
+acct-1300,Nexus Trading,50.93,EUR,FR,FR,card,purchase,2026-09-02T20:53:00Z
+acct-1114,Quantum Retail,372.38,GBP,AU,AU,card,subscription,2026-09-05T13:37:00Z
+acct-1074,Phoenix Financial,283.20,AUD,GB,GB,card,purchase,2026-10-14T22:49:00Z
+acct-1369,Silverline Trading,188.75,EUR,US,US,card,subscription,2026-10-16T20:54:00Z
+acct-1046,Redwood Treasury,277.08,GBP,US,US,bank_transfer,purchase,2026-10-17T22:14:00Z
+acct-1318,Helios Crypto Desk,204.78,CAD,CA,CA,bank_transfer,subscription,2026-09-28T07:57:00Z
+acct-1104,Phoenix Financial,230.10,EUR,GB,GB,card,subscription,2026-09-22T18:58:00Z
+acct-1349,Quantum Retail,224.92,GBP,FR,FR,card,purchase,2026-09-01T17:25:00Z
+acct-1417,Northwind Supply,124.71,USD,FR,FR,card,subscription,2026-10-02T14:09:00Z
+acct-1145,Horizon Ventures,319.26,CAD,GB,GB,card,subscription,2026-09-16T06:43:00Z
+acct-1138,Horizon Ventures,283.21,CAD,US,US,card,subscription,2026-10-08T11:06:00Z
+acct-1418,Phoenix Financial,379.43,EUR,FR,FR,bank_transfer,purchase,2026-09-11T10:13:00Z
+acct-1000,Titan Logistics,334.59,CAD,US,US,card,subscription,2026-09-05T13:45:00Z
+acct-1025,Velocity Partners,284.96,AUD,GB,GB,bank_transfer,purchase,2026-10-13T13:42:00Z
+acct-1251,Stellar Motors,166.21,GBP,CA,CA,bank_transfer,purchase,2026-09-02T16:58:00Z
+acct-1365,Nova Wire Partners,449.75,GBP,AU,AU,card,purchase,2026-09-09T07:50:00Z
+acct-1000,Echo Finance,491.10,GBP,FR,FR,bank_transfer,purchase,2026-09-08T18:09:00Z
+acct-1030,Evergreen Logistics,386.18,EUR,US,US,card,subscription,2026-10-12T06:57:00Z
+acct-1459,Northwind Supply,369.63,USD,CA,CA,bank_transfer,purchase,2026-10-02T06:48:00Z
+acct-1138,Northwind Supply,428.01,AUD,GB,GB,bank_transfer,purchase,2026-09-22T16:22:00Z
+acct-1469,Harbor Point,116.57,CAD,GB,GB,card,purchase,2026-10-09T16:37:00Z
+acct-1211,Helios Crypto Desk,439.78,AUD,FR,FR,card,purchase,2026-10-04T13:39:00Z
+acct-1179,Stellar Motors,199.12,GBP,CA,CA,bank_transfer,subscription,2026-09-16T20:14:00Z
+acct-1484,Nova Wire Partners,215.99,EUR,FR,FR,card,subscription,2026-10-15T16:19:00Z
+acct-1051,Nexus Trading,117.77,AUD,CA,CA,bank_transfer,subscription,2026-09-15T12:30:00Z
+acct-1195,Quantum Retail,174.74,AUD,AU,AU,card,subscription,2026-09-07T19:34:00Z
+acct-1131,Fjord Consulting,392.21,GBP,CA,CA,card,subscription,2026-09-28T17:34:00Z
+acct-1246,Phoenix Financial,388.44,EUR,FR,FR,card,purchase,2026-10-09T15:17:00Z
+acct-1232,Crestline Foods,391.74,CAD,GB,GB,card,purchase,2026-09-16T21:24:00Z
+acct-1136,Aurora Tech,137.57,GBP,GB,GB,card,purchase,2026-09-11T20:24:00Z
+acct-1124,Redwood Treasury,423.83,GBP,FR,FR,card,subscription,2026-09-19T17:15:00Z
+acct-1412,Quantum Retail,314.42,EUR,AU,AU,card,subscription,2026-10-19T14:47:00Z
+acct-1250,Aurora Tech,393.08,USD,AU,AU,card,subscription,2026-10-15T10:39:00Z
+acct-1030,Velocity Partners,424.11,USD,FR,FR,bank_transfer,purchase,2026-10-06T21:56:00Z
+acct-1288,Redwood Treasury,51.11,AUD,FR,FR,card,subscription,2026-09-29T22:22:00Z
+acct-1253,Cascadia Commerce,419.68,EUR,CA,CA,card,subscription,2026-10-12T16:44:00Z
+acct-1394,Blue Harbor FX,378.60,EUR,CA,CA,bank_transfer,purchase,2026-09-03T15:55:00Z
+acct-1001,Helios Crypto Desk,232.92,USD,GB,GB,bank_transfer,subscription,2026-10-09T07:59:00Z
+acct-1161,Redwood Treasury,234.55,AUD,US,US,bank_transfer,purchase,2026-09-04T19:26:00Z
+acct-1113,Vertex Capital Ops,136.97,USD,AU,AU,card,purchase,2026-09-21T13:01:00Z
+acct-1281,Bayview Motors,351.88,USD,AU,AU,card,subscription,2026-10-03T15:54:00Z
+acct-1102,Redwood Treasury,233.81,GBP,FR,FR,card,purchase,2026-10-03T11:41:00Z
+acct-1113,Bayview Motors,180.45,CAD,US,US,card,subscription,2026-09-24T12:30:00Z
+acct-1024,Horizon Ventures,375.75,CAD,AU,AU,bank_transfer,purchase,2026-09-23T12:03:00Z
+acct-1308,Titan Logistics,473.15,EUR,CA,CA,bank_transfer,purchase,2026-09-19T06:09:00Z
+acct-1482,Harbor Point,181.71,GBP,CA,CA,card,purchase,2026-09-24T16:27:00Z
+acct-1019,Prism Consulting,53.12,AUD,GB,GB,bank_transfer,subscription,2026-09-17T09:43:00Z
+acct-1059,Fjord Consulting,468.34,AUD,GB,GB,card,purchase,2026-09-25T20:29:00Z
+acct-1046,Apex Currency Exchange,202.17,EUR,GB,GB,card,purchase,2026-09-07T20:16:00Z
+acct-1315,Harbor Point,304.32,USD,AU,AU,bank_transfer,subscription,2026-09-09T17:25:00Z
+acct-1038,Zenith Industries,369.32,AUD,FR,FR,card,purchase,2026-09-01T12:09:00Z
+acct-1375,Compass Airlines,465.28,USD,AU,AU,card,purchase,2026-09-07T06:51:00Z
+acct-1157,Phoenix Financial,425.52,GBP,AU,AU,bank_transfer,subscription,2026-10-18T14:58:00Z
+acct-1410,Apex Currency Exchange,186.76,USD,FR,FR,bank_transfer,purchase,2026-10-06T13:52:00Z
+acct-1256,Prism Consulting,158.02,USD,GB,GB,card,purchase,2026-09-26T14:17:00Z
+acct-1057,Zenith Industries,429.54,CAD,US,US,bank_transfer,subscription,2026-09-08T22:03:00Z
+acct-1018,Harbor Point,369.63,EUR,GB,GB,bank_transfer,subscription,2026-10-19T22:29:00Z
+acct-1328,Velocity Partners,231.89,USD,AU,AU,bank_transfer,subscription,2026-09-12T19:44:00Z
+acct-1185,Velocity Partners,248.04,USD,CA,CA,bank_transfer,purchase,2026-09-03T14:34:00Z
+acct-1445,Phoenix Financial,350.04,CAD,GB,GB,bank_transfer,purchase,2026-09-20T15:53:00Z
+acct-1494,Bayview Motors,120.81,CAD,FR,FR,bank_transfer,subscription,2026-10-02T17:14:00Z
+acct-1474,Prism Consulting,59.06,GBP,FR,FR,bank_transfer,subscription,2026-10-02T07:27:00Z
+acct-1494,Cascadia Commerce,453.35,EUR,US,US,bank_transfer,purchase,2026-10-01T14:11:00Z
+acct-1390,Harbor Point,76.65,GBP,GB,GB,bank_transfer,purchase,2026-09-11T12:48:00Z
+acct-1253,Harbor Point,292.09,CAD,CA,CA,bank_transfer,purchase,2026-09-05T08:48:00Z
+acct-1268,Compass Airlines,441.65,USD,FR,FR,bank_transfer,purchase,2026-09-26T09:24:00Z
+acct-1115,Zenith Industries,347.12,EUR,AU,AU,card,subscription,2026-10-08T19:42:00Z
+acct-1174,Titan Logistics,228.74,USD,US,US,bank_transfer,subscription,2026-09-27T11:32:00Z
+acct-1036,Prism Consulting,73.71,AUD,US,US,card,purchase,2026-10-08T11:01:00Z
+acct-1402,Crestline Foods,408.86,CAD,FR,FR,bank_transfer,subscription,2026-10-14T20:18:00Z
+acct-1030,Oakleaf Consulting,457.36,GBP,FR,FR,card,purchase,2026-10-20T11:53:00Z
+acct-1080,Nexus Trading,422.29,USD,US,US,card,subscription,2026-09-16T11:23:00Z
+acct-1256,Titan Logistics,190.82,AUD,CA,CA,bank_transfer,subscription,2026-09-29T17:04:00Z
+acct-1494,Stellar Motors,174.14,AUD,CA,CA,bank_transfer,purchase,2026-09-01T12:37:00Z
+acct-1309,Northwind Supply,472.64,USD,FR,FR,card,subscription,2026-09-11T11:31:00Z
+acct-1066,Bluebird Hotel,284.54,EUR,CA,CA,card,purchase,2026-09-16T15:06:00Z
+acct-1039,Titan Logistics,82.26,CAD,FR,FR,card,purchase,2026-10-03T09:57:00Z
+acct-1033,Fjord Consulting,274.51,GBP,US,US,card,subscription,2026-09-19T17:55:00Z
+acct-1402,Harbor Point,454.48,CAD,GB,GB,card,subscription,2026-09-28T20:41:00Z
+acct-1468,Bridgeport Labs,391.00,EUR,AU,AU,bank_transfer,subscription,2026-10-04T10:03:00Z
+acct-1496,Prism Consulting,296.93,USD,GB,GB,bank_transfer,subscription,2026-10-05T10:56:00Z
+acct-1380,Northwind Supply,300.87,EUR,FR,FR,card,purchase,2026-09-05T19:16:00Z
+acct-1187,Bluebird Hotel,192.89,CAD,US,US,bank_transfer,purchase,2026-10-14T15:27:00Z
+acct-1305,Prism Consulting,266.45,AUD,FR,FR,card,purchase,2026-09-25T19:07:00Z
+acct-1079,Crestline Foods,52.32,EUR,CA,CA,card,subscription,2026-09-03T21:20:00Z
+acct-1390,Aurora Tech,94.01,GBP,CA,CA,bank_transfer,subscription,2026-10-19T11:47:00Z
+acct-1085,Evergreen Logistics,458.09,USD,US,US,card,purchase,2026-09-18T18:40:00Z
+acct-1090,Bridgeport Labs,400.40,CAD,CA,CA,bank_transfer,subscription,2026-09-22T18:35:00Z
+acct-1162,Echo Finance,469.59,EUR,GB,GB,bank_transfer,purchase,2026-10-10T21:23:00Z
+acct-1417,Redwood Treasury,172.15,CAD,FR,FR,card,subscription,2026-10-18T14:21:00Z
+acct-1089,Bayview Motors,79.52,EUR,US,US,card,subscription,2026-10-09T07:02:00Z
+acct-1454,Compass Airlines,138.86,AUD,GB,GB,bank_transfer,subscription,2026-09-15T16:35:00Z
+acct-1420,Phoenix Financial,131.13,AUD,GB,GB,card,purchase,2026-10-19T19:09:00Z
+acct-1265,Velocity Partners,129.84,USD,CA,CA,bank_transfer,purchase,2026-09-27T18:25:00Z
+acct-1187,Bluebird Hotel,89.95,USD,US,US,bank_transfer,subscription,2026-09-17T11:30:00Z
+acct-1476,Redwood Treasury,301.13,USD,GB,GB,bank_transfer,purchase,2026-09-15T19:09:00Z
+acct-1142,Zenith Industries,165.67,AUD,AU,AU,bank_transfer,purchase,2026-10-07T06:20:00Z
+acct-1441,Apex Currency Exchange,309.56,GBP,GB,GB,bank_transfer,subscription,2026-09-05T16:23:00Z
+acct-1013,Bluebird Hotel,91.59,USD,GB,GB,bank_transfer,subscription,2026-09-18T19:22:00Z
+acct-1268,Vertex Capital Ops,97.37,CAD,AU,AU,card,purchase,2026-09-07T16:32:00Z
+acct-1335,Nexus Trading,317.13,CAD,CA,CA,card,subscription,2026-09-06T14:58:00Z
+acct-1128,Titan Logistics,84.84,CAD,US,US,bank_transfer,purchase,2026-09-26T08:05:00Z
+acct-1353,Horizon Ventures,371.40,USD,AU,AU,bank_transfer,subscription,2026-10-01T22:46:00Z
+acct-1033,Redwood Treasury,171.18,CAD,FR,FR,bank_transfer,purchase,2026-09-18T18:04:00Z
+acct-1153,Redwood Treasury,155.82,GBP,US,US,card,subscription,2026-09-13T07:11:00Z
+acct-1287,Nova Wire Partners,99.76,EUR,AU,AU,bank_transfer,purchase,2026-09-10T09:27:00Z
+acct-1247,Zenith Industries,86.38,AUD,CA,CA,bank_transfer,purchase,2026-10-12T19:32:00Z
+acct-1297,Aurora Tech,282.80,USD,GB,GB,card,purchase,2026-10-17T19:26:00Z
+acct-1276,Velocity Partners,431.98,USD,GB,GB,bank_transfer,subscription,2026-10-01T14:22:00Z
+acct-1002,Crestline Foods,480.18,EUR,AU,AU,bank_transfer,purchase,2026-09-19T14:11:00Z
+acct-1473,Helios Crypto Desk,240.25,AUD,US,US,bank_transfer,purchase,2026-10-05T10:16:00Z
+acct-1415,Fjord Consulting,106.55,GBP,GB,GB,bank_transfer,purchase,2026-10-11T11:49:00Z
+acct-1042,Silverline Trading,374.72,EUR,AU,AU,bank_transfer,subscription,2026-10-18T17:42:00Z
+acct-1389,Crestline Foods,383.05,USD,CA,CA,card,subscription,2026-10-17T21:10:00Z
+acct-1085,Bridgeport Labs,113.91,GBP,AU,AU,card,purchase,2026-09-05T19:09:00Z
+acct-1202,Crestline Foods,257.04,USD,AU,AU,card,purchase,2026-09-22T14:32:00Z
+acct-1036,Oakleaf Consulting,306.35,GBP,AU,AU,bank_transfer,purchase,2026-09-21T16:48:00Z
+acct-1294,Titan Logistics,398.79,GBP,GB,GB,card,purchase,2026-09-26T14:38:00Z
+acct-1415,Compass Airlines,227.47,CAD,FR,FR,card,purchase,2026-10-10T21:22:00Z
+acct-1005,Compass Airlines,236.75,AUD,FR,FR,bank_transfer,subscription,2026-10-10T21:11:00Z
+acct-1011,Velocity Partners,222.34,CAD,CA,CA,card,purchase,2026-09-15T11:17:00Z
+acct-1337,Evergreen Logistics,464.74,EUR,FR,FR,card,purchase,2026-09-24T14:06:00Z
+acct-1396,Harbor Point,268.24,GBP,AU,AU,card,purchase,2026-09-13T20:21:00Z
+acct-1314,Cascadia Commerce,360.51,EUR,AU,AU,card,purchase,2026-10-05T19:11:00Z
+acct-1240,Horizon Ventures,295.04,AUD,FR,FR,card,subscription,2026-09-13T11:25:00Z
+acct-1008,Compass Airlines,248.27,AUD,FR,FR,card,purchase,2026-09-11T22:27:00Z
+acct-1033,Aurora Tech,279.80,GBP,FR,FR,bank_transfer,subscription,2026-09-09T12:21:00Z
+acct-1355,Quantum Retail,207.59,GBP,GB,GB,bank_transfer,subscription,2026-10-16T09:26:00Z
+acct-1195,Echo Finance,89.77,GBP,GB,GB,card,subscription,2026-09-16T09:04:00Z
+acct-1235,Atlas Hotel Group,276.87,USD,AU,AU,card,purchase,2026-10-16T08:09:00Z
+acct-1061,Apex Currency Exchange,327.92,USD,FR,FR,card,subscription,2026-09-06T17:58:00Z
+acct-1060,Phoenix Financial,360.60,AUD,CA,CA,bank_transfer,purchase,2026-10-17T13:06:00Z
+acct-1231,Aurora Tech,118.48,GBP,AU,AU,bank_transfer,subscription,2026-09-16T09:03:00Z
+acct-1125,Apex Currency Exchange,308.14,USD,AU,AU,card,subscription,2026-09-07T19:06:00Z
+acct-1414,Titan Logistics,171.08,AUD,US,US,bank_transfer,subscription,2026-10-06T22:48:00Z
+acct-1373,Bayview Motors,305.15,AUD,FR,FR,card,purchase,2026-09-05T22:34:00Z
+acct-1239,Horizon Ventures,344.06,EUR,US,US,bank_transfer,purchase,2026-09-03T22:01:00Z
+acct-1074,Echo Finance,413.23,CAD,CA,CA,card,purchase,2026-09-12T07:44:00Z
+acct-1231,Apex Currency Exchange,149.51,AUD,US,US,card,subscription,2026-10-06T16:47:00Z
+acct-1260,Prism Consulting,97.14,AUD,US,US,bank_transfer,subscription,2026-09-17T18:07:00Z
+acct-1032,Stellar Motors,456.88,GBP,AU,AU,card,subscription,2026-09-16T13:10:00Z
+acct-1453,Oakleaf Consulting,300.10,EUR,GB,GB,bank_transfer,subscription,2026-10-10T22:59:00Z
+acct-1402,Aurora Tech,356.04,EUR,GB,GB,card,subscription,2026-10-03T14:31:00Z
+acct-1129,Echo Finance,214.04,EUR,US,US,card,subscription,2026-09-09T09:13:00Z
+acct-1039,Phoenix Financial,103.87,CAD,GB,GB,card,subscription,2026-09-28T08:43:00Z
+acct-1390,Velocity Partners,94.30,AUD,FR,FR,bank_transfer,subscription,2026-09-20T17:03:00Z
+acct-1397,Horizon Ventures,170.83,EUR,AU,AU,card,subscription,2026-10-09T06:15:00Z
+acct-1300,Horizon Ventures,359.40,AUD,CA,CA,bank_transfer,purchase,2026-09-14T22:23:00Z
+acct-1435,Compass Airlines,315.57,AUD,FR,FR,bank_transfer,purchase,2026-10-07T13:52:00Z
+acct-1017,Silverline Trading,212.02,AUD,FR,FR,bank_transfer,subscription,2026-10-17T18:55:00Z
+acct-1137,Crestline Foods,193.39,GBP,US,US,card,purchase,2026-09-24T07:37:00Z
+acct-1341,Crestline Foods,187.23,GBP,AU,AU,bank_transfer,purchase,2026-10-12T06:24:00Z
+acct-1461,Crestline Foods,151.16,GBP,GB,GB,bank_transfer,subscription,2026-10-07T22:20:00Z
+acct-1497,Zenith Industries,445.33,CAD,GB,GB,bank_transfer,purchase,2026-10-01T07:53:00Z
+acct-1467,Bridgeport Labs,492.57,CAD,FR,FR,bank_transfer,purchase,2026-09-16T07:52:00Z
+acct-1379,Phoenix Financial,408.58,USD,FR,FR,bank_transfer,purchase,2026-10-06T22:30:00Z
+acct-1286,Echo Finance,196.46,CAD,AU,AU,card,purchase,2026-09-28T10:34:00Z
+acct-1065,Velocity Partners,234.48,CAD,AU,AU,card,subscription,2026-10-20T09:01:00Z
+acct-1203,Titan Logistics,199.91,CAD,FR,FR,bank_transfer,subscription,2026-09-26T17:09:00Z
+acct-1467,Zenith Industries,57.19,CAD,FR,FR,bank_transfer,purchase,2026-10-09T08:03:00Z
+acct-1427,Titan Logistics,151.39,CAD,CA,CA,card,subscription,2026-10-15T10:23:00Z
+acct-1067,Oakleaf Consulting,71.55,AUD,FR,FR,card,purchase,2026-10-08T21:18:00Z
+acct-1372,Northwind Supply,331.61,GBP,CA,CA,card,purchase,2026-10-07T19:35:00Z
+acct-1040,Crestline Foods,421.52,EUR,GB,GB,card,subscription,2026-10-04T20:31:00Z
+acct-1284,Crestline Foods,367.30,CAD,CA,CA,card,purchase,2026-09-01T18:47:00Z
+acct-1232,Crestline Foods,50.44,AUD,AU,AU,bank_transfer,purchase,2026-10-16T14:56:00Z
+acct-1163,Apex Currency Exchange,297.66,EUR,CA,CA,bank_transfer,purchase,2026-10-10T11:30:00Z
+acct-1447,Blue Harbor FX,281.70,USD,AU,AU,card,purchase,2026-10-18T08:58:00Z
+acct-1459,Bridgeport Labs,372.35,CAD,AU,AU,card,subscription,2026-09-27T12:30:00Z
+acct-1158,Apex Currency Exchange,118.49,USD,FR,FR,card,subscription,2026-09-24T13:57:00Z
+acct-1052,Aurora Tech,282.24,EUR,FR,FR,card,subscription,2026-09-14T20:38:00Z
+acct-1155,Evergreen Logistics,222.26,GBP,GB,GB,card,purchase,2026-10-13T18:40:00Z
+acct-1427,Compass Airlines,310.91,CAD,GB,GB,bank_transfer,purchase,2026-09-22T20:39:00Z
+acct-1018,Phoenix Financial,433.58,USD,AU,AU,card,purchase,2026-09-09T18:52:00Z
+acct-1422,Vertex Capital Ops,141.00,CAD,CA,CA,card,subscription,2026-09-27T11:11:00Z
+acct-1404,Stellar Motors,499.90,AUD,GB,GB,bank_transfer,purchase,2026-09-03T08:18:00Z
+acct-1424,Nova Wire Partners,237.30,CAD,GB,GB,card,subscription,2026-09-18T15:13:00Z
+acct-1010,Atlas Hotel Group,450.04,EUR,GB,GB,bank_transfer,subscription,2026-09-14T18:15:00Z
+acct-1038,Redwood Treasury,359.36,GBP,US,US,bank_transfer,subscription,2026-09-27T12:16:00Z
+acct-1453,Silverline Trading,419.62,USD,US,US,bank_transfer,purchase,2026-10-11T17:06:00Z
+acct-1341,Crestline Foods,487.14,AUD,US,US,card,purchase,2026-09-21T06:06:00Z
+acct-1188,Nexus Trading,271.87,EUR,AU,AU,card,purchase,2026-09-01T10:39:00Z
+acct-1287,Zenith Industries,103.51,USD,US,US,bank_transfer,purchase,2026-09-21T17:21:00Z
+acct-1272,Nexus Trading,265.34,USD,GB,GB,card,purchase,2026-09-22T21:14:00Z
+acct-1142,Aurora Tech,71.36,CAD,AU,AU,card,purchase,2026-09-10T18:35:00Z
+acct-1452,Crestline Foods,115.82,EUR,US,US,bank_transfer,purchase,2026-09-22T19:14:00Z
+acct-1460,Cascadia Commerce,277.64,AUD,FR,FR,bank_transfer,purchase,2026-10-20T07:13:00Z
+acct-1092,Horizon Ventures,428.91,AUD,US,US,card,subscription,2026-09-26T11:42:00Z
+acct-1201,Crestline Foods,434.48,CAD,CA,CA,card,purchase,2026-09-29T11:51:00Z
+acct-1463,Echo Finance,363.53,GBP,US,US,card,subscription,2026-09-18T06:58:00Z
+acct-1486,Stellar Motors,233.34,EUR,CA,CA,bank_transfer,subscription,2026-09-13T20:48:00Z
+acct-1476,Crestline Foods,214.95,USD,AU,AU,bank_transfer,subscription,2026-09-30T11:15:00Z
+acct-1257,Harbor Point,65.14,CAD,GB,GB,bank_transfer,subscription,2026-09-17T14:43:00Z
+acct-1344,Compass Airlines,396.52,GBP,GB,GB,card,purchase,2026-09-30T15:05:00Z
+acct-1258,Compass Airlines,416.33,USD,AU,AU,card,purchase,2026-09-26T08:01:00Z
+acct-1273,Quantum Retail,243.23,AUD,US,US,card,subscription,2026-10-03T07:22:00Z
+acct-1323,Helios Crypto Desk,175.98,CAD,AU,AU,bank_transfer,subscription,2026-10-01T09:14:00Z
+acct-1236,Bridgeport Labs,410.55,USD,US,US,card,purchase,2026-09-16T17:42:00Z
+acct-1014,Aurora Tech,251.20,GBP,FR,FR,card,purchase,2026-10-06T15:10:00Z
+acct-1425,Quantum Retail,357.64,GBP,AU,AU,card,subscription,2026-10-04T08:17:00Z
+acct-1347,Bridgeport Labs,70.94,AUD,US,US,bank_transfer,subscription,2026-09-18T10:09:00Z
+acct-1161,Crestline Foods,438.07,CAD,AU,AU,card,subscription,2026-09-03T18:14:00Z
+acct-1265,Apex Currency Exchange,452.82,AUD,CA,CA,bank_transfer,purchase,2026-09-18T08:11:00Z
+acct-1207,Compass Airlines,335.83,GBP,FR,FR,bank_transfer,purchase,2026-09-11T07:12:00Z
+acct-1103,Phoenix Financial,115.55,USD,GB,GB,card,purchase,2026-09-22T14:27:00Z
+acct-1399,Oakleaf Consulting,137.17,EUR,GB,GB,bank_transfer,subscription,2026-10-16T08:30:00Z
+acct-1306,Prism Consulting,154.42,USD,US,US,bank_transfer,purchase,2026-09-14T06:39:00Z
+acct-1007,Redwood Treasury,207.92,USD,AU,AU,card,subscription,2026-09-17T20:53:00Z
+acct-1198,Northwind Supply,494.92,GBP,AU,AU,card,purchase,2026-09-28T20:24:00Z
+acct-1367,Bridgeport Labs,496.12,USD,FR,FR,card,subscription,2026-09-28T14:33:00Z
+acct-1165,Nova Wire Partners,199.28,EUR,FR,FR,bank_transfer,subscription,2026-09-28T21:31:00Z
+acct-1047,Atlas Hotel Group,64.74,AUD,FR,FR,bank_transfer,purchase,2026-09-26T17:22:00Z
+acct-1067,Titan Logistics,174.95,USD,GB,GB,card,purchase,2026-10-16T14:52:00Z
+acct-1325,Northwind Supply,329.21,GBP,US,US,card,purchase,2026-09-19T16:09:00Z
+acct-1206,Titan Logistics,386.26,USD,AU,AU,card,purchase,2026-10-05T13:55:00Z
+acct-1134,Nova Wire Partners,294.22,EUR,GB,GB,bank_transfer,subscription,2026-09-28T20:43:00Z
+acct-1315,Aurora Tech,302.59,EUR,AU,AU,card,subscription,2026-09-10T07:20:00Z
+acct-1165,Nova Wire Partners,361.19,USD,US,US,card,subscription,2026-09-01T21:06:00Z
+acct-1260,Atlas Hotel Group,491.09,AUD,GB,GB,bank_transfer,subscription,2026-10-06T14:30:00Z
+acct-1143,Redwood Treasury,426.36,USD,FR,FR,card,purchase,2026-09-21T17:30:00Z
+acct-1186,Evergreen Logistics,354.74,GBP,CA,CA,bank_transfer,purchase,2026-09-30T11:34:00Z
+acct-1350,Apex Currency Exchange,204.42,USD,FR,FR,card,purchase,2026-10-08T18:14:00Z
+acct-1432,Nexus Trading,178.02,USD,US,US,bank_transfer,subscription,2026-10-18T16:12:00Z
+acct-1352,Stellar Motors,178.87,EUR,GB,GB,bank_transfer,purchase,2026-09-10T15:12:00Z
+acct-1232,Zenith Industries,52.24,EUR,AU,AU,bank_transfer,purchase,2026-10-10T09:41:00Z
+acct-1170,Aurora Tech,353.41,GBP,CA,CA,bank_transfer,subscription,2026-09-14T10:20:00Z
+acct-1418,Silverline Trading,366.97,CAD,AU,AU,card,subscription,2026-10-11T21:05:00Z
+acct-1105,Phoenix Financial,348.85,CAD,GB,GB,card,subscription,2026-10-08T13:05:00Z
+acct-1481,Horizon Ventures,494.10,USD,US,US,bank_transfer,purchase,2026-10-19T14:36:00Z
+acct-1454,Apex Currency Exchange,322.75,AUD,US,US,card,purchase,2026-09-28T08:18:00Z
+acct-1411,Phoenix Financial,415.46,GBP,CA,CA,bank_transfer,purchase,2026-10-02T13:25:00Z
+acct-1275,Apex Currency Exchange,279.09,GBP,GB,GB,bank_transfer,purchase,2026-10-19T07:04:00Z
+acct-1084,Phoenix Financial,280.42,AUD,FR,FR,bank_transfer,purchase,2026-09-23T17:21:00Z
+acct-1337,Vertex Capital Ops,352.65,USD,AU,AU,card,subscription,2026-09-24T12:34:00Z
+acct-1359,Northwind Supply,97.42,EUR,CA,CA,card,subscription,2026-09-19T07:06:00Z
+acct-1158,Blue Harbor FX,392.01,EUR,CA,CA,bank_transfer,purchase,2026-10-05T12:51:00Z
+acct-1412,Fjord Consulting,106.21,EUR,CA,CA,bank_transfer,purchase,2026-10-13T20:36:00Z
+acct-1046,Silverline Trading,408.87,AUD,FR,FR,card,subscription,2026-10-16T12:43:00Z
+acct-1297,Phoenix Financial,404.56,CAD,US,US,card,purchase,2026-09-07T12:43:00Z
+acct-1019,Vertex Capital Ops,91.30,CAD,GB,GB,card,subscription,2026-10-10T06:34:00Z
+acct-1155,Harbor Point,462.32,AUD,FR,FR,bank_transfer,subscription,2026-10-18T11:17:00Z
+acct-1344,Cascadia Commerce,66.76,EUR,CA,CA,bank_transfer,subscription,2026-10-16T15:37:00Z
+acct-1290,Compass Airlines,483.98,USD,AU,AU,card,subscription,2026-10-09T22:06:00Z
+acct-1416,Cascadia Commerce,217.45,CAD,CA,CA,card,purchase,2026-09-24T20:50:00Z
+acct-1067,Helios Crypto Desk,108.52,USD,CA,CA,bank_transfer,purchase,2026-10-13T06:42:00Z
+acct-1465,Horizon Ventures,301.32,CAD,AU,AU,bank_transfer,purchase,2026-09-28T08:58:00Z
+acct-1084,Vertex Capital Ops,365.66,GBP,FR,FR,bank_transfer,subscription,2026-09-23T07:27:00Z
+acct-1165,Quantum Retail,427.62,GBP,US,US,card,subscription,2026-10-20T06:40:00Z
+acct-1350,Harbor Point,450.59,EUR,AU,AU,card,purchase,2026-09-07T19:58:00Z
+acct-1249,Helios Crypto Desk,355.50,CAD,FR,FR,bank_transfer,purchase,2026-09-06T22:44:00Z
+acct-1234,Redwood Treasury,439.32,EUR,CA,CA,bank_transfer,subscription,2026-09-15T07:34:00Z
+acct-1318,Atlas Hotel Group,466.94,CAD,AU,AU,card,purchase,2026-09-03T18:03:00Z
+acct-1058,Oakleaf Consulting,459.34,EUR,CA,CA,card,purchase,2026-09-20T20:56:00Z
+acct-1380,Nexus Trading,76.80,CAD,US,US,bank_transfer,subscription,2026-10-09T19:43:00Z
+acct-1152,Horizon Ventures,395.96,GBP,GB,GB,bank_transfer,subscription,2026-10-15T11:43:00Z
+acct-1072,Oakleaf Consulting,496.56,EUR,CA,CA,card,purchase,2026-09-29T11:21:00Z
+acct-1224,Phoenix Financial,353.41,AUD,US,US,card,subscription,2026-10-04T09:44:00Z
+acct-1310,Northwind Supply,335.56,AUD,CA,CA,bank_transfer,purchase,2026-10-05T15:55:00Z
+acct-1171,Helios Crypto Desk,395.77,AUD,FR,FR,card,purchase,2026-09-10T19:55:00Z
+acct-1453,Bayview Motors,369.13,EUR,US,US,card,purchase,2026-10-19T14:49:00Z
+acct-1279,Oakleaf Consulting,411.04,AUD,GB,GB,card,purchase,2026-09-21T06:54:00Z
+acct-1495,Atlas Hotel Group,120.61,USD,CA,CA,bank_transfer,subscription,2026-10-16T09:16:00Z
+acct-1496,Quantum Retail,471.79,CAD,FR,FR,card,subscription,2026-09-20T18:33:00Z
+acct-1260,Nova Wire Partners,382.51,GBP,FR,FR,card,subscription,2026-09-26T21:46:00Z
+acct-1119,Crestline Foods,215.33,USD,US,US,card,purchase,2026-10-12T06:45:00Z
+acct-1092,Zenith Industries,483.35,EUR,GB,GB,bank_transfer,purchase,2026-09-28T13:25:00Z
+acct-1481,Velocity Partners,346.44,AUD,FR,FR,bank_transfer,purchase,2026-09-23T11:25:00Z
+acct-1486,Nova Wire Partners,172.69,USD,AU,AU,bank_transfer,subscription,2026-09-24T06:08:00Z
+acct-1020,Prism Consulting,203.46,CAD,FR,FR,bank_transfer,purchase,2026-10-05T08:56:00Z
+acct-1427,Vertex Capital Ops,347.37,USD,FR,FR,bank_transfer,purchase,2026-09-17T09:47:00Z
+acct-1145,Horizon Ventures,81.19,USD,CA,CA,card,purchase,2026-09-13T15:48:00Z
+acct-1217,Blue Harbor FX,59.27,AUD,AU,AU,card,subscription,2026-09-01T09:25:00Z
+acct-1044,Silverline Trading,488.50,CAD,US,US,card,purchase,2026-09-06T06:06:00Z
+acct-1338,Echo Finance,151.84,AUD,CA,CA,bank_transfer,subscription,2026-09-05T14:36:00Z
+acct-1499,Redwood Treasury,355.95,USD,FR,FR,bank_transfer,subscription,2026-09-18T18:04:00Z
+acct-1338,Evergreen Logistics,385.43,GBP,AU,AU,bank_transfer,subscription,2026-10-13T10:22:00Z
+acct-1262,Vertex Capital Ops,281.27,EUR,US,US,bank_transfer,subscription,2026-09-15T10:21:00Z
+acct-1180,Silverline Trading,54.66,AUD,CA,CA,bank_transfer,subscription,2026-09-04T21:59:00Z
+acct-1301,Bayview Motors,404.68,CAD,FR,FR,bank_transfer,subscription,2026-10-04T14:06:00Z
+acct-1413,Harbor Point,384.60,GBP,FR,FR,bank_transfer,purchase,2026-09-01T18:30:00Z
+acct-1258,Stellar Motors,182.76,GBP,GB,GB,card,subscription,2026-09-15T10:03:00Z
+acct-1097,Fjord Consulting,220.59,EUR,GB,GB,bank_transfer,subscription,2026-10-04T16:27:00Z
+acct-1460,Crestline Foods,59.61,USD,CA,CA,card,purchase,2026-10-20T11:53:00Z
+acct-1428,Zenith Industries,266.24,AUD,US,US,bank_transfer,subscription,2026-09-05T10:37:00Z
+acct-1396,Titan Logistics,183.25,CAD,AU,AU,card,purchase,2026-09-24T13:34:00Z
+acct-1326,Cascadia Commerce,491.76,CAD,AU,AU,card,subscription,2026-10-10T12:32:00Z
+acct-1395,Northwind Supply,437.03,USD,FR,FR,bank_transfer,subscription,2026-09-05T22:23:00Z
+acct-1469,Bluebird Hotel,211.46,EUR,CA,CA,card,subscription,2026-09-28T18:35:00Z
+acct-1190,Crestline Foods,393.56,EUR,CA,CA,card,subscription,2026-10-17T17:50:00Z
+acct-1492,Apex Currency Exchange,88.42,GBP,FR,FR,card,purchase,2026-10-04T15:02:00Z
+acct-1410,Fjord Consulting,360.37,GBP,FR,FR,bank_transfer,purchase,2026-09-01T10:36:00Z
+acct-1333,Titan Logistics,488.07,CAD,FR,FR,card,purchase,2026-10-02T19:26:00Z
+acct-1341,Oakleaf Consulting,113.96,CAD,US,US,card,subscription,2026-10-09T21:13:00Z
+acct-1338,Prism Consulting,404.15,USD,US,US,card,subscription,2026-10-09T21:10:00Z
+acct-1113,Oakleaf Consulting,314.73,CAD,US,US,card,purchase,2026-09-01T15:32:00Z
+acct-1049,Redwood Treasury,464.83,EUR,AU,AU,card,purchase,2026-10-12T14:49:00Z
+acct-1113,Stellar Motors,157.36,AUD,GB,GB,bank_transfer,purchase,2026-10-14T15:42:00Z
+acct-1290,Horizon Ventures,334.44,CAD,US,US,bank_transfer,purchase,2026-10-04T10:27:00Z
+acct-1166,Compass Airlines,257.40,CAD,CA,CA,bank_transfer,subscription,2026-09-22T10:04:00Z
+acct-1168,Prism Consulting,64.28,AUD,CA,CA,bank_transfer,purchase,2026-09-08T09:06:00Z
+acct-1376,Prism Consulting,408.03,GBP,US,US,bank_transfer,purchase,2026-10-11T09:55:00Z
+acct-1022,Atlas Hotel Group,391.22,EUR,AU,AU,card,purchase,2026-10-02T14:34:00Z
+acct-1187,Evergreen Logistics,461.01,AUD,CA,CA,bank_transfer,purchase,2026-09-13T17:12:00Z
+acct-1079,Vertex Capital Ops,400.09,USD,AU,AU,bank_transfer,subscription,2026-10-09T20:36:00Z
+acct-1406,Silverline Trading,260.66,USD,US,US,bank_transfer,subscription,2026-10-03T10:10:00Z
+acct-1232,Nova Wire Partners,434.74,AUD,AU,AU,bank_transfer,subscription,2026-09-26T06:48:00Z
+acct-1440,Helios Crypto Desk,53.74,EUR,GB,GB,bank_transfer,purchase,2026-09-12T15:08:00Z
+acct-1299,Velocity Partners,340.89,GBP,CA,CA,card,purchase,2026-10-09T12:01:00Z
+acct-1091,Harbor Point,478.85,USD,GB,GB,bank_transfer,purchase,2026-09-14T07:14:00Z
+acct-1393,Quantum Retail,311.37,CAD,US,US,card,purchase,2026-09-07T15:49:00Z
+acct-1015,Phoenix Financial,198.13,EUR,FR,FR,card,subscription,2026-10-14T20:22:00Z
+acct-1258,Blue Harbor FX,168.44,EUR,CA,CA,bank_transfer,subscription,2026-10-17T12:47:00Z
+acct-1360,Crestline Foods,67.98,CAD,CA,CA,card,purchase,2026-10-13T18:00:00Z
+acct-1210,Zenith Industries,236.53,USD,FR,FR,bank_transfer,purchase,2026-09-18T20:58:00Z
+acct-1330,Titan Logistics,292.28,GBP,CA,CA,bank_transfer,purchase,2026-10-16T20:22:00Z
+acct-1142,Bridgeport Labs,181.76,AUD,FR,FR,bank_transfer,subscription,2026-09-13T18:40:00Z
+acct-1090,Harbor Point,418.60,AUD,FR,FR,bank_transfer,purchase,2026-10-08T06:05:00Z
+acct-1068,Prism Consulting,79.91,USD,GB,GB,bank_transfer,purchase,2026-10-13T10:51:00Z
+acct-1263,Phoenix Financial,138.34,EUR,GB,GB,bank_transfer,purchase,2026-09-03T16:17:00Z
+acct-1247,Bridgeport Labs,478.37,EUR,AU,AU,bank_transfer,purchase,2026-09-05T20:40:00Z
+acct-1234,Redwood Treasury,188.58,CAD,GB,GB,card,purchase,2026-09-10T08:32:00Z
+acct-1486,Evergreen Logistics,162.23,CAD,FR,FR,card,purchase,2026-09-20T17:15:00Z
+acct-1092,Vertex Capital Ops,391.90,AUD,FR,FR,bank_transfer,purchase,2026-09-06T21:01:00Z
+acct-1216,Stellar Motors,84.34,USD,GB,GB,card,subscription,2026-10-02T18:39:00Z
+acct-1095,Oakleaf Consulting,350.38,AUD,AU,AU,bank_transfer,purchase,2026-10-03T09:01:00Z
+acct-1201,Horizon Ventures,306.08,USD,US,US,bank_transfer,subscription,2026-09-02T22:40:00Z
+acct-1194,Helios Crypto Desk,179.86,GBP,GB,GB,card,purchase,2026-09-18T18:46:00Z
+acct-1159,Phoenix Financial,168.20,EUR,US,US,bank_transfer,subscription,2026-10-18T11:27:00Z
+acct-1369,Compass Airlines,427.67,EUR,CA,CA,card,subscription,2026-09-30T21:29:00Z
+acct-1124,Nova Wire Partners,74.10,USD,CA,CA,bank_transfer,subscription,2026-09-09T12:29:00Z
+acct-1364,Blue Harbor FX,161.12,CAD,AU,AU,bank_transfer,subscription,2026-09-18T15:13:00Z
+acct-1006,Fjord Consulting,192.04,CAD,US,US,bank_transfer,purchase,2026-09-30T14:39:00Z
+acct-1419,Zenith Industries,406.05,CAD,AU,AU,bank_transfer,subscription,2026-09-28T13:07:00Z
+acct-1145,Northwind Supply,333.96,GBP,US,US,card,subscription,2026-09-26T14:29:00Z
+acct-1086,Nova Wire Partners,183.00,EUR,CA,CA,bank_transfer,purchase,2026-09-15T13:21:00Z
+acct-1498,Vertex Capital Ops,55.33,CAD,US,US,card,subscription,2026-10-11T22:42:00Z
+acct-1263,Horizon Ventures,197.96,USD,US,US,bank_transfer,subscription,2026-10-14T11:47:00Z
+acct-1153,Evergreen Logistics,439.51,AUD,FR,FR,card,subscription,2026-09-08T13:48:00Z
+acct-1092,Velocity Partners,480.90,AUD,US,US,card,purchase,2026-09-04T21:50:00Z
+acct-1121,Phoenix Financial,370.84,USD,AU,AU,bank_transfer,purchase,2026-09-25T18:19:00Z
+acct-1199,Vertex Capital Ops,270.81,GBP,CA,CA,card,purchase,2026-09-04T08:03:00Z
+acct-1175,Aurora Tech,174.32,GBP,GB,GB,bank_transfer,purchase,2026-10-20T06:45:00Z
+acct-1321,Phoenix Financial,77.39,USD,GB,GB,bank_transfer,subscription,2026-10-18T19:05:00Z
+acct-1439,Titan Logistics,454.91,CAD,AU,AU,card,purchase,2026-10-06T16:47:00Z
+acct-1403,Zenith Industries,405.10,USD,AU,AU,card,purchase,2026-09-19T06:45:00Z
+acct-1108,Velocity Partners,208.35,EUR,AU,AU,bank_transfer,subscription,2026-10-03T13:07:00Z
+acct-1248,Bridgeport Labs,423.97,EUR,GB,GB,bank_transfer,subscription,2026-10-08T15:33:00Z
+acct-1105,Blue Harbor FX,108.51,CAD,AU,AU,card,purchase,2026-09-04T16:45:00Z
+acct-1382,Bridgeport Labs,316.20,CAD,US,US,card,purchase,2026-09-06T16:36:00Z
+acct-1498,Northwind Supply,284.62,USD,US,US,card,subscription,2026-09-19T17:54:00Z
+acct-1381,Phoenix Financial,134.80,EUR,FR,FR,bank_transfer,purchase,2026-09-28T08:21:00Z
+acct-1190,Bayview Motors,302.71,CAD,GB,GB,card,subscription,2026-10-07T19:56:00Z
+acct-1068,Fjord Consulting,88.67,CAD,FR,FR,card,purchase,2026-10-03T20:19:00Z
+acct-1263,Nexus Trading,414.83,CAD,US,US,bank_transfer,purchase,2026-09-19T14:10:00Z
+acct-1340,Silverline Trading,299.51,USD,GB,GB,card,purchase,2026-10-06T14:12:00Z
+acct-1354,Compass Airlines,495.89,CAD,CA,CA,card,subscription,2026-10-13T07:22:00Z
+acct-1233,Prism Consulting,424.51,AUD,FR,FR,card,purchase,2026-10-04T08:01:00Z
+acct-1130,Fjord Consulting,277.49,EUR,AU,AU,card,subscription,2026-09-28T16:13:00Z
+acct-1273,Evergreen Logistics,414.42,USD,GB,GB,card,purchase,2026-09-14T17:47:00Z
+acct-1057,Northwind Supply,314.56,GBP,US,US,card,subscription,2026-09-14T19:53:00Z
+acct-1313,Aurora Tech,331.16,CAD,CA,CA,card,subscription,2026-09-03T21:55:00Z
+acct-1376,Bridgeport Labs,412.09,GBP,US,US,card,subscription,2026-09-07T17:58:00Z
+acct-1346,Northwind Supply,464.66,EUR,GB,GB,bank_transfer,subscription,2026-10-11T09:57:00Z
+acct-1108,Echo Finance,344.83,AUD,CA,CA,bank_transfer,subscription,2026-09-09T17:51:00Z
+acct-1237,Crestline Foods,299.21,GBP,AU,AU,bank_transfer,subscription,2026-09-05T13:30:00Z
+acct-1256,Nova Wire Partners,365.45,EUR,GB,GB,bank_transfer,purchase,2026-10-05T07:33:00Z
+acct-1357,Oakleaf Consulting,310.60,EUR,FR,FR,card,purchase,2026-09-26T09:20:00Z
+acct-1355,Velocity Partners,328.01,USD,CA,CA,bank_transfer,purchase,2026-10-07T21:22:00Z
+acct-1134,Oakleaf Consulting,59.38,USD,CA,CA,bank_transfer,subscription,2026-09-13T22:15:00Z
+acct-1082,Zenith Industries,231.49,AUD,AU,AU,bank_transfer,subscription,2026-09-02T14:53:00Z
+acct-1122,Blue Harbor FX,76.74,EUR,US,US,bank_transfer,subscription,2026-09-25T18:27:00Z
+acct-1330,Prism Consulting,435.65,EUR,GB,GB,bank_transfer,subscription,2026-09-18T07:01:00Z
+acct-1280,Prism Consulting,277.71,GBP,US,US,card,subscription,2026-10-02T06:25:00Z
+acct-1425,Phoenix Financial,102.06,GBP,US,US,bank_transfer,subscription,2026-09-25T19:48:00Z
+acct-1039,Titan Logistics,167.93,GBP,AU,AU,card,purchase,2026-09-25T19:54:00Z
+acct-1087,Atlas Hotel Group,490.04,USD,AU,AU,bank_transfer,purchase,2026-09-26T15:39:00Z
+acct-1013,Stellar Motors,56.49,USD,FR,FR,bank_transfer,subscription,2026-10-06T20:05:00Z
+acct-1327,Redwood Treasury,379.16,GBP,AU,AU,card,subscription,2026-10-07T16:28:00Z
+acct-1363,Nexus Trading,347.24,CAD,GB,GB,bank_transfer,subscription,2026-09-20T19:23:00Z
+acct-1105,Prism Consulting,66.68,EUR,CA,CA,card,subscription,2026-09-09T10:28:00Z
+acct-1252,Zenith Industries,61.50,CAD,GB,GB,bank_transfer,subscription,2026-10-12T20:40:00Z
+acct-1452,Nexus Trading,147.58,GBP,CA,CA,bank_transfer,purchase,2026-10-16T14:04:00Z
+acct-1214,Stellar Motors,362.83,USD,FR,FR,bank_transfer,purchase,2026-09-02T09:24:00Z
+acct-1302,Aurora Tech,432.60,USD,FR,FR,card,purchase,2026-10-08T18:16:00Z
+acct-1245,Helios Crypto Desk,244.64,CAD,GB,GB,bank_transfer,purchase,2026-10-15T16:26:00Z
+acct-1311,Aurora Tech,297.95,GBP,GB,GB,bank_transfer,subscription,2026-10-08T17:52:00Z
+acct-1196,Stellar Motors,407.99,USD,US,US,card,subscription,2026-10-04T12:24:00Z
+acct-1212,Vertex Capital Ops,141.74,USD,CA,CA,bank_transfer,purchase,2026-09-11T15:21:00Z
+acct-1339,Prism Consulting,441.16,GBP,FR,FR,card,subscription,2026-10-05T18:27:00Z
+acct-1329,Fjord Consulting,155.81,EUR,AU,AU,bank_transfer,subscription,2026-10-18T17:43:00Z
+acct-1280,Harbor Point,236.86,EUR,FR,FR,bank_transfer,subscription,2026-09-27T08:06:00Z
+acct-1002,Bayview Motors,286.34,GBP,CA,CA,bank_transfer,purchase,2026-09-03T21:38:00Z
+acct-1333,Fjord Consulting,90.52,GBP,GB,GB,card,subscription,2026-10-09T18:18:00Z
+acct-1064,Compass Airlines,454.65,EUR,GB,GB,bank_transfer,purchase,2026-09-07T06:52:00Z
+acct-1339,Vertex Capital Ops,371.91,GBP,CA,CA,card,subscription,2026-09-19T18:41:00Z
+acct-1338,Evergreen Logistics,416.63,EUR,CA,CA,card,subscription,2026-09-03T09:28:00Z
+acct-1394,Fjord Consulting,227.60,USD,FR,FR,bank_transfer,subscription,2026-10-20T22:58:00Z
+acct-1055,Redwood Treasury,481.72,AUD,FR,FR,bank_transfer,subscription,2026-10-12T15:08:00Z
+acct-1033,Quantum Retail,95.84,AUD,GB,GB,bank_transfer,purchase,2026-10-13T22:20:00Z
+acct-1445,Evergreen Logistics,412.05,USD,GB,GB,card,purchase,2026-09-30T16:08:00Z
+acct-1396,Northwind Supply,166.60,GBP,AU,AU,card,purchase,2026-09-24T12:29:00Z
+acct-1387,Echo Finance,383.28,USD,CA,CA,card,purchase,2026-10-03T07:45:00Z
+acct-1193,Atlas Hotel Group,96.31,GBP,CA,CA,card,subscription,2026-09-25T22:20:00Z
+acct-1326,Compass Airlines,281.47,AUD,FR,FR,bank_transfer,purchase,2026-10-16T13:44:00Z
+acct-1024,Cascadia Commerce,361.47,EUR,GB,GB,bank_transfer,purchase,2026-10-10T10:27:00Z
+acct-1187,Titan Logistics,296.93,USD,AU,AU,card,purchase,2026-10-10T20:42:00Z
+acct-1176,Bridgeport Labs,350.57,CAD,US,US,bank_transfer,subscription,2026-10-16T15:36:00Z
+acct-1106,Silverline Trading,473.77,CAD,FR,FR,card,purchase,2026-09-17T10:01:00Z
+acct-1231,Echo Finance,221.56,AUD,AU,AU,card,subscription,2026-10-19T09:49:00Z
+acct-1363,Bluebird Hotel,71.22,GBP,CA,CA,card,subscription,2026-10-20T14:37:00Z
+acct-1262,Bayview Motors,343.40,AUD,GB,GB,bank_transfer,subscription,2026-09-03T19:47:00Z
+acct-1145,Northwind Supply,116.19,AUD,GB,GB,card,subscription,2026-10-08T08:53:00Z
+acct-1292,Silverline Trading,239.34,GBP,FR,FR,card,purchase,2026-09-21T06:48:00Z
+acct-1490,Helios Crypto Desk,447.33,USD,AU,AU,card,subscription,2026-09-23T14:41:00Z
+acct-1013,Crestline Foods,460.19,EUR,FR,FR,card,purchase,2026-10-12T10:45:00Z
+acct-1158,Silverline Trading,289.16,GBP,FR,FR,card,subscription,2026-09-20T17:25:00Z
+acct-1454,Nexus Trading,371.58,CAD,FR,FR,bank_transfer,subscription,2026-10-10T21:32:00Z
+acct-1490,Velocity Partners,450.92,CAD,GB,GB,bank_transfer,purchase,2026-10-03T07:43:00Z
+acct-1413,Compass Airlines,488.46,EUR,GB,GB,card,purchase,2026-09-09T09:43:00Z
+acct-1178,Aurora Tech,438.12,CAD,AU,AU,bank_transfer,purchase,2026-10-18T18:34:00Z
+acct-1319,Titan Logistics,310.93,AUD,GB,GB,bank_transfer,purchase,2026-10-12T17:28:00Z
+acct-1042,Nova Wire Partners,416.31,AUD,GB,GB,card,subscription,2026-09-21T14:17:00Z
+acct-1182,Bayview Motors,335.31,CAD,US,US,bank_transfer,purchase,2026-09-26T21:54:00Z
+acct-1444,Evergreen Logistics,473.24,EUR,FR,FR,card,subscription,2026-09-26T16:38:00Z
+acct-1082,Nexus Trading,478.95,USD,US,US,card,purchase,2026-09-12T19:26:00Z
+acct-1168,Nova Wire Partners,476.07,EUR,GB,GB,bank_transfer,subscription,2026-10-10T06:17:00Z
+acct-1364,Blue Harbor FX,241.44,CAD,FR,FR,bank_transfer,purchase,2026-09-19T08:33:00Z
+acct-1164,Echo Finance,67.62,GBP,US,US,card,subscription,2026-09-23T06:27:00Z
+acct-1120,Evergreen Logistics,185.76,USD,CA,CA,card,purchase,2026-10-12T06:24:00Z
+acct-1435,Aurora Tech,441.80,USD,US,US,card,purchase,2026-10-18T10:32:00Z
+acct-1486,Aurora Tech,155.25,CAD,FR,FR,bank_transfer,purchase,2026-09-29T10:20:00Z
+acct-1188,Redwood Treasury,356.76,CAD,GB,GB,bank_transfer,subscription,2026-09-12T12:15:00Z
+acct-1179,Blue Harbor FX,68.70,CAD,GB,GB,bank_transfer,purchase,2026-09-15T09:56:00Z
+acct-1419,Crestline Foods,490.16,GBP,AU,AU,card,subscription,2026-09-27T06:47:00Z
+acct-1318,Aurora Tech,208.11,AUD,US,US,card,subscription,2026-09-03T21:41:00Z
+acct-1207,Helios Crypto Desk,50.56,AUD,GB,GB,card,subscription,2026-10-16T13:58:00Z
+acct-1265,Aurora Tech,128.24,GBP,US,US,card,purchase,2026-10-14T10:24:00Z
+acct-1384,Echo Finance,287.77,AUD,CA,CA,card,purchase,2026-10-02T16:49:00Z
+acct-1272,Fjord Consulting,348.57,EUR,AU,AU,bank_transfer,purchase,2026-09-29T21:23:00Z
+acct-1326,Bayview Motors,138.08,CAD,FR,FR,bank_transfer,subscription,2026-10-01T17:58:00Z
+acct-1413,Phoenix Financial,113.12,EUR,CA,CA,bank_transfer,purchase,2026-10-13T13:22:00Z
+acct-1376,Prism Consulting,143.61,EUR,CA,CA,bank_transfer,purchase,2026-09-19T07:24:00Z
+acct-1012,Harbor Point,291.29,CAD,CA,CA,card,purchase,2026-10-18T11:41:00Z
+acct-1267,Nova Wire Partners,453.38,AUD,FR,FR,card,purchase,2026-10-07T20:42:00Z
+acct-1215,Stellar Motors,394.57,GBP,CA,CA,bank_transfer,subscription,2026-09-10T09:25:00Z
+acct-1289,Evergreen Logistics,156.98,CAD,GB,GB,card,purchase,2026-09-26T14:28:00Z
+acct-1031,Bluebird Hotel,201.28,CAD,GB,GB,card,subscription,2026-10-12T18:31:00Z
+acct-1474,Quantum Retail,467.02,USD,AU,AU,bank_transfer,purchase,2026-09-22T17:03:00Z
+acct-1125,Cascadia Commerce,370.78,GBP,AU,AU,bank_transfer,subscription,2026-09-02T18:09:00Z
+acct-1227,Nova Wire Partners,211.62,EUR,AU,AU,bank_transfer,purchase,2026-10-04T16:24:00Z
+acct-1434,Bridgeport Labs,296.82,GBP,FR,FR,card,purchase,2026-09-11T15:24:00Z
+acct-1194,Titan Logistics,86.64,EUR,US,US,card,subscription,2026-09-10T17:53:00Z
+acct-1116,Atlas Hotel Group,111.21,EUR,CA,CA,card,subscription,2026-09-25T11:30:00Z
+acct-1013,Blue Harbor FX,263.80,USD,FR,FR,card,purchase,2026-09-04T15:56:00Z
+acct-1049,Horizon Ventures,377.56,USD,US,US,bank_transfer,purchase,2026-10-17T10:05:00Z
+acct-1152,Harbor Point,220.88,USD,AU,AU,card,subscription,2026-09-28T22:14:00Z
+acct-1160,Prism Consulting,406.99,CAD,US,US,bank_transfer,subscription,2026-09-27T22:31:00Z
+acct-1215,Quantum Retail,207.48,USD,GB,GB,card,purchase,2026-09-01T08:44:00Z
+acct-1498,Echo Finance,284.29,EUR,US,US,bank_transfer,subscription,2026-10-07T09:34:00Z
+acct-1241,Silverline Trading,496.36,CAD,AU,AU,bank_transfer,subscription,2026-09-27T12:16:00Z
+acct-1399,Harbor Point,200.26,USD,AU,AU,card,subscription,2026-09-28T08:17:00Z
+acct-1365,Fjord Consulting,444.07,GBP,US,US,card,subscription,2026-10-05T16:18:00Z
+acct-1372,Redwood Treasury,209.67,EUR,FR,FR,bank_transfer,subscription,2026-09-24T15:40:00Z
+acct-1057,Bluebird Hotel,114.46,CAD,FR,FR,bank_transfer,subscription,2026-10-13T07:40:00Z
+acct-1342,Phoenix Financial,410.98,GBP,GB,GB,bank_transfer,subscription,2026-09-14T14:31:00Z
+acct-1097,Harbor Point,294.11,EUR,US,US,bank_transfer,subscription,2026-09-09T08:30:00Z
+acct-1473,Harbor Point,161.00,GBP,GB,GB,card,purchase,2026-10-16T10:40:00Z
+acct-1136,Echo Finance,338.37,GBP,US,US,bank_transfer,purchase,2026-09-19T07:25:00Z
+acct-1196,Velocity Partners,189.18,GBP,FR,FR,card,purchase,2026-10-01T22:17:00Z
+acct-1236,Apex Currency Exchange,179.63,GBP,AU,AU,card,subscription,2026-09-20T08:14:00Z
+acct-1018,Atlas Hotel Group,386.39,AUD,CA,CA,bank_transfer,purchase,2026-10-05T18:06:00Z
+acct-1321,Northwind Supply,458.34,USD,AU,AU,card,subscription,2026-09-24T11:29:00Z
+acct-1490,Bayview Motors,497.99,EUR,US,US,bank_transfer,subscription,2026-09-04T21:53:00Z
+acct-1313,Quantum Retail,334.30,AUD,AU,AU,card,subscription,2026-09-27T15:40:00Z
+acct-1447,Quantum Retail,391.08,USD,CA,CA,card,subscription,2026-09-19T20:35:00Z
+acct-1071,Horizon Ventures,454.83,CAD,FR,FR,card,purchase,2026-10-07T13:22:00Z
+acct-1254,Zenith Industries,234.96,AUD,FR,FR,bank_transfer,purchase,2026-10-19T22:37:00Z
+acct-1082,Prism Consulting,190.92,GBP,AU,AU,card,subscription,2026-10-13T07:41:00Z
+acct-1373,Bridgeport Labs,90.67,AUD,AU,AU,bank_transfer,purchase,2026-09-14T19:29:00Z
+acct-1104,Blue Harbor FX,266.94,USD,CA,CA,bank_transfer,subscription,2026-09-01T18:33:00Z
+acct-1342,Cascadia Commerce,281.55,EUR,CA,CA,bank_transfer,subscription,2026-09-09T14:38:00Z
+acct-1095,Vertex Capital Ops,441.92,USD,AU,AU,bank_transfer,purchase,2026-10-13T20:47:00Z
+acct-1126,Evergreen Logistics,222.88,USD,AU,AU,card,subscription,2026-09-16T11:38:00Z
+acct-1083,Prism Consulting,265.95,AUD,US,US,bank_transfer,purchase,2026-09-08T11:46:00Z
+acct-1216,Horizon Ventures,170.33,CAD,US,US,bank_transfer,subscription,2026-09-18T10:40:00Z
+acct-1386,Horizon Ventures,497.99,USD,GB,GB,card,purchase,2026-10-05T15:31:00Z
+acct-1457,Bluebird Hotel,313.42,EUR,AU,AU,card,subscription,2026-09-21T11:02:00Z
+acct-1062,Oakleaf Consulting,428.92,EUR,US,US,card,subscription,2026-09-10T11:48:00Z
+acct-1372,Bayview Motors,158.71,AUD,GB,GB,card,subscription,2026-09-09T15:23:00Z
+acct-1163,Redwood Treasury,305.99,AUD,GB,GB,bank_transfer,subscription,2026-10-18T15:16:00Z
+acct-1441,Titan Logistics,109.49,EUR,CA,CA,bank_transfer,purchase,2026-10-09T10:47:00Z
+acct-1486,Velocity Partners,148.09,USD,GB,GB,card,purchase,2026-09-05T19:40:00Z
+acct-1050,Bayview Motors,457.90,EUR,AU,AU,bank_transfer,subscription,2026-09-03T07:11:00Z
+acct-1346,Bridgeport Labs,328.35,AUD,GB,GB,bank_transfer,purchase,2026-10-12T12:57:00Z
+acct-1230,Atlas Hotel Group,187.83,AUD,US,US,card,subscription,2026-10-20T15:14:00Z
+acct-1413,Titan Logistics,221.38,EUR,AU,AU,card,subscription,2026-09-17T11:51:00Z
+acct-1466,Bayview Motors,399.27,AUD,AU,AU,bank_transfer,subscription,2026-10-03T18:21:00Z
+acct-1249,Echo Finance,414.75,USD,FR,FR,card,purchase,2026-10-17T10:09:00Z
+acct-1101,Phoenix Financial,483.17,CAD,CA,CA,bank_transfer,subscription,2026-10-18T12:53:00Z
+acct-1409,Evergreen Logistics,99.52,EUR,CA,CA,bank_transfer,purchase,2026-09-29T20:41:00Z
+acct-1062,Aurora Tech,412.81,AUD,US,US,bank_transfer,subscription,2026-09-24T17:45:00Z
+acct-1194,Aurora Tech,164.00,EUR,US,US,bank_transfer,subscription,2026-09-10T11:53:00Z
+acct-1189,Bridgeport Labs,379.07,AUD,AU,AU,bank_transfer,purchase,2026-09-21T20:28:00Z
+acct-1035,Evergreen Logistics,455.85,CAD,FR,FR,bank_transfer,purchase,2026-10-05T19:51:00Z
+acct-1058,Bridgeport Labs,112.58,CAD,US,US,card,purchase,2026-09-24T12:11:00Z
+acct-1187,Blue Harbor FX,329.94,USD,FR,FR,card,subscription,2026-10-18T13:45:00Z
+acct-1383,Compass Airlines,228.54,AUD,FR,FR,bank_transfer,subscription,2026-10-17T09:37:00Z
+acct-1064,Zenith Industries,79.19,EUR,AU,AU,bank_transfer,subscription,2026-09-09T19:19:00Z
+acct-1403,Bayview Motors,338.69,AUD,US,US,card,purchase,2026-09-23T18:34:00Z
+acct-1261,Bluebird Hotel,181.47,AUD,FR,FR,card,subscription,2026-09-21T13:49:00Z
+acct-1219,Nova Wire Partners,409.56,AUD,CA,CA,bank_transfer,purchase,2026-10-11T17:16:00Z
+acct-1194,Silverline Trading,466.30,GBP,FR,FR,card,subscription,2026-10-19T16:53:00Z
+acct-1332,Phoenix Financial,406.68,EUR,US,US,bank_transfer,purchase,2026-09-05T14:04:00Z
+acct-1295,Compass Airlines,321.98,USD,US,US,card,purchase,2026-09-16T11:20:00Z
+acct-1420,Velocity Partners,130.79,GBP,FR,FR,card,purchase,2026-09-27T17:03:00Z
+acct-1251,Titan Logistics,470.68,AUD,CA,CA,bank_transfer,purchase,2026-09-05T08:42:00Z
+acct-1129,Oakleaf Consulting,216.26,USD,GB,GB,bank_transfer,purchase,2026-10-16T12:45:00Z
+acct-1441,Apex Currency Exchange,51.93,AUD,US,US,bank_transfer,purchase,2026-10-10T11:23:00Z
+acct-1216,Apex Currency Exchange,417.35,GBP,US,US,card,purchase,2026-09-26T06:57:00Z
+acct-1290,Aurora Tech,144.12,CAD,CA,CA,card,subscription,2026-09-29T15:33:00Z
+acct-1391,Titan Logistics,426.01,AUD,AU,AU,bank_transfer,subscription,2026-09-03T21:28:00Z
+acct-1336,Prism Consulting,482.48,USD,CA,CA,bank_transfer,subscription,2026-09-24T12:57:00Z
+acct-1336,Redwood Treasury,124.40,USD,AU,AU,bank_transfer,purchase,2026-09-21T21:30:00Z
+acct-1247,Apex Currency Exchange,272.14,GBP,CA,CA,bank_transfer,purchase,2026-10-15T12:35:00Z
+acct-1151,Apex Currency Exchange,449.14,CAD,AU,AU,card,subscription,2026-10-17T06:07:00Z
+acct-1118,Cascadia Commerce,112.86,USD,AU,AU,card,subscription,2026-10-02T22:20:00Z
+acct-1126,Velocity Partners,399.61,EUR,US,US,bank_transfer,subscription,2026-09-26T15:36:00Z
+acct-1170,Titan Logistics,326.96,CAD,FR,FR,bank_transfer,subscription,2026-09-16T21:23:00Z
+acct-1344,Horizon Ventures,204.59,USD,FR,FR,bank_transfer,purchase,2026-10-02T13:58:00Z
+acct-1370,Stellar Motors,480.66,AUD,FR,FR,bank_transfer,purchase,2026-09-01T10:24:00Z
+acct-1128,Titan Logistics,143.19,CAD,GB,GB,bank_transfer,purchase,2026-09-22T16:29:00Z
+acct-1089,Phoenix Financial,151.42,EUR,US,US,card,subscription,2026-10-13T19:11:00Z
+acct-1041,Bayview Motors,455.06,EUR,US,US,card,subscription,2026-09-04T06:42:00Z
+acct-1213,Redwood Treasury,53.65,GBP,CA,CA,bank_transfer,purchase,2026-09-14T19:26:00Z
+acct-1298,Vertex Capital Ops,100.60,EUR,GB,GB,bank_transfer,subscription,2026-09-25T07:08:00Z
+acct-1292,Horizon Ventures,126.86,EUR,FR,FR,card,purchase,2026-09-21T07:06:00Z
+acct-1344,Quantum Retail,146.20,AUD,US,US,card,subscription,2026-09-16T10:02:00Z
+acct-1444,Atlas Hotel Group,137.89,AUD,AU,AU,bank_transfer,purchase,2026-09-06T12:51:00Z
+acct-1409,Cascadia Commerce,485.18,USD,FR,FR,bank_transfer,subscription,2026-09-11T11:57:00Z
+acct-1194,Aurora Tech,77.95,USD,US,US,bank_transfer,purchase,2026-10-18T09:05:00Z
+acct-1067,Nova Wire Partners,175.74,CAD,FR,FR,bank_transfer,subscription,2026-09-21T10:56:00Z
+acct-1367,Aurora Tech,308.85,USD,GB,GB,bank_transfer,subscription,2026-10-08T07:34:00Z
+acct-1014,Redwood Treasury,261.21,AUD,CA,CA,card,purchase,2026-10-09T17:11:00Z
+acct-1372,Apex Currency Exchange,281.39,CAD,AU,AU,bank_transfer,purchase,2026-09-22T11:23:00Z
+acct-1280,Aurora Tech,93.69,AUD,FR,FR,bank_transfer,subscription,2026-09-10T15:09:00Z
+acct-1322,Bridgeport Labs,404.03,EUR,GB,GB,bank_transfer,subscription,2026-09-03T21:17:00Z
+acct-1065,Harbor Point,277.97,USD,AU,AU,bank_transfer,subscription,2026-09-05T19:19:00Z
+acct-1150,Echo Finance,100.57,EUR,AU,AU,bank_transfer,subscription,2026-09-24T22:30:00Z
+acct-1146,Horizon Ventures,87.40,CAD,GB,GB,card,purchase,2026-10-14T07:11:00Z
+acct-1001,Phoenix Financial,178.87,EUR,FR,FR,card,subscription,2026-09-01T09:03:00Z
+acct-1172,Nova Wire Partners,249.31,AUD,AU,AU,card,subscription,2026-10-09T13:32:00Z
+acct-1257,Cascadia Commerce,400.34,USD,AU,AU,bank_transfer,subscription,2026-10-12T20:59:00Z
+acct-1159,Aurora Tech,476.59,USD,FR,FR,card,subscription,2026-09-21T20:30:00Z
+acct-1144,Velocity Partners,455.85,EUR,US,US,card,subscription,2026-10-07T06:38:00Z
+acct-1127,Stellar Motors,260.77,CAD,FR,FR,bank_transfer,subscription,2026-10-06T09:55:00Z
+acct-1099,Silverline Trading,494.18,USD,AU,AU,card,subscription,2026-10-10T10:37:00Z
+acct-1430,Echo Finance,234.41,CAD,FR,FR,card,subscription,2026-09-19T12:05:00Z
+acct-1484,Fjord Consulting,357.68,EUR,AU,AU,bank_transfer,subscription,2026-09-21T06:56:00Z
+acct-1055,Horizon Ventures,443.97,AUD,CA,CA,card,subscription,2026-09-25T18:21:00Z
+acct-1332,Helios Crypto Desk,183.55,USD,GB,GB,card,subscription,2026-10-05T14:26:00Z
+acct-1210,Nova Wire Partners,407.35,AUD,GB,GB,bank_transfer,subscription,2026-09-22T09:55:00Z
+acct-1278,Velocity Partners,459.88,EUR,AU,AU,bank_transfer,purchase,2026-09-15T20:07:00Z
+acct-1426,Apex Currency Exchange,178.57,EUR,GB,GB,card,subscription,2026-09-13T21:49:00Z
+acct-1320,Titan Logistics,408.95,AUD,CA,CA,card,subscription,2026-09-25T20:16:00Z
+acct-1213,Horizon Ventures,238.06,CAD,AU,AU,card,subscription,2026-09-03T15:50:00Z
+acct-1395,Prism Consulting,405.44,CAD,US,US,bank_transfer,purchase,2026-09-17T16:55:00Z
+acct-1196,Aurora Tech,427.23,CAD,CA,CA,bank_transfer,purchase,2026-09-23T12:13:00Z
+acct-1214,Phoenix Financial,239.20,GBP,US,US,bank_transfer,purchase,2026-09-02T19:42:00Z
+acct-1171,Stellar Motors,130.62,EUR,CA,CA,card,subscription,2026-10-09T22:27:00Z
+acct-1102,Evergreen Logistics,246.60,AUD,AU,AU,card,purchase,2026-09-28T15:04:00Z
+acct-1063,Cascadia Commerce,244.99,EUR,US,US,card,subscription,2026-10-12T13:09:00Z
+acct-1452,Quantum Retail,54.28,USD,FR,FR,bank_transfer,purchase,2026-09-07T14:03:00Z
+acct-1377,Aurora Tech,378.09,CAD,AU,AU,bank_transfer,subscription,2026-09-05T17:12:00Z
+acct-1256,Harbor Point,464.27,EUR,US,US,card,purchase,2026-10-11T20:30:00Z
+acct-1260,Apex Currency Exchange,421.76,AUD,AU,AU,bank_transfer,purchase,2026-10-17T19:28:00Z
+acct-1266,Atlas Hotel Group,284.41,CAD,GB,GB,bank_transfer,subscription,2026-09-30T17:56:00Z
+acct-1275,Harbor Point,330.35,GBP,AU,AU,card,subscription,2026-10-10T11:35:00Z
+acct-1009,Apex Currency Exchange,411.76,EUR,GB,GB,card,purchase,2026-10-06T17:46:00Z
+acct-1293,Aurora Tech,59.86,GBP,FR,FR,card,purchase,2026-10-04T13:42:00Z
+acct-1072,Evergreen Logistics,303.33,USD,GB,GB,bank_transfer,purchase,2026-09-30T11:32:00Z
+acct-1162,Silverline Trading,87.16,CAD,CA,CA,bank_transfer,subscription,2026-10-10T14:30:00Z
+acct-1491,Aurora Tech,388.51,USD,AU,AU,bank_transfer,subscription,2026-10-01T12:05:00Z
+acct-1229,Prism Consulting,409.18,USD,CA,CA,card,subscription,2026-09-26T20:10:00Z
+acct-1253,Vertex Capital Ops,456.60,GBP,GB,GB,bank_transfer,subscription,2026-09-02T09:33:00Z
+acct-1104,Northwind Supply,303.24,AUD,CA,CA,bank_transfer,purchase,2026-10-09T12:42:00Z
+acct-1362,Bayview Motors,412.01,EUR,GB,GB,card,subscription,2026-09-06T19:48:00Z
+acct-1267,Titan Logistics,383.11,CAD,US,US,bank_transfer,purchase,2026-09-03T07:41:00Z
+acct-1250,Nexus Trading,442.44,AUD,FR,FR,card,purchase,2026-10-11T14:40:00Z
+acct-1263,Northwind Supply,64.24,GBP,AU,AU,bank_transfer,purchase,2026-10-02T09:01:00Z
+acct-1237,Northwind Supply,223.09,AUD,US,US,bank_transfer,purchase,2026-10-14T10:14:00Z
+acct-1364,Echo Finance,438.85,AUD,AU,AU,card,purchase,2026-09-30T18:32:00Z
+acct-1397,Redwood Treasury,81.89,AUD,GB,GB,card,purchase,2026-09-30T12:26:00Z
+acct-1378,Crestline Foods,234.63,EUR,GB,GB,bank_transfer,subscription,2026-09-13T14:39:00Z
+acct-1119,Blue Harbor FX,189.58,AUD,CA,CA,card,subscription,2026-09-14T12:20:00Z
+acct-1234,Zenith Industries,269.12,USD,AU,AU,bank_transfer,subscription,2026-09-14T11:17:00Z
+acct-1410,Phoenix Financial,336.70,GBP,AU,AU,bank_transfer,subscription,2026-10-04T20:59:00Z
+acct-1339,Blue Harbor FX,121.28,CAD,FR,FR,bank_transfer,subscription,2026-10-12T07:08:00Z
+acct-1421,Fjord Consulting,312.81,CAD,US,US,bank_transfer,purchase,2026-09-22T18:56:00Z
+acct-1395,Silverline Trading,126.40,EUR,CA,CA,bank_transfer,subscription,2026-10-18T14:29:00Z
+acct-1420,Fjord Consulting,425.44,USD,US,US,bank_transfer,subscription,2026-09-16T15:52:00Z
+acct-1059,Oakleaf Consulting,127.16,USD,FR,FR,card,purchase,2026-09-03T21:24:00Z
+acct-1160,Zenith Industries,70.05,USD,FR,FR,card,purchase,2026-09-24T11:42:00Z
+acct-1374,Cascadia Commerce,134.49,USD,US,US,card,subscription,2026-09-28T16:31:00Z
+acct-1394,Atlas Hotel Group,177.29,CAD,FR,FR,bank_transfer,purchase,2026-09-05T07:46:00Z
+acct-1406,Titan Logistics,491.71,GBP,FR,FR,bank_transfer,purchase,2026-10-05T07:38:00Z
+acct-1079,Titan Logistics,306.55,AUD,US,US,bank_transfer,subscription,2026-10-19T16:00:00Z
+acct-1097,Nexus Trading,92.31,GBP,GB,GB,card,subscription,2026-09-20T14:00:00Z
+acct-1281,Bayview Motors,106.45,AUD,US,US,bank_transfer,purchase,2026-10-19T18:29:00Z
+acct-1221,Harbor Point,162.66,GBP,CA,CA,card,subscription,2026-09-16T16:49:00Z
+acct-1129,Fjord Consulting,221.05,EUR,CA,CA,bank_transfer,subscription,2026-10-15T22:31:00Z
+acct-1071,Blue Harbor FX,424.80,CAD,GB,GB,card,subscription,2026-10-01T07:33:00Z
+acct-1401,Silverline Trading,333.37,USD,CA,CA,card,purchase,2026-09-02T11:12:00Z
+acct-1149,Bridgeport Labs,498.11,USD,FR,FR,bank_transfer,purchase,2026-10-17T09:48:00Z
+acct-1173,Aurora Tech,265.79,GBP,AU,AU,bank_transfer,purchase,2026-10-10T11:51:00Z
+acct-1140,Bridgeport Labs,99.82,USD,FR,FR,card,subscription,2026-09-13T11:29:00Z
+acct-1079,Evergreen Logistics,499.06,USD,FR,FR,bank_transfer,subscription,2026-10-05T14:27:00Z
+acct-1220,Velocity Partners,191.12,GBP,CA,CA,bank_transfer,purchase,2026-10-20T16:45:00Z
+acct-1312,Atlas Hotel Group,402.52,GBP,CA,CA,card,purchase,2026-10-03T20:49:00Z
+acct-1170,Evergreen Logistics,448.07,GBP,US,US,bank_transfer,purchase,2026-10-18T09:29:00Z
+acct-1466,Stellar Motors,131.45,GBP,GB,GB,bank_transfer,subscription,2026-09-14T09:26:00Z
+acct-1334,Bluebird Hotel,269.53,USD,FR,FR,bank_transfer,subscription,2026-10-02T18:21:00Z
+acct-1355,Atlas Hotel Group,135.91,USD,FR,FR,card,subscription,2026-09-03T13:09:00Z
+acct-1473,Crestline Foods,362.63,GBP,GB,GB,bank_transfer,purchase,2026-09-14T22:33:00Z
+acct-1491,Quantum Retail,359.42,AUD,AU,AU,bank_transfer,subscription,2026-09-21T08:40:00Z
+acct-1225,Horizon Ventures,132.11,GBP,US,US,card,purchase,2026-10-14T09:03:00Z
+acct-1465,Quantum Retail,240.50,USD,US,US,card,subscription,2026-10-20T07:23:00Z
+acct-1492,Blue Harbor FX,437.02,EUR,US,US,bank_transfer,purchase,2026-10-08T15:13:00Z
+acct-1088,Prism Consulting,197.07,GBP,US,US,card,subscription,2026-09-11T18:24:00Z
+acct-1014,Silverline Trading,310.41,GBP,CA,CA,card,purchase,2026-10-02T22:03:00Z
+acct-1010,Prism Consulting,477.25,USD,FR,FR,bank_transfer,purchase,2026-10-05T19:04:00Z
+acct-1307,Bayview Motors,193.70,EUR,FR,FR,bank_transfer,subscription,2026-10-08T18:35:00Z
+acct-1193,Stellar Motors,324.30,CAD,FR,FR,bank_transfer,subscription,2026-09-18T16:54:00Z
+acct-1403,Northwind Supply,274.27,EUR,FR,FR,bank_transfer,purchase,2026-10-08T12:10:00Z
+acct-1381,Blue Harbor FX,145.13,CAD,CA,CA,card,subscription,2026-10-17T09:43:00Z
+acct-1227,Titan Logistics,78.77,USD,GB,GB,bank_transfer,purchase,2026-10-20T15:27:00Z
+acct-1116,Blue Harbor FX,71.31,USD,FR,FR,card,subscription,2026-10-04T10:28:00Z
+acct-1104,Velocity Partners,355.42,EUR,AU,AU,bank_transfer,purchase,2026-09-15T20:08:00Z
+acct-1028,Harbor Point,457.87,EUR,AU,AU,bank_transfer,purchase,2026-10-12T20:45:00Z
+acct-1491,Nexus Trading,52.03,USD,CA,CA,card,purchase,2026-10-13T20:16:00Z
+acct-1335,Nova Wire Partners,346.96,CAD,GB,GB,bank_transfer,subscription,2026-09-18T21:42:00Z
+acct-1466,Echo Finance,249.54,CAD,AU,AU,bank_transfer,purchase,2026-10-20T22:02:00Z
+acct-1245,Fjord Consulting,201.08,USD,FR,FR,bank_transfer,purchase,2026-09-24T18:57:00Z
+acct-1039,Bridgeport Labs,358.39,GBP,FR,FR,bank_transfer,purchase,2026-09-02T08:52:00Z
+acct-1137,Nexus Trading,426.04,USD,GB,GB,bank_transfer,purchase,2026-09-03T20:10:00Z
+acct-1455,Oakleaf Consulting,354.39,CAD,AU,AU,bank_transfer,purchase,2026-09-04T17:15:00Z
+acct-1310,Echo Finance,174.91,CAD,AU,AU,card,subscription,2026-09-07T16:19:00Z
+acct-1192,Nexus Trading,96.45,EUR,GB,GB,card,purchase,2026-10-02T22:40:00Z
+acct-1381,Prism Consulting,391.76,AUD,GB,GB,bank_transfer,purchase,2026-09-03T14:25:00Z
+acct-1228,Echo Finance,336.09,USD,GB,GB,card,purchase,2026-09-14T09:15:00Z
+acct-1453,Redwood Treasury,59.88,CAD,US,US,bank_transfer,subscription,2026-10-11T18:14:00Z
+acct-1129,Velocity Partners,261.20,EUR,CA,CA,card,purchase,2026-09-02T17:23:00Z
+acct-1400,Horizon Ventures,252.94,AUD,AU,AU,bank_transfer,purchase,2026-09-15T16:34:00Z
+acct-1486,Phoenix Financial,387.65,CAD,GB,GB,card,purchase,2026-09-04T11:57:00Z
+acct-1058,Crestline Foods,72.59,CAD,GB,GB,card,subscription,2026-10-16T07:24:00Z
+acct-1385,Evergreen Logistics,250.98,EUR,FR,FR,bank_transfer,subscription,2026-10-04T06:13:00Z
+acct-1193,Northwind Supply,336.01,USD,AU,AU,bank_transfer,purchase,2026-09-20T08:29:00Z
+acct-1155,Atlas Hotel Group,466.91,AUD,GB,GB,bank_transfer,purchase,2026-09-08T16:44:00Z
+acct-1079,Bayview Motors,70.35,AUD,US,US,bank_transfer,subscription,2026-09-01T21:49:00Z
+acct-1418,Aurora Tech,176.56,USD,AU,AU,bank_transfer,subscription,2026-10-05T22:19:00Z
+acct-1282,Velocity Partners,427.06,USD,GB,GB,bank_transfer,subscription,2026-10-19T08:46:00Z
+acct-1163,Titan Logistics,247.92,GBP,GB,GB,card,purchase,2026-09-16T20:49:00Z
+acct-1026,Echo Finance,140.06,AUD,CA,CA,card,subscription,2026-09-20T17:42:00Z
+acct-1491,Bridgeport Labs,314.45,AUD,AU,AU,bank_transfer,purchase,2026-10-04T10:44:00Z
+acct-1472,Blue Harbor FX,443.64,USD,GB,GB,card,subscription,2026-09-30T09:50:00Z
+acct-1424,Titan Logistics,341.30,AUD,CA,CA,bank_transfer,purchase,2026-09-14T07:19:00Z
+acct-1238,Stellar Motors,443.92,AUD,US,US,card,purchase,2026-09-19T19:34:00Z
+acct-1409,Crestline Foods,257.70,GBP,FR,FR,card,purchase,2026-10-09T14:02:00Z
+acct-1237,Horizon Ventures,215.67,EUR,FR,FR,card,subscription,2026-09-10T12:48:00Z
+acct-1178,Apex Currency Exchange,322.88,EUR,AU,AU,card,subscription,2026-09-07T14:09:00Z
+acct-1223,Echo Finance,275.03,EUR,CA,CA,card,subscription,2026-09-28T16:58:00Z
+acct-1289,Titan Logistics,471.61,EUR,GB,GB,card,purchase,2026-10-09T09:10:00Z
+acct-1074,Redwood Treasury,474.33,USD,AU,AU,card,subscription,2026-10-05T20:56:00Z
+acct-1235,Nexus Trading,478.89,CAD,AU,AU,card,purchase,2026-09-05T19:44:00Z
+acct-1461,Cascadia Commerce,453.43,AUD,GB,GB,card,purchase,2026-10-06T18:30:00Z
+acct-1258,Nova Wire Partners,164.31,CAD,US,US,card,subscription,2026-10-06T22:21:00Z
+acct-1465,Northwind Supply,260.48,USD,AU,AU,card,subscription,2026-09-24T11:22:00Z
+acct-1026,Stellar Motors,470.01,USD,FR,FR,card,purchase,2026-09-14T19:29:00Z
+acct-1323,Bluebird Hotel,221.37,USD,CA,CA,bank_transfer,purchase,2026-10-15T11:39:00Z
+acct-1276,Vertex Capital Ops,420.26,CAD,AU,AU,card,purchase,2026-10-19T06:49:00Z
+acct-1312,Blue Harbor FX,223.34,EUR,GB,GB,card,subscription,2026-09-04T09:30:00Z
+acct-1058,Helios Crypto Desk,107.77,CAD,FR,FR,card,subscription,2026-10-03T15:44:00Z
+acct-1369,Prism Consulting,57.45,GBP,GB,GB,bank_transfer,subscription,2026-09-26T22:22:00Z
+acct-1025,Quantum Retail,324.94,USD,FR,FR,card,purchase,2026-09-01T11:13:00Z
+acct-1419,Phoenix Financial,161.02,EUR,FR,FR,card,subscription,2026-09-08T21:36:00Z
+acct-1276,Crestline Foods,300.55,GBP,FR,FR,card,subscription,2026-09-26T12:57:00Z
+acct-1289,Harbor Point,131.20,USD,FR,FR,bank_transfer,purchase,2026-10-01T13:10:00Z
+acct-1140,Horizon Ventures,133.61,GBP,CA,CA,card,subscription,2026-09-04T10:08:00Z
+acct-1224,Bridgeport Labs,185.32,GBP,CA,CA,card,purchase,2026-09-21T11:14:00Z
+acct-1443,Bayview Motors,228.21,AUD,GB,GB,bank_transfer,subscription,2026-09-13T06:10:00Z
+acct-1261,Aurora Tech,248.96,AUD,CA,CA,card,purchase,2026-09-10T18:32:00Z
+acct-1094,Atlas Hotel Group,373.33,EUR,FR,FR,card,subscription,2026-09-20T09:55:00Z
+acct-1009,Atlas Hotel Group,220.39,GBP,CA,CA,card,subscription,2026-09-23T20:43:00Z
+acct-1290,Horizon Ventures,352.47,AUD,FR,FR,bank_transfer,purchase,2026-10-02T19:03:00Z
+acct-1362,Quantum Retail,77.58,USD,CA,CA,card,purchase,2026-09-11T15:14:00Z
+acct-1006,Titan Logistics,72.06,CAD,GB,GB,bank_transfer,purchase,2026-10-05T14:52:00Z
+acct-1259,Aurora Tech,95.63,GBP,AU,AU,card,subscription,2026-09-13T08:41:00Z
+acct-1263,Northwind Supply,197.54,USD,FR,FR,card,purchase,2026-10-18T19:24:00Z
+acct-1287,Atlas Hotel Group,390.01,CAD,US,US,bank_transfer,subscription,2026-10-19T20:15:00Z
+acct-1337,Aurora Tech,174.90,AUD,CA,CA,bank_transfer,subscription,2026-10-14T17:38:00Z
+acct-1086,Bayview Motors,222.80,CAD,CA,CA,bank_transfer,subscription,2026-09-23T07:48:00Z
+acct-1362,Quantum Retail,290.70,USD,CA,CA,bank_transfer,subscription,2026-09-16T22:53:00Z
+acct-1020,Aurora Tech,235.71,GBP,AU,AU,bank_transfer,purchase,2026-09-15T20:52:00Z
+acct-1479,Nova Wire Partners,474.92,CAD,AU,AU,card,subscription,2026-09-05T09:43:00Z
+acct-1488,Prism Consulting,153.81,AUD,GB,GB,bank_transfer,subscription,2026-10-18T06:38:00Z
+acct-1291,Prism Consulting,416.85,GBP,CA,CA,bank_transfer,subscription,2026-10-12T22:00:00Z
+acct-1396,Velocity Partners,90.32,USD,AU,AU,bank_transfer,purchase,2026-10-03T09:28:00Z
+acct-1387,Cascadia Commerce,378.24,EUR,AU,AU,bank_transfer,purchase,2026-10-07T15:49:00Z
+acct-1237,Fjord Consulting,202.99,USD,AU,AU,card,purchase,2026-10-13T16:42:00Z
+acct-1382,Stellar Motors,285.73,EUR,FR,FR,bank_transfer,purchase,2026-10-04T22:54:00Z
+acct-1229,Bridgeport Labs,349.86,AUD,GB,GB,card,purchase,2026-09-18T11:57:00Z
+acct-1440,Aurora Tech,130.61,AUD,AU,AU,card,subscription,2026-09-04T18:31:00Z
+acct-1107,Titan Logistics,143.12,EUR,FR,FR,bank_transfer,subscription,2026-09-19T20:59:00Z
+acct-1097,Silverline Trading,226.75,CAD,FR,FR,bank_transfer,purchase,2026-09-30T22:38:00Z
+acct-1009,Evergreen Logistics,353.46,EUR,GB,GB,bank_transfer,subscription,2026-10-11T07:02:00Z
+acct-1112,Bridgeport Labs,455.72,CAD,CA,CA,card,subscription,2026-10-10T20:55:00Z
+acct-1389,Prism Consulting,451.07,USD,FR,FR,card,subscription,2026-10-04T18:29:00Z
+acct-1168,Quantum Retail,332.72,AUD,FR,FR,card,subscription,2026-10-08T07:47:00Z
+acct-1180,Echo Finance,103.22,EUR,CA,CA,card,subscription,2026-09-13T20:55:00Z
+acct-1478,Helios Crypto Desk,473.68,GBP,FR,FR,bank_transfer,subscription,2026-09-16T11:47:00Z
+acct-1322,Phoenix Financial,288.19,GBP,FR,FR,card,purchase,2026-10-04T17:12:00Z
+acct-1197,Fjord Consulting,440.75,CAD,US,US,card,purchase,2026-09-12T12:10:00Z
+acct-1326,Redwood Treasury,187.10,GBP,FR,FR,bank_transfer,purchase,2026-09-17T13:59:00Z
+acct-1137,Fjord Consulting,63.24,CAD,AU,AU,bank_transfer,subscription,2026-10-14T09:52:00Z
+acct-1128,Crestline Foods,392.07,AUD,FR,FR,card,subscription,2026-10-19T20:30:00Z
+acct-1370,Bluebird Hotel,61.15,AUD,GB,GB,bank_transfer,subscription,2026-10-12T09:12:00Z
+acct-1176,Phoenix Financial,453.77,CAD,FR,FR,bank_transfer,subscription,2026-10-12T22:41:00Z
+acct-1415,Cascadia Commerce,361.00,CAD,CA,CA,bank_transfer,purchase,2026-10-09T19:49:00Z
+acct-1370,Atlas Hotel Group,407.72,AUD,GB,GB,bank_transfer,subscription,2026-10-19T16:17:00Z
+acct-1173,Apex Currency Exchange,489.20,GBP,FR,FR,bank_transfer,subscription,2026-09-19T22:13:00Z
+acct-1302,Redwood Treasury,77.82,GBP,AU,AU,bank_transfer,purchase,2026-09-15T10:35:00Z
+acct-1118,Bayview Motors,307.04,USD,FR,FR,card,purchase,2026-09-19T13:42:00Z
+acct-1436,Vertex Capital Ops,161.68,USD,FR,FR,bank_transfer,purchase,2026-09-16T11:45:00Z
+acct-1139,Bayview Motors,73.00,AUD,AU,AU,bank_transfer,subscription,2026-09-09T15:33:00Z
+acct-1412,Blue Harbor FX,160.29,CAD,AU,AU,bank_transfer,subscription,2026-10-03T13:58:00Z
+acct-1178,Northwind Supply,131.02,USD,GB,GB,bank_transfer,subscription,2026-09-21T13:29:00Z
+acct-1471,Nexus Trading,422.70,GBP,GB,GB,bank_transfer,purchase,2026-10-01T19:18:00Z
+acct-1318,Stellar Motors,415.35,USD,GB,GB,bank_transfer,subscription,2026-10-11T09:26:00Z
+acct-1202,Vertex Capital Ops,247.47,GBP,US,US,card,purchase,2026-10-13T06:05:00Z
+acct-1417,Atlas Hotel Group,246.63,EUR,AU,AU,card,purchase,2026-10-03T13:44:00Z
+acct-1121,Fjord Consulting,56.46,GBP,US,US,bank_transfer,subscription,2026-09-30T21:48:00Z
+acct-1208,Vertex Capital Ops,67.62,GBP,CA,CA,bank_transfer,purchase,2026-10-13T10:22:00Z
+acct-1230,Compass Airlines,458.70,USD,CA,CA,bank_transfer,subscription,2026-09-20T20:14:00Z
+acct-1115,Phoenix Financial,234.41,CAD,FR,FR,bank_transfer,subscription,2026-10-12T10:37:00Z
+acct-1359,Velocity Partners,465.94,USD,US,US,card,purchase,2026-09-21T13:32:00Z
+acct-1282,Bayview Motors,312.70,EUR,GB,GB,bank_transfer,subscription,2026-09-04T06:02:00Z
+acct-1231,Bayview Motors,129.27,GBP,US,US,card,subscription,2026-09-09T18:50:00Z
+acct-1241,Compass Airlines,442.37,CAD,GB,GB,card,purchase,2026-09-18T06:47:00Z
+acct-1135,Horizon Ventures,323.55,GBP,US,US,card,subscription,2026-10-12T16:25:00Z
+acct-1394,Northwind Supply,237.30,EUR,FR,FR,card,subscription,2026-10-02T06:12:00Z
+acct-1314,Fjord Consulting,273.69,USD,US,US,card,subscription,2026-10-03T11:27:00Z
+acct-1369,Evergreen Logistics,123.15,GBP,FR,FR,bank_transfer,subscription,2026-10-04T19:55:00Z
+acct-1152,Silverline Trading,61.59,AUD,CA,CA,bank_transfer,subscription,2026-09-07T18:08:00Z
+acct-1278,Blue Harbor FX,131.47,AUD,FR,FR,bank_transfer,purchase,2026-10-15T08:25:00Z
+acct-1071,Redwood Treasury,132.20,EUR,FR,FR,card,subscription,2026-09-07T17:31:00Z
+acct-1361,Redwood Treasury,458.75,GBP,US,US,bank_transfer,purchase,2026-09-12T08:42:00Z
+acct-1181,Stellar Motors,398.32,GBP,FR,FR,card,subscription,2026-09-11T18:20:00Z
+acct-1475,Nexus Trading,235.96,USD,AU,AU,card,purchase,2026-09-25T16:11:00Z
+acct-1467,Nova Wire Partners,117.85,USD,FR,FR,card,purchase,2026-09-18T09:39:00Z
+acct-1419,Bluebird Hotel,308.71,USD,AU,AU,card,subscription,2026-09-26T19:23:00Z
+acct-1014,Aurora Tech,304.01,CAD,GB,GB,card,subscription,2026-09-28T15:24:00Z
+acct-1314,Atlas Hotel Group,199.73,GBP,GB,GB,bank_transfer,purchase,2026-09-14T20:53:00Z
+acct-1111,Echo Finance,61.64,CAD,FR,FR,card,subscription,2026-10-14T06:20:00Z
+acct-1326,Nexus Trading,346.64,GBP,FR,FR,bank_transfer,purchase,2026-10-14T12:29:00Z

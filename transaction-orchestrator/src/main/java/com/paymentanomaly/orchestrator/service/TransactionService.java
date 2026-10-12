@@ -5,6 +5,7 @@ import com.paymentanomaly.orchestrator.dto.CreateTransactionRequest;
 import com.paymentanomaly.orchestrator.dto.TransactionResponse;
 import com.paymentanomaly.orchestrator.model.PaymentTransaction;
 import com.paymentanomaly.orchestrator.repository.PaymentTransactionRepository;
+import java.time.Instant;
 import java.util.List;
 import java.util.Objects;
 import java.util.UUID;
@@ -57,17 +58,43 @@ public class TransactionService {
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Transaction not found"));
     }
 
-    public List<TransactionResponse> listTransactions(Boolean flagged) {
-        List<PaymentTransaction> transactions = flagged == null
-                ? repository.findAllByOrderByTransactionTimestampDesc()
-                : repository.findByFlaggedOrderByTransactionTimestampDesc(flagged);
+    public List<TransactionResponse> listTransactions(Boolean flagged, Instant from, Instant to) {
+        List<PaymentTransaction> transactions;
+        
+        if (from != null && to != null) {
+            if (flagged == null) {
+                transactions = repository.findByTransactionTimestampBetweenOrderByTransactionTimestampDesc(from, to);
+            } else {
+                transactions = repository.findByFlaggedAndTransactionTimestampBetweenOrderByTransactionTimestampDesc(flagged, from, to);
+            }
+        } else {
+            if (flagged == null) {
+                transactions = repository.findAllByOrderByTransactionTimestampDesc();
+            } else {
+                transactions = repository.findByFlaggedOrderByTransactionTimestampDesc(flagged);
+            }
+        }
 
         return transactions.stream()
                 .map(this::toResponse)
                 .toList();
     }
 
+    private String calculateRiskLevel(boolean flagged, List<String> reasons) {
+        if (!flagged) {
+            return "LOW";
+        }
+        
+        if (reasons.size() >= 2) {
+            return "HIGH";
+        }
+        
+        return "MEDIUM";
+    }
+
     private TransactionResponse toResponse(PaymentTransaction transaction) {
+        String riskLevel = calculateRiskLevel(transaction.isFlagged(), transaction.getReasons());
+        
         return new TransactionResponse(
                 transaction.getId(),
                 transaction.getAccountId(),
@@ -80,7 +107,7 @@ public class TransactionService {
                 transaction.getTransactionType(),
                 transaction.getTransactionTimestamp(),
                 transaction.isFlagged(),
-                transaction.getAnomalyScore(),
+                riskLevel,
                 transaction.getReasons(),
                 transaction.getExplanation(),
                 transaction.getExplanationSource() == null ? "template" : transaction.getExplanationSource(),

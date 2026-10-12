@@ -4,6 +4,7 @@ import com.paymentanomaly.orchestrator.dto.CreateTransactionRequest;
 import com.paymentanomaly.orchestrator.dto.TransactionResponse;
 import com.paymentanomaly.orchestrator.service.TransactionService;
 import jakarta.validation.Valid;
+import java.time.Instant;
 import java.util.List;
 import java.util.UUID;
 import org.springframework.http.HttpStatus;
@@ -38,7 +39,10 @@ public class TransactionController {
     }
 
     @GetMapping
-    public List<TransactionResponse> listTransactions(@RequestParam(required = false) Boolean flagged) {
-        return transactionService.listTransactions(flagged);
+    public List<TransactionResponse> listTransactions(
+            @RequestParam(required = false) Boolean flagged,
+            @RequestParam(required = false) Instant from,
+            @RequestParam(required = false) Instant to) {
+        return transactionService.listTransactions(flagged, from, to);
     }
 }

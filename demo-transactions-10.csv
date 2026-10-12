@@ -1,0 +1,11 @@
+accountId,merchant,amount,currency,country,homeCountry,paymentMethod,transactionType,transactionTimestamp
+acct-3001,Northwind Supply,245.00,USD,US,US,card,purchase,2026-10-12T09:10:00Z
+acct-3002,Crestline Foods,189.50,GBP,GB,GB,bank_transfer,subscription,2026-10-12T10:45:00Z
+acct-3003,Fjord Consulting,315.75,EUR,FR,FR,card,purchase,2026-10-12T11:20:00Z
+acct-3004,Evergreen Logistics,410.00,CAD,CA,CA,bank_transfer,purchase,2026-10-12T12:05:00Z
+acct-3005,Bridgeport Labs,152.25,AUD,AU,AU,card,subscription,2026-10-12T13:40:00Z
+acct-3006,Helios Crypto Desk,470.00,USD,NG,US,crypto,purchase,2026-10-12T03:15:00Z
+acct-3007,Nova Wire Partners,525.00,GBP,AE,GB,wire,purchase,2026-10-12T23:25:00Z
+acct-3008,Apex Currency Exchange,560.00,EUR,BR,FR,crypto,cash_advance,2026-10-12T04:30:00Z
+acct-3009,Fjord Consulting,455.00,CAD,SG,CA,wire,refund,2026-10-12T02:20:00Z
+acct-3010,Crestline Foods,535.00,AUD,JP,AU,crypto,purchase,2026-10-12T23:05:00Z

@@ -220,6 +220,27 @@
                         <h2 id="chartTitle">Risk activity timeline</h2>
                     </div>
                 </div>
+                <div class="transaction-controls">
+                    <label class="country-filter-wrap" for="statsMerchantFilter">
+                        <span>Merchant</span>
+                        <select id="statsMerchantFilter">
+                            <option value="all">All merchants</option>
+                        </select>
+                    </label>
+                    <label class="country-filter-wrap" for="statsCountryFilter">
+                        <span>Country</span>
+                        <select id="statsCountryFilter">
+                            <option value="all">All countries</option>
+                        </select>
+                    </label>
+                    <label class="country-filter-wrap" for="statsCurrencyFilter">
+                        <span>Currency</span>
+                        <select id="statsCurrencyFilter">
+                            <option value="all">All currencies</option>
+                        </select>
+                    </label>
+                    <button class="ghost-button" id="resetStatsFilters" type="button">Reset filters</button>
+                </div>
                 <div class="chart-legend" aria-label="Chart legend">
                     <span><i class="legend-swatch flagged"></i>Flagged activity</span>
                     <span><i class="legend-swatch normal"></i>Normal activity</span>

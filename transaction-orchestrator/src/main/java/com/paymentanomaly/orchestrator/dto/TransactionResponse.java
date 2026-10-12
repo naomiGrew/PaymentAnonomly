@@ -17,7 +17,7 @@ public record TransactionResponse(
         String transactionType,
         OffsetDateTime transactionTimestamp,
         boolean flagged,
-        double anomalyScore,
+        String riskLevel,
         List<String> reasons,
         String explanation,
         String explanationSource,

@@ -32,8 +32,6 @@ class PaymentAnomalyDetector:
         model_flagged = int(self.model.predict(features)[0]) == -1
 
         reasons: list[str] = []
-        if request.amount >= 2500:
-            reasons.append("amount is much higher than the simulated baseline")
         if request.transactionTimestamp.hour < 5 or request.transactionTimestamp.hour >= 23:
             reasons.append("transaction happened at an unusual hour")
         if request.country.upper() != request.homeCountry.upper():
@@ -42,7 +40,7 @@ class PaymentAnomalyDetector:
             reasons.append("payment method is less common in the training profile")
 
         anomaly_score = float(np.clip(1 / (1 + np.exp(-5 * raw_score)), 0, 1))
-        flagged = anomaly_score >= 0.70 or model_flagged or len(reasons) >= 2 or request.amount >= 5000
+        flagged = anomaly_score >= 0.70 or model_flagged or len(reasons) >= 2
 
         if not reasons and flagged:
             reasons.append("feature combination differs from normal transaction patterns")
